@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "obsidian-jarvis",
+  "version": "1.0.0",
+  "description": "Portable Obsidian integration for JarvisVault — MCP server + knowledge base skills",
+  "author": { "name": "Rustam" },
+  "license": "MIT",
+  "keywords": ["obsidian", "vault", "knowledge-base", "mcp"]
+}

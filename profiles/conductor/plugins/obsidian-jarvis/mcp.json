@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "obsidian": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "C:/Users/Пользователь/Documents/JarvisVault"],
+      "env": {}
+    }
+  }
+}

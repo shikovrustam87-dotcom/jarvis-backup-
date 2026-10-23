@@ -1,0 +1,407 @@
+{
+  "jobs": [
+    {
+      "id": "2e038a304105",
+      "name": "Напоминание: выпить воды",
+      "prompt": "Напомни пользователю Рустаму коротко и по-дружески выпить воды. Одна фраза, без лишних слов.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-10-18T23:35:55.604814+03:00",
+        "display": "once in 2m"
+      },
+      "schedule_display": "once in 2m",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-18T23:33:55.604918+03:00",
+      "next_run_at": null,
+      "last_run_at": "2026-10-18T23:36:09.213571+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "run_claim": null,
+      "fire_claim": null
+    },
+    {
+      "id": "e1f05046f771",
+      "name": "Утренняя сводка",
+      "prompt": "Ты — Джарвис, личный ассистент Рустама. Составь утреннюю сводку на сегодня и отправь её в этот чат. Отвечай на русском языке.\n\nСводка должна содержать четыре раздела:\n\n1. **Погода в Шалушке (Кабардино-Балкария)**\nНайди текущую погоду и прогноз на день для населённого пункта Шалушка (Shalushka, Kabardino-Balkaria, Россия). Используй web_search с запросом «погода Шалушка Кабардино-Балкария сегодня» и web_extract для получения деталей. Укажи: температуру, осадки, ветер, общее описание.\n\n2. **Время намаза на сегодня**\nНайди расписание намазов для Шалушки (или Нальчика, если для Шалушки нет отдельных данных) на сегодняшнюю дату. Используй web_search с запросом «время намаза Нальчик ДУМ РФ сегодня» или «prayer times Nalchik Russia method». Используй метод расчёта Духовного управления мусульман России (ДУМ РФ). Укажи времена: Фаджр, Восход, Зухр, Аср, Магриб, Иша.\n\n3. **Напоминания на сегодня**\nС помощью инструмента cronjob_manage (action='list') получи список всех активных cron-задач. Отфильтруй те, которые запланированы на сегодня (по полю next_run_at) и имеют в названии или описании слова «напомин», «remind», «reminder», «задача», «дедлайн» или похожие. Перечисли их с временем срабатывания. Если активных напоминаний на сегодня нет — так и напиши.\n\n4. **Баланс OpenRouter**\nСвежие данные проверки баланса уже подставлены в этот запрос (блок с as_of, ОСТАТОК, расходом за сутки/неделю/месяц и, если есть, разбивка по моделям) — используй их, ничего не выдумывай. Приведи остаток на счёте и расход за сутки. Если в данных есть блок разбивки по моделям — добавь одну строку: на какие модели (1–2 крупнейшие по расходу) ушло больше всего за последние завершённые сутки UTC. Если в твоём предыдущем отчёте из истории был назван прошлый остаток — сравни и покажи, сколько ушло с прошлой проверки. Кратко, 2–4 строки. Если в данных есть строка ОШИБКА — напиши, что баланс проверить не удалось, и приведи текст ошибки.\n\nФормат вывода: красиво оформленное сообщение, кратко и по делу. Начни с «Доброе утро, сэр. Утренняя сводка на <дата>:» и затем четыре раздела.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "balance_check.py",
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": [
+        "self"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "display": "every day at 8am"
+      },
+      "schedule_display": "every day at 8am",
+      "repeat": {
+        "times": null,
+        "completed": 4
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-19T11:20:02.064139+03:00",
+      "next_run_at": "2026-10-24T08:00:00+03:00",
+      "last_run_at": "2026-10-23T08:01:44.042182+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": {
+        "at": "2026-10-22T08:00:11.694234+03:00",
+        "detail": "RuntimeError: HTTP 401: Недействительный токен. Токен должен быть создан в нашем сервисе aitunnel.ru"
+      },
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "attach_to_session": true,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-23T08:00:00+03:00",
+        "dispatched_at": "2026-10-23T08:00:50.669868+03:00",
+        "lateness_seconds": 50.7,
+        "kind": "on_time"
+      },
+      "fire_claim": null
+    },
+    {
+      "id": "658eaae7c910",
+      "name": "Недельный отчёт",
+      "prompt": "Ты — Джарвис, личный ассистент Рустама. Составь недельный отчёт и отправь его в этот чат. Отвечай на русском языке, кратко и по делу.\n\n### Что нужно сделать:\n\n1. **Прошлая неделя — итоги.** С помощью инструмента session_search найди разговоры Рустама за последние 7 дней. Извлеки ключевые темы, решения, созданные файлы, выполненные просьбы. Выдели главные достижения.\n\n2. **Напоминания и задачи.** С помощью cronjob_manage (action='list') получи список ВСЕХ cron-задач. Проанализируй:\n   - Какие задачи были выполнены (last_status = 'completed') на этой неделе.\n   - Какие остались активными и не выполненными.\n   - Какие просрочены (next_run_at в прошлом, но задача ещё активна).\n\n3. **Что осталось несделанным.** Из анализа сессий и cron-задач выдели всё, что обсуждалось или планировалось, но не было завершено или отложено.\n\n4. **План на следующую неделю — 3 главных дела.** На основе контекста прошедшей недели и незавершённых задач предложи 3 приоритетных дела на предстоящую неделю. Они должны быть конкретными, реалистичными и учитывать контекст проекта «Джарвис» (голосовой ассистент, HUD, видео, автоматизация).\n\n### Формат вывода:\n\nНачни с «📊 **Недельный отчёт** — <диапазон дат>»\n\nДалее четыре раздела:\n- ✅ Выполнено\n- 📋 Задачи и напоминания\n- ⚠️ Осталось несделанным\n- 🎯 3 главных дела на следующую неделю\n\nБудь конкретен, ссылайся на факты из сессий. Не фантазируй.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": [
+        "self"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 20 * * 0",
+        "display": "every sunday at 8pm"
+      },
+      "schedule_display": "every sunday at 8pm",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-19T11:27:28.370436+03:00",
+      "next_run_at": "2026-10-25T20:00:00+03:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "attach_to_session": true
+    },
+    {
+      "id": "8da903da6036",
+      "name": "Радар трендов ИИ",
+      "prompt": "Ты — Джарвис, личный ассистент Рустама. Составь еженедельный радар трендов на русском языке. Отвечай кратко, без лишних слов.\n\nНайди 5 главных новостей прошедшей недели в сфере искусственного интеллекта и технологий. Используй web_search с англоязычными запросами (например, «top AI news this week», «biggest tech stories this week») и русскоязычными (например, «главные новости ИИ за неделю»).\n\nДля каждой новости:\n- Один заголовок-предложение (на русском, своими словами, но отражающее суть).\n- Ссылка на авторитетный источник (оригинальная статья, пресс-релиз, проверенное издание — не агрегатор).\n\nФормат:\n📡 **Радар трендов — неделя <диапазон>**\n\n1. <новость> — [источник](url)\n2. <новость> — [источник](url)\n...\n\nВсего ровно 5 пунктов. Сортируй по значимости: самое важное — первым.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": [
+        "self"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1",
+        "display": "every monday at 9am"
+      },
+      "schedule_display": "every monday at 9am",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-19T11:28:45.732649+03:00",
+      "next_run_at": "2026-10-26T09:00:00+03:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "attach_to_session": true
+    },
+    {
+      "id": "b840194e87ab",
+      "name": "Дневник в Obsidian",
+      "prompt": "Ты — Джарвис, личный ассистент Рустама. Создай заметку дня в его базе знаний Obsidian.\n\n**Путь к базе:** `C:\\Users\\Пользователь\\Documents\\JarvisVault`\n\n### Шаги:\n\n1. Прочитай файл `ПРАВИЛА.md` в корне базы и следуй его правилам.\n\n2. С помощью инструмента session_search найди все разговоры Рустама за сегодняшний день. Извлеки:\n   - о чём говорили (темы, вопросы, задачи);\n   - что было сделано/выполнено;\n   - какие напоминания и задачи создавались или выполнялись.\n\n3. Создай файл `daily/<ГГГГ-ММ-ДД>.md` (дата сегодняшняя) со структурой:\n   ```\n   # <ГГГГ-ММ-ДД>\n   \n   ## О чём говорили\n   - ...\n   \n   ## Что сделано\n   - ...\n   \n   ## Напоминания\n   - ...\n   \n   ## Планы на завтра\n   - ...\n   ```\n   Если сегодняшняя заметка уже существует — дополни её, не перезаписывай.\n\n4. Обнови `log.md`: добавь строку с сегодняшней датой и кратким описанием, что добавлено/изменено.\n\n5. Верни краткий отчёт в чат: «📔 Заметка дня за <дата> создана в базе. <одна-две строки сути>».\n\nЕсли за сегодня разговоров не было — всё равно создай заметку с пометкой, что день был тихим. Соблюдай запреты из ПРАВИЛА.md (не удалять файлы, не писать пароли).\n\nЭКОНОМИЯ: session_search вызывай не больше 2 раз и только за сегодня. Заметка не длиннее 20 строк.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": [
+        "self"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * *",
+        "display": "every day at 10pm"
+      },
+      "schedule_display": "every day at 10pm",
+      "repeat": {
+        "times": null,
+        "completed": 5
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-19T11:58:29.793829+03:00",
+      "next_run_at": "2026-10-24T22:00:00+03:00",
+      "last_run_at": "2026-10-23T22:01:27.078174+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": {
+        "at": "2026-10-21T22:00:16.426299+03:00",
+        "detail": "RuntimeError: HTTP 401: Недействительный токен. Токен должен быть создан в нашем сервисе aitunnel.ru"
+      },
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "file",
+        "session_search",
+        "terminal"
+      ],
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-23T22:00:00+03:00",
+        "dispatched_at": "2026-10-23T22:00:02.213470+03:00",
+        "lateness_seconds": 2.2,
+        "kind": "on_time"
+      },
+      "fire_claim": null
+    },
+    {
+      "id": "c41d4d25baa3",
+      "name": "Утренний отчёт Джарвиса",
+      "prompt": "Проверь статус четырёх задач: 1) Переключатель F9/F10 (файл C:/Users/Пользователь/Desktop/Для Джарвиса/jarvis_switch.py и 1_ВИЗУАЛ.bat) — работает ли он. 2) Синтез речи TTS — проверь конфиг tts.provider в C:/Users/Пользователь/AppData/Local/hermes/config.yaml, проверь что скрипт tts_sapi.py существует. 3) Мессенджеры — проверь какие коннекторы подключены (manage_connections status). 4) Извлечение знаний из Instagram/VK/Facebook — проверь логи делегированной задачи в C:/Users/Пользователь/AppData/Local/hermes/cache/delegation/live/deleg_b5494823/task-0.log, есть ли результаты. Составь краткий отчёт по-русски: что сделано, что работает, что не работает, что нужно сделать. Отправь отчёт в этот чат.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "once",
+        "run_at": "2026-10-21T08:00:00+03:00",
+        "display": "once at 2026-10-21 08:00"
+      },
+      "schedule_display": "once at 2026-10-21 08:00",
+      "repeat": {
+        "times": 1,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "completed",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-20T01:53:46.185044+03:00",
+      "next_run_at": null,
+      "last_run_at": "2026-10-21T08:02:02.247838+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "telegram",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "run_claim": null,
+      "fire_claim": null
+    },
+    {
+      "id": "5e82fef373a0",
+      "name": "Мониторинг баланса (вечер)",
+      "prompt": "Ты — Джарвис, личный ассистент Рустама. Проверь остаток и расходы на счёте OpenRouter и отправь короткий отчёт в этот чат. Отвечай по-русски.\n\nСвежие данные проверки баланса уже подставлены в этот запрос (блок с as_of, ОСТАТОК, расходом за сутки/неделю/месяц и разбивкой по моделям) — используй их, ничего не выдумывай и не считай вручную.\n\nОтчёт:\n💳 **Баланс OpenRouter** — <дата, время>\n- Остаток: $X\n- Расход за сутки: $Y\n- Расход за неделю: $..., за месяц: $...\n- Разбивка по моделям за сутки: <модель> — $..., <модель> — $... (бери строки из блока разбивки по моделям в данных; если блока нет — строку опусти)\n- С прошлой проверки ушло: $... (если в твоём предыдущем отчёте был назван прошлый остаток; иначе строку опусти)\n\nБлок с топом моделей за 7 завершённых суток UTC приводи только если расход за неделю заметно больше суточного.\n\nЕсли в данных есть строка ОШИБКА — сообщи сэру, что баланс проверить не удалось, и приведи текст ошибки.\n\nКоротко: не больше 8 строк.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "balance_check.py",
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": [
+        "self"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * *",
+        "display": "every day at 10pm"
+      },
+      "schedule_display": "every day at 10pm",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-23T09:26:23.361721+03:00",
+      "next_run_at": "2026-10-24T22:00:00+03:00",
+      "last_run_at": "2026-10-23T22:00:34.658434+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "attach_to_session": true,
+      "fire_claim": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-23T22:00:00+03:00",
+        "dispatched_at": "2026-10-23T22:00:02.213470+03:00",
+        "lateness_seconds": 2.2,
+        "kind": "on_time"
+      }
+    }
+  ],
+  "updated_at": "2026-10-23T22:01:27.080271+03:00"
+}

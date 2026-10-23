@@ -1,0 +1,2 @@
+groq: ERR (HTTP Error 401: Unauthorized)
+openrouter: OK (200)

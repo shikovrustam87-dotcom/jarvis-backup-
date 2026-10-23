@@ -1,0 +1,86 @@
+{
+  "0bull": {
+    "catalog": {
+      "name": "0bull",
+      "pin": "240890a71715375bc877b238491e414517e9d902",
+      "repo": "https://github.com/0bull/agent-plugin",
+      "sha": "240890a71715375bc877b238491e414517e9d902",
+      "tier": "community"
+    },
+    "pinned": true,
+    "revision": "240890a71715375bc877b238491e414517e9d902",
+    "source": "https://github.com/0bull/agent-plugin"
+  },
+  "account-pool": {
+    "catalog": {
+      "name": "account-pool",
+      "pin": "7a4fc9fd976ed68de9e6f70ba326ef2053741e69",
+      "repo": "https://github.com/roqianjas/hermes-account-pool",
+      "sha": "7a4fc9fd976ed68de9e6f70ba326ef2053741e69",
+      "tier": "community"
+    },
+    "pinned": true,
+    "revision": "7a4fc9fd976ed68de9e6f70ba326ef2053741e69",
+    "source": "https://github.com/roqianjas/hermes-account-pool#plugins/account-pool"
+  },
+  "acedatacloud": {
+    "catalog": {
+      "name": "acedatacloud",
+      "pin": "568763ee21fe081562bb9bcd91e7323f8f81d6ff",
+      "repo": "https://github.com/AceDataCloud/AceDataCloudModelProviderHermes",
+      "sha": "568763ee21fe081562bb9bcd91e7323f8f81d6ff",
+      "tier": "community"
+    },
+    "pinned": true,
+    "revision": "568763ee21fe081562bb9bcd91e7323f8f81d6ff",
+    "source": "https://github.com/AceDataCloud/AceDataCloudModelProviderHermes"
+  },
+  "acedatacloud-media": {
+    "catalog": {
+      "name": "acedatacloud-media",
+      "pin": "8eaebfb86152d754061375de881548bfa096dd2d",
+      "repo": "https://github.com/AceDataCloud/AceDataCloudMediaHermes",
+      "sha": "8eaebfb86152d754061375de881548bfa096dd2d",
+      "tier": "community"
+    },
+    "pinned": true,
+    "revision": "8eaebfb86152d754061375de881548bfa096dd2d",
+    "source": "https://github.com/AceDataCloud/AceDataCloudMediaHermes"
+  },
+  "adaption": {
+    "catalog": {
+      "name": "adaption",
+      "pin": "958ad2e9077107be1919a5365541caa4e0acdcc8",
+      "repo": "https://github.com/adaptionlabs/adaption-hermes-plugin",
+      "sha": "958ad2e9077107be1919a5365541caa4e0acdcc8",
+      "tier": "community"
+    },
+    "pinned": true,
+    "revision": "958ad2e9077107be1919a5365541caa4e0acdcc8",
+    "source": "https://github.com/adaptionlabs/adaption-hermes-plugin"
+  },
+  "adwhispr": {
+    "catalog": {
+      "name": "adwhispr",
+      "pin": "80fd0e8fd93fe6207e6e9dd288811be9fe695bc2",
+      "repo": "https://github.com/adwhispr/adwhispr-hermes-plugin",
+      "sha": "80fd0e8fd93fe6207e6e9dd288811be9fe695bc2",
+      "tier": "community"
+    },
+    "pinned": true,
+    "revision": "80fd0e8fd93fe6207e6e9dd288811be9fe695bc2",
+    "source": "https://github.com/adwhispr/adwhispr-hermes-plugin"
+  },
+  "hermes-dpapi-secrets": {
+    "catalog": {
+      "name": "hermes-dpapi-secrets",
+      "pin": "c1651a401370013493903883d7ec4a1c90731b41",
+      "repo": "https://github.com/Yicheng-Mark/hermes-dpapi-secrets",
+      "sha": "c1651a401370013493903883d7ec4a1c90731b41",
+      "tier": "community"
+    },
+    "pinned": true,
+    "revision": "c1651a401370013493903883d7ec4a1c90731b41",
+    "source": "https://github.com/Yicheng-Mark/hermes-dpapi-secrets"
+  }
+}

@@ -1,0 +1,42 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit:
+    # The Hermes-free halves (config parsing, store format, failure handling) run anywhere
+    # the plugin's Python floor does. The SecretSource half needs the Hermes core and is
+    # exercised by `hermes plugins validate` (the same check catalog CI runs) and by the
+    # live job below.
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11", "3.13"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: python -m pip install "pytest>=8,<10"
+      - run: python -m pytest tests/test_config.py tests/test_store.py -q
+
+  live:
+    # Writes a real DPAPI blob for the runner's user, then removes it.
+    if: ${{ vars.HERMES_DPAPI_LIVE_CI == '1' }}
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install "pytest>=8,<10"
+      - name: Hermes core for the SecretSource contract
+        run: python -m pip install "hermes-agent"
+      - name: Live DPAPI round-trip
+        env:
+          HERMES_DPAPI_LIVE: "1"
+        run: python -m pytest tests/test_live_dpapi.py -q
