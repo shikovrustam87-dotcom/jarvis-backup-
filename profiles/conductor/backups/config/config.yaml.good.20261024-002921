@@ -1,4 +1,4 @@
-_config_version: 50
+_config_version: 51
 database:
   journal_mode: wal
 runtime:
@@ -19,7 +19,7 @@ plugins:
   clone_timeout_seconds: 300
   disabled: []
 model:
-  default: deepseek/deepseek-v4.1-flash
+  default: anthropic/claude-sonnet-4-6
   provider: openrouter
   base_url: https://openrouter.ai/api/v1
 kanban:
@@ -88,7 +88,7 @@ streaming:
 skills:
   creation_nudge_interval: 15
 agent:
-  max_turns: 150
+  max_turns: 50
   verbose: false
   reasoning_effort: ultra
   service_tier: ''
