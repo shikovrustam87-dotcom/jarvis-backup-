@@ -20,8 +20,8 @@ plugins:
   disabled: []
 model:
   default: anthropic/claude-sonnet-4-6
-  provider: openrouter
-  base_url: https://openrouter.ai/api/v1
+  provider: aitunnel
+  base_url: https://api.aitunnel.ru/v1
 kanban:
   review_dispatch: true
 cron:
@@ -283,15 +283,15 @@ known_builtin_toolsets:
     - yuanbao
 auxiliary:
   vision:
-    provider: openrouter
+    provider: aitunnel
   web_extract:
-    provider: openrouter
+    provider: aitunnel
   compression:
-    provider: openrouter
+    provider: aitunnel
   title_generation:
-    provider: openrouter
+    provider: aitunnel
   session_search:
-    provider: openrouter
+    provider: aitunnel
 wake_word:
   enabled: false
 fallback_providers:
@@ -300,7 +300,7 @@ fallback_providers:
   - provider: gemini
     model: gemini-3-flash-preview
   - provider: groq
-    model: qwen/qwen3.8-27b
+    model: qwen3.8-omni-flash
   - provider: nous
     model: reflection/beam-1.0-501b-a23b:free
   - provider: nous

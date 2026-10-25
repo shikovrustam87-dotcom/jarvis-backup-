@@ -23,9 +23,11 @@ plugins:
     - adwhispr
     - acedatacloud-media
 model:
-  default: deepseek/deepseek-v4-pro
-  provider: openrouter
-  base_url: https://openrouter.ai/api/v1
+  default: deepseek-v4-pro
+  provider: aitunnel
+  base_url: https://api.aitunnel.ru/v1
+  aliases:
+    local: custom/llama3.2:3b?base_url=http://localhost:11434/v1
 kanban:
   review_dispatch: true
 cron:
@@ -42,9 +44,11 @@ terminal:
   container_disk: 51200
   container_persistent: true
 browser:
+  cdp_url: http://127.0.0.1:9222
   inactivity_timeout: 120
   extension_control:
     enabled: false
+  use_real_profile: true
 tool_loop_guardrails:
   warnings_enabled: true
   hard_stop_enabled: false
@@ -213,8 +217,8 @@ code_execution:
   max_tool_calls: 50
 delegation:
   max_iterations: 250
-  model: deepseek/deepseek-v4-flash
-  provider: openrouter
+  model: deepseek-v4.1-flash-1017
+  provider: aitunnel
 display:
   compact: false
   cleanup_progress: false
@@ -251,6 +255,8 @@ platforms:
       chat_id: '596611073'
       name: . .
       user_id: '596611073'
+    extra:
+      status_indicator: true
   api_server:
     enabled: true
     extra:
@@ -317,32 +323,27 @@ known_builtin_toolsets:
     - yuanbao
 auxiliary:
   vision:
-    provider: openrouter
-    model: qwen/qwen3.8-omni-flash
+    provider: aitunnel
+    model: qwen3.8-omni-flash
   web_extract:
-    provider: openrouter
+    provider: aitunnel
   compression:
-    provider: openrouter
-    model: deepseek/deepseek-v4-flash
+    provider: aitunnel
+    model: deepseek-v4.1-flash-1017
   title_generation:
-    provider: openrouter
-    model: deepseek/deepseek-v4-flash
+    provider: aitunnel
+    model: deepseek-v4.1-flash-1017
   session_search:
-    provider: openrouter
+    provider: aitunnel
   review:
-    provider: openrouter
-    model: deepseek/deepseek-v4.1-flash
+    provider: aitunnel
+    model: deepseek-v4.1-flash-1017
 wake_word:
   enabled: false
 fallback_providers:
-  - provider: openrouter
-    model: nvidia/nemotron-3-ultra-550b-a55b:free
-  - provider: groq
-    model: openai/gpt-oss-120b
-  - provider: groq
-    model: qwen/qwen3.8-27b
-  - provider: gemini
-    model: gemini-3.1-flash-lite
+  - provider: custom
+    model: llama3.2:3b
+    base_url: http://localhost:11434/v1
 providers:
   aitunnel:
     name: AITUNNEL

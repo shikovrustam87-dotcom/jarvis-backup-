@@ -1,0 +1,129 @@
+[
+  {
+    "name": "0bull",
+    "class": "catalog",
+    "current": "240890a71715375bc877b238491e414517e9d902",
+    "latest": "240890a71715375bc877b238491e414517e9d902",
+    "update_available": false,
+    "needs_fixing": null,
+    "min_hermes": null,
+    "reason": "",
+    "checked_install": {
+      "source": "https://github.com/0bull/agent-plugin",
+      "revision": "240890a71715375bc877b238491e414517e9d902",
+      "pinned": true
+    }
+  },
+  {
+    "name": "account-pool",
+    "class": "catalog",
+    "current": "7a4fc9fd976ed68de9e6f70ba326ef2053741e69",
+    "latest": "7a4fc9fd976ed68de9e6f70ba326ef2053741e69",
+    "update_available": false,
+    "needs_fixing": null,
+    "min_hermes": null,
+    "reason": "",
+    "checked_install": {
+      "source": "https://github.com/roqianjas/hermes-account-pool#plugins/account-pool",
+      "revision": "7a4fc9fd976ed68de9e6f70ba326ef2053741e69",
+      "pinned": true
+    }
+  },
+  {
+    "name": "acedatacloud",
+    "class": "catalog",
+    "current": "568763ee21fe081562bb9bcd91e7323f8f81d6ff",
+    "latest": "568763ee21fe081562bb9bcd91e7323f8f81d6ff",
+    "update_available": false,
+    "needs_fixing": null,
+    "min_hermes": null,
+    "reason": "",
+    "checked_install": {
+      "source": "https://github.com/AceDataCloud/AceDataCloudModelProviderHermes",
+      "revision": "568763ee21fe081562bb9bcd91e7323f8f81d6ff",
+      "pinned": true
+    }
+  },
+  {
+    "name": "acedatacloud-media",
+    "class": "catalog",
+    "current": "8eaebfb86152d754061375de881548bfa096dd2d",
+    "latest": "8eaebfb86152d754061375de881548bfa096dd2d",
+    "update_available": false,
+    "needs_fixing": null,
+    "min_hermes": null,
+    "reason": "",
+    "checked_install": {
+      "source": "https://github.com/AceDataCloud/AceDataCloudMediaHermes",
+      "revision": "8eaebfb86152d754061375de881548bfa096dd2d",
+      "pinned": true
+    }
+  },
+  {
+    "name": "adaption",
+    "class": "catalog",
+    "current": "958ad2e9077107be1919a5365541caa4e0acdcc8",
+    "latest": "958ad2e9077107be1919a5365541caa4e0acdcc8",
+    "update_available": false,
+    "needs_fixing": null,
+    "min_hermes": null,
+    "reason": "",
+    "checked_install": {
+      "source": "https://github.com/adaptionlabs/adaption-hermes-plugin",
+      "revision": "958ad2e9077107be1919a5365541caa4e0acdcc8",
+      "pinned": true
+    }
+  },
+  {
+    "name": "adwhispr",
+    "class": "catalog",
+    "current": "80fd0e8fd93fe6207e6e9dd288811be9fe695bc2",
+    "latest": "80fd0e8fd93fe6207e6e9dd288811be9fe695bc2",
+    "update_available": false,
+    "needs_fixing": null,
+    "min_hermes": null,
+    "reason": "",
+    "checked_install": {
+      "source": "https://github.com/adwhispr/adwhispr-hermes-plugin",
+      "revision": "80fd0e8fd93fe6207e6e9dd288811be9fe695bc2",
+      "pinned": true
+    }
+  },
+  {
+    "name": "hermes-dpapi-secrets",
+    "class": "catalog",
+    "current": "c1651a401370013493903883d7ec4a1c90731b41",
+    "latest": "c1651a401370013493903883d7ec4a1c90731b41",
+    "update_available": false,
+    "needs_fixing": null,
+    "min_hermes": null,
+    "reason": "",
+    "checked_install": {
+      "source": "https://github.com/Yicheng-Mark/hermes-dpapi-secrets",
+      "revision": "c1651a401370013493903883d7ec4a1c90731b41",
+      "pinned": true
+    }
+  },
+  {
+    "name": "jarvis-switch",
+    "class": "self-cloned",
+    "current": null,
+    "latest": null,
+    "update_available": null,
+    "needs_fixing": null,
+    "min_hermes": null,
+    "reason": "self-cloned; run `hermes plugins adopt` first",
+    "checked_install": null
+  },
+  {
+    "name": "obsidian-jarvis",
+    "class": "self-cloned",
+    "current": null,
+    "latest": null,
+    "update_available": null,
+    "needs_fixing": null,
+    "min_hermes": null,
+    "reason": "self-cloned; run `hermes plugins adopt` first",
+    "checked_install": null
+  }
+]

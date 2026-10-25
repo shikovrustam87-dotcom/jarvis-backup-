@@ -77,15 +77,15 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-10-24T08:00:00+03:00",
-      "last_run_at": "2026-10-23T08:01:44.042182+03:00",
+      "next_run_at": "2026-10-25T08:00:00+03:00",
+      "last_run_at": "2026-10-24T08:04:51.857562+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -108,12 +108,15 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-23T08:00:00+03:00",
-        "dispatched_at": "2026-10-23T08:00:50.669868+03:00",
-        "lateness_seconds": 50.7,
+        "scheduled_at": "2026-10-24T08:00:00+03:00",
+        "dispatched_at": "2026-10-24T08:00:12.001806+03:00",
+        "lateness_seconds": 12.0,
         "kind": "on_time"
       },
-      "fire_claim": null
+      "fire_claim": null,
+      "canonical_completions": [
+        "80089aba9fe14f1dbb32545254c30ef0"
+      ]
     },
     {
       "id": "658eaae7c910",
@@ -246,15 +249,15 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-10-24T22:00:00+03:00",
-      "last_run_at": "2026-10-23T22:01:27.078174+03:00",
+      "next_run_at": "2026-10-25T22:00:00+03:00",
+      "last_run_at": "2026-10-24T22:02:10.184931+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -280,12 +283,15 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-23T22:00:00+03:00",
-        "dispatched_at": "2026-10-23T22:00:02.213470+03:00",
-        "lateness_seconds": 2.2,
+        "scheduled_at": "2026-10-24T22:00:00+03:00",
+        "dispatched_at": "2026-10-24T22:00:52.127970+03:00",
+        "lateness_seconds": 52.1,
         "kind": "on_time"
       },
-      "fire_claim": null
+      "fire_claim": null,
+      "canonical_completions": [
+        "91f0890f765643fb83b340ba145b8330"
+      ]
     },
     {
       "id": "c41d4d25baa3",
@@ -364,15 +370,15 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-10-24T22:00:00+03:00",
-      "last_run_at": "2026-10-23T22:00:34.658434+03:00",
+      "next_run_at": "2026-10-25T22:00:00+03:00",
+      "last_run_at": "2026-10-24T22:01:17.963733+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -396,12 +402,67 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-23T22:00:00+03:00",
-        "dispatched_at": "2026-10-23T22:00:02.213470+03:00",
-        "lateness_seconds": 2.2,
+        "scheduled_at": "2026-10-24T22:00:00+03:00",
+        "dispatched_at": "2026-10-24T22:00:52.127970+03:00",
+        "lateness_seconds": 52.1,
         "kind": "on_time"
-      }
+      },
+      "canonical_completions": [
+        "8e72a7480cea4bdb870b4cca22e24314"
+      ]
+    },
+    {
+      "id": "e59af8f4fdc1",
+      "name": "Сводка по рынку продуктов питания",
+      "prompt": "Ты - Джарвис, ассистент Рустама. Рустам занимается производством и дистрибуцией продуктов питания. Составь утреннюю сводку по его рынку и отправь в этот чат. Отвечай по-русски, коротко.\n\nШаг 0. Прочитай файл источников (read_file): C:\\Users\\Пользователь\\Documents\\JarvisVault\\Источники сводки.md\nВ нём разделы: Telegram-каналы, Сайты и другие ссылки, Темы для поиска, Instagram-аккаунты. Строки с # не источники. Если файл не открылся, используй темы: кондитерка, колбаса и мясо, соки, вода, газировка, мёд, витаминные смеси, сухари, продукция из Китая, дистрибуция, цены.\n\nШаг 1. Telegram. Для каждого канала из раздела открой через web_extract веб-версию вида https://t.me/s/ИМЯ_КАНАЛА и возьми посты за последние 24 часа, только по темам из файла.\n\nШаг 2. Сайты из раздела \"Сайты и другие ссылки\" (если есть): открой через web_extract, возьми свежее по темам.\n\nШаг 3. Поиск. Через web_search найди свежие (за последние сутки) новости и новые видео на YouTube, Rutube и во ВКонтакте по темам из файла.\n\nШаг 4. Instagram. В твоём браузере уже выполнен вход в Instagram (отдельный аккаунт для сводок). Через browser_navigate и browser_snapshot открой:\nа) поиск по 3-4 темам из файла (каждый день другие темы по кругу): https://www.instagram.com/explore/search/keyword/?q=ТЕМА\nб) страницы 3-5 аккаунтов из раздела Instagram файла (каждый день другие по кругу).\nНе больше 10 страниц Instagram за раз. Только смотри: ничего не лайкай, не комментируй, не подписывайся, не пиши сообщений и не публикуй.\nОтбери до 5 свежих (за 1-3 дня) постов или Reels производителей, брендов, дистрибьюторов и магазинов продуктов питания. Для каждого: аккаунт, что за контент (новинка, акция, ролик с ИИ-аватаром, рецепт, обзор, производство) и ссылка.\nЕсли вместо Instagram видишь страницу входа или проверку, никаких данных не вводи. В сводке одной строкой напиши: \"Instagram: нужен повторный вход, откройте ярлык Instagram для Джарвиса на рабочем столе\", а посты поищи через web_search запросами site:instagram.com ТЕМА.\nНовые полезные аккаунты (производители, бренды, дистрибьюторы продуктов, не блогеры-однодневки) допиши в конец раздела Instagram файла источников, по одному в строке в виде https://www.instagram.com/имя/ . Не дублируй те, что уже есть, не больше 5 новых за раз, остальной файл не меняй.\n\nШаг 5. Пришли сводку:\n- Рынок: не больше 10 пунктов, в каждом источник, суть в 1-2 предложениях и ссылка.\n- Instagram: до 5 пунктов. Если ничего свежего не нашлось, одной строкой.\n- \"Что может пригодиться Вам\": 2-3 практические мысли (новинки, тренды, цены, поставщики, идеи для своих роликов).\nЕсли нового почти нет, так и напиши одной строкой.\n\nЭкономия: открывай не больше 25 страниц, session_search не используй.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 7 * * *",
+        "display": "every day at 7:55am"
+      },
+      "schedule_display": "every day at 7:55am",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-10-24T09:20:55.457205+03:00",
+      "next_run_at": "2026-10-25T07:55:00+03:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "attach_to_session": false,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-23T22:01:27.080271+03:00"
+  "updated_at": "2026-10-24T22:02:12.456793+03:00"
 }

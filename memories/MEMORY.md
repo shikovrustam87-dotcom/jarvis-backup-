@@ -8,8 +8,8 @@ Windows Hermes: файл `$LOCALAPPDATA/hermes/.env` имеет CRLF-перев�
 §
 Windows-аккаунт кириллический (`Пользователь`): MSYS bash искажает вывод нативных команд и реестра на таких путях (mojibake, `grep -P` падает). Юникод-данные (реестр, имена значений) читать и писать через PowerShell — не через `reg`/grep.
 §
-faster-whisper на Windows: av==16.0.1 совместим; av==19.x ломается TypeError (metadata_errors). При установке: uv pip install faster-whisper av==16.0.1.
-§
 База знаний Рустама — Obsidian vault: `C:\Users\Пользователь\Documents\JarvisVault` (путь также в .env как `OBSIDIAN_VAULT_PATH`). Структура: raw/ (источники, только добавлять), wiki/ (страницы знаний, кратко по-русски, ссылки [[...]]), daily/ (ГГГГ-ММ-ДД.md), inbox/ (мысли владельца), index.md (оглавление), log.md (журнал). Полные правила ведения — в файле `ПРАВИЛА.md` в корне базы; перед работой с базой читать его и следовать ему.
 §
 NOTE: memory is full. Do not add more entries this session.
+§
+Instagram: вход в браузере, instagram.com/explore/search/keyword/?q=СЛОВО. Только смотреть. Навык: instagram-search. Источники: JarvisVault/Источники сводки.md
