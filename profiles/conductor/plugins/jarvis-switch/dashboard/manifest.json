@@ -1,9 +1,0 @@
-{
-  "name": "jarvis-switch",
-  "label": "Джарвис — переключатель",
-  "description": "Переключатель ВИЗУАЛ / ЧАТ для интерфейса Джарвиса.",
-  "version": "1.0.0",
-  "icon": "Puzzle",
-  "api": "plugin_api.py",
-  "tab": { "hidden": true }
-}

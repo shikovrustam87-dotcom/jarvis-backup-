@@ -59,18 +59,6 @@
     "revision": "958ad2e9077107be1919a5365541caa4e0acdcc8",
     "source": "https://github.com/adaptionlabs/adaption-hermes-plugin"
   },
-  "adwhispr": {
-    "catalog": {
-      "name": "adwhispr",
-      "pin": "80fd0e8fd93fe6207e6e9dd288811be9fe695bc2",
-      "repo": "https://github.com/adwhispr/adwhispr-hermes-plugin",
-      "sha": "80fd0e8fd93fe6207e6e9dd288811be9fe695bc2",
-      "tier": "community"
-    },
-    "pinned": true,
-    "revision": "80fd0e8fd93fe6207e6e9dd288811be9fe695bc2",
-    "source": "https://github.com/adwhispr/adwhispr-hermes-plugin"
-  },
   "hermes-dpapi-secrets": {
     "catalog": {
       "name": "hermes-dpapi-secrets",

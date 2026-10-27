@@ -7,27 +7,28 @@ attachments:
   storage: hermes-home
 plugins:
   enabled:
-    - account-pool
-    - adaption
-    - clinepass
     - disk-cleanup
     - hermes-dpapi-secrets
     - hermes-resetwatch
-    - jarvis-switch
+    - kanban-graph
+    - memory-wiki
     - mnemosyne-dashboard
     - obsidian-jarvis
+    - openviking
     - security-guidance
   clone_timeout_seconds: 300
   disabled:
     - 0bull
-    - adwhispr
+    - account-pool
     - acedatacloud-media
+    - adaption
+    - adwhispr
+    - clinepass
+    - jarvis-switch
 model:
-  default: deepseek-v4-pro
-  provider: aitunnel
-  base_url: https://api.aitunnel.ru/v1
-  aliases:
-    local: custom/llama3.2:3b?base_url=http://localhost:11434/v1
+  default: deepseek/deepseek-v4-pro
+  provider: openrouter
+  base_url: https://openrouter.ai/api/v1
 kanban:
   review_dispatch: true
 cron:
@@ -51,16 +52,16 @@ browser:
   use_real_profile: true
 tool_loop_guardrails:
   warnings_enabled: true
-  hard_stop_enabled: false
+  hard_stop_enabled: true
   non_interactive_hard_stop_enabled: true
   warn_after:
     exact_failure: 2
     same_tool_failure: 3
     idempotent_no_progress: 2
   hard_stop_after:
-    exact_failure: 5
-    same_tool_failure: 8
-    idempotent_no_progress: 5
+    exact_failure: 3
+    same_tool_failure: 5
+    idempotent_no_progress: 3
 compression:
   enabled: true
   checkpoint_required: false
@@ -89,6 +90,10 @@ memory:
   memory_char_limit: 2200
   user_char_limit: 1375
   nudge_interval: 10
+  provider: openviking
+  openviking:
+    use_ovcli_config: false
+    recall_scope: peer
 max_concurrent_sessions:
 group_sessions_per_user: true
 streaming:
@@ -96,7 +101,7 @@ streaming:
 skills:
   creation_nudge_interval: 15
 agent:
-  max_turns: 150
+  max_turns: 90
   verbose: false
   reasoning_effort: medium
   service_tier: ''
@@ -166,34 +171,24 @@ platform_toolsets:
     - vision
     - web
     - x_search
-    - acedatacloud-face
   telegram:
     - hermes-telegram
-    - acedatacloud-face
   discord:
     - hermes-discord
-    - acedatacloud-face
   whatsapp:
     - hermes-whatsapp
-    - acedatacloud-face
   slack:
     - hermes-slack
-    - acedatacloud-face
   signal:
     - hermes-signal
-    - acedatacloud-face
   qqbot:
     - hermes-qqbot
-    - acedatacloud-face
   yuanbao:
     - hermes-yuanbao
-    - acedatacloud-face
   teams:
     - hermes-teams
-    - acedatacloud-face
   google_chat:
     - hermes-google_chat
-    - acedatacloud-face
 stt:
   provider: groq
   enabled: true
@@ -216,8 +211,8 @@ code_execution:
   timeout: 300
   max_tool_calls: 50
 delegation:
-  max_iterations: 250
-  model: deepseek-v4.1-flash-1017
+  max_iterations: 60
+  model: deepseek/deepseek-v4-flash
   provider: aitunnel
 display:
   compact: false
@@ -234,6 +229,10 @@ display:
   interim_assistant_messages: false
   in_app_tours: true
   in_app_tips: true
+  pet:
+    enabled: true
+    slug: snow-dragon
+    scale: 0.66
 telemetry:
   shared_metrics:
     enabled: false
@@ -268,7 +267,7 @@ tts:
   edge:
     voice: ru-RU-DmitryNeural
     speed: 1.0
-  provider: voice_auto
+  provider: piper
   providers:
     sapi:
       type: command
@@ -280,6 +279,9 @@ tts:
       format: wav
       voice_compatible: false
       command: C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/tools/tts_auto.py {input_path} {output_path}
+  piper:
+    voice: ru_RU-dmitri-medium
+    voices_dir: 'C:\Users\Пользователь\AppData\Local\hermes\cache\piper-voices'
 voice:
   auto_tts: true
 command_allowlist:
@@ -323,8 +325,8 @@ known_builtin_toolsets:
     - yuanbao
 auxiliary:
   vision:
-    provider: aitunnel
-    model: qwen3.8-omni-flash
+    provider: openrouter
+    model: deepseek/deepseek-v4.1-flash
   web_extract:
     provider: aitunnel
   compression:
@@ -338,12 +340,16 @@ auxiliary:
   review:
     provider: aitunnel
     model: deepseek-v4.1-flash-1017
+  video:
+    provider: openrouter
+    model: qwen/qwen3.8-omni-flash
 wake_word:
   enabled: false
 fallback_providers:
-  - provider: custom
-    model: llama3.2:3b
-    base_url: http://localhost:11434/v1
+  - provider: openrouter
+    model: deepseek/deepseek-v4-flash
+  - provider: groq
+    model: openai/gpt-oss-120b
 providers:
   aitunnel:
     name: AITUNNEL

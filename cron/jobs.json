@@ -1,58 +1,6 @@
 {
   "jobs": [
     {
-      "id": "2e038a304105",
-      "name": "Напоминание: выпить воды",
-      "prompt": "Напомни пользователю Рустаму коротко и по-дружески выпить воды. Одна фраза, без лишних слов.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-10-18T23:35:55.604814+03:00",
-        "display": "once in 2m"
-      },
-      "schedule_display": "once in 2m",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-10-18T23:33:55.604918+03:00",
-      "next_run_at": null,
-      "last_run_at": "2026-10-18T23:36:09.213571+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "last_failure": null,
-      "failure_streak": 0,
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "596611073",
-        "chat_name": ". .",
-        "thread_id": null,
-        "user_id": "596611073",
-        "scope_id": null
-      },
-      "enabled_toolsets": null,
-      "workdir": null,
-      "run_claim": null,
-      "fire_claim": null
-    },
-    {
       "id": "e1f05046f771",
       "name": "Утренняя сводка",
       "prompt": "Ты — Джарвис, личный ассистент Рустама. Составь утреннюю сводку на сегодня и отправь её в этот чат. Отвечай на русском языке.\n\nСводка должна содержать четыре раздела:\n\n1. **Погода в Шалушке (Кабардино-Балкария)**\nНайди текущую погоду и прогноз на день для населённого пункта Шалушка (Shalushka, Kabardino-Balkaria, Россия). Используй web_search с запросом «погода Шалушка Кабардино-Балкария сегодня» и web_extract для получения деталей. Укажи: температуру, осадки, ветер, общее описание.\n\n2. **Время намаза на сегодня**\nНайди расписание намазов для Шалушки (или Нальчика, если для Шалушки нет отдельных данных) на сегодняшнюю дату. Используй web_search с запросом «время намаза Нальчик ДУМ РФ сегодня» или «prayer times Nalchik Russia method». Используй метод расчёта Духовного управления мусульман России (ДУМ РФ). Укажи времена: Фаджр, Восход, Зухр, Аср, Магриб, Иша.\n\n3. **Напоминания на сегодня**\nС помощью инструмента cronjob_manage (action='list') получи список всех активных cron-задач. Отфильтруй те, которые запланированы на сегодня (по полю next_run_at) и имеют в названии или описании слова «напомин», «remind», «reminder», «задача», «дедлайн» или похожие. Перечисли их с временем срабатывания. Если активных напоминаний на сегодня нет — так и напиши.\n\n4. **Баланс OpenRouter**\nСвежие данные проверки баланса уже подставлены в этот запрос (блок с as_of, ОСТАТОК, расходом за сутки/неделю/месяц и, если есть, разбивка по моделям) — используй их, ничего не выдумывай. Приведи остаток на счёте и расход за сутки. Если в данных есть блок разбивки по моделям — добавь одну строку: на какие модели (1–2 крупнейшие по расходу) ушло больше всего за последние завершённые сутки UTC. Если в твоём предыдущем отчёте из истории был назван прошлый остаток — сравни и покажи, сколько ушло с прошлой проверки. Кратко, 2–4 строки. Если в данных есть строка ОШИБКА — напиши, что баланс проверить не удалось, и приведи текст ошибки.\n\nФормат вывода: красиво оформленное сообщение, кратко и по делу. Начни с «Доброе утро, сэр. Утренняя сводка на <дата>:» и затем четыре раздела.",
@@ -77,24 +25,24 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-10-25T08:00:00+03:00",
-      "last_run_at": "2026-10-24T08:04:51.857562+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-10-27T08:00:00+03:00",
+      "last_run_at": "2026-10-26T16:23:07.860553+03:00",
+      "last_status": "error",
+      "last_error": "interrupted",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-10-22T08:00:11.694234+03:00",
-        "detail": "RuntimeError: HTTP 401: Недействительный токен. Токен должен быть создан в нашем сервисе aitunnel.ru"
+        "at": "2026-10-26T16:23:07.860553+03:00",
+        "detail": "interrupted"
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -108,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-24T08:00:00+03:00",
-        "dispatched_at": "2026-10-24T08:00:12.001806+03:00",
-        "lateness_seconds": 12.0,
-        "kind": "on_time"
+        "scheduled_at": "2026-10-26T08:00:00+03:00",
+        "dispatched_at": "2026-10-26T16:21:13.997409+03:00",
+        "lateness_seconds": 30074.0,
+        "kind": "catch_up"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "80089aba9fe14f1dbb32545254c30ef0"
+        "5c905c48b0a54ec7b9c911a016c63218"
       ]
     },
     {
@@ -143,16 +91,16 @@
       "schedule_display": "every sunday at 8pm",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:27:28.370436+03:00",
-      "next_run_at": "2026-10-25T20:00:00+03:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-11-01T20:00:00+03:00",
+      "last_run_at": "2026-10-25T20:00:39.017924+03:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
@@ -169,7 +117,17 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "attach_to_session": true
+      "attach_to_session": true,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-25T20:00:00+03:00",
+        "dispatched_at": "2026-10-25T20:00:06.636193+03:00",
+        "lateness_seconds": 6.6,
+        "kind": "on_time"
+      },
+      "fire_claim": null,
+      "canonical_completions": [
+        "ca2879af7a754d41afb5604a5585c81a"
+      ]
     },
     {
       "id": "8da903da6036",
@@ -196,21 +154,24 @@
       "schedule_display": "every monday at 9am",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:28:45.732649+03:00",
-      "next_run_at": "2026-10-26T09:00:00+03:00",
-      "last_run_at": null,
-      "last_status": null,
-      "last_error": null,
+      "next_run_at": "2026-11-02T09:00:00+03:00",
+      "last_run_at": "2026-10-26T16:23:07.164064+03:00",
+      "last_status": "error",
+      "last_error": "interrupted",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "last_failure": null,
-      "failure_streak": 0,
+      "last_failure": {
+        "at": "2026-10-26T16:23:07.164064+03:00",
+        "detail": "interrupted"
+      },
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -222,7 +183,17 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "attach_to_session": true
+      "attach_to_session": true,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-26T09:00:00+03:00",
+        "dispatched_at": "2026-10-26T16:21:13.997409+03:00",
+        "lateness_seconds": 26474.0,
+        "kind": "catch_up"
+      },
+      "fire_claim": null,
+      "canonical_completions": [
+        "e2824f546fd5477ca32d3e06ff2fb67c"
+      ]
     },
     {
       "id": "b840194e87ab",
@@ -249,15 +220,15 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-10-25T22:00:00+03:00",
-      "last_run_at": "2026-10-24T22:02:10.184931+03:00",
+      "next_run_at": "2026-10-27T22:00:00+03:00",
+      "last_run_at": "2026-10-26T22:02:29.020992+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -283,14 +254,14 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-24T22:00:00+03:00",
-        "dispatched_at": "2026-10-24T22:00:52.127970+03:00",
-        "lateness_seconds": 52.1,
+        "scheduled_at": "2026-10-26T22:00:00+03:00",
+        "dispatched_at": "2026-10-26T22:00:49.812466+03:00",
+        "lateness_seconds": 49.8,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "91f0890f765643fb83b340ba145b8330"
+        "eac8f0bd7da34b33b8f0f448666bc43d"
       ]
     },
     {
@@ -370,20 +341,23 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-10-25T22:00:00+03:00",
-      "last_run_at": "2026-10-24T22:01:17.963733+03:00",
+      "next_run_at": "2026-10-27T22:00:00+03:00",
+      "last_run_at": "2026-10-26T22:01:32.708843+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "last_failure": null,
+      "last_failure": {
+        "at": "2026-10-25T22:01:10.547276+03:00",
+        "detail": "[CRON_FAILURE]\nСэр, баланс OpenRouter не проверить удалось. Причина ошибки: \\\"ОШИБКА запроса activity (HTTP Error 401: Unauthorized)\\\". Подробности о ошибке приведены ниже.\n\n{\"name\": \"error\", \"parameters\": {\"original\": \"activity\", \"code\": \"401\", \"message\": \"Activity is Unauthorized\"}}\n\n⚠️ File-mutation verifier: 1 file edit(s) FAILED this turn despite any wording above that may suggest otherwise. Run `git status` or `read_file` to confirm what actually landed.\n  • `OpenRouter.csv` — [patch] Failed to read file: `C:\\Users\\Пользователь\\OpenRouter.csv`"
+      },
       "failure_streak": 0,
       "deliver": "origin",
       "origin": {
@@ -402,19 +376,19 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-24T22:00:00+03:00",
-        "dispatched_at": "2026-10-24T22:00:52.127970+03:00",
-        "lateness_seconds": 52.1,
+        "scheduled_at": "2026-10-26T22:00:00+03:00",
+        "dispatched_at": "2026-10-26T22:00:49.812466+03:00",
+        "lateness_seconds": 49.8,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "8e72a7480cea4bdb870b4cca22e24314"
+        "8a5e251575204bea8e3f8e6d5194e22f"
       ]
     },
     {
       "id": "e59af8f4fdc1",
       "name": "Сводка по рынку продуктов питания",
-      "prompt": "Ты - Джарвис, ассистент Рустама. Рустам занимается производством и дистрибуцией продуктов питания. Составь утреннюю сводку по его рынку и отправь в этот чат. Отвечай по-русски, коротко.\n\nШаг 0. Прочитай файл источников (read_file): C:\\Users\\Пользователь\\Documents\\JarvisVault\\Источники сводки.md\nВ нём разделы: Telegram-каналы, Сайты и другие ссылки, Темы для поиска, Instagram-аккаунты. Строки с # не источники. Если файл не открылся, используй темы: кондитерка, колбаса и мясо, соки, вода, газировка, мёд, витаминные смеси, сухари, продукция из Китая, дистрибуция, цены.\n\nШаг 1. Telegram. Для каждого канала из раздела открой через web_extract веб-версию вида https://t.me/s/ИМЯ_КАНАЛА и возьми посты за последние 24 часа, только по темам из файла.\n\nШаг 2. Сайты из раздела \"Сайты и другие ссылки\" (если есть): открой через web_extract, возьми свежее по темам.\n\nШаг 3. Поиск. Через web_search найди свежие (за последние сутки) новости и новые видео на YouTube, Rutube и во ВКонтакте по темам из файла.\n\nШаг 4. Instagram. В твоём браузере уже выполнен вход в Instagram (отдельный аккаунт для сводок). Через browser_navigate и browser_snapshot открой:\nа) поиск по 3-4 темам из файла (каждый день другие темы по кругу): https://www.instagram.com/explore/search/keyword/?q=ТЕМА\nб) страницы 3-5 аккаунтов из раздела Instagram файла (каждый день другие по кругу).\nНе больше 10 страниц Instagram за раз. Только смотри: ничего не лайкай, не комментируй, не подписывайся, не пиши сообщений и не публикуй.\nОтбери до 5 свежих (за 1-3 дня) постов или Reels производителей, брендов, дистрибьюторов и магазинов продуктов питания. Для каждого: аккаунт, что за контент (новинка, акция, ролик с ИИ-аватаром, рецепт, обзор, производство) и ссылка.\nЕсли вместо Instagram видишь страницу входа или проверку, никаких данных не вводи. В сводке одной строкой напиши: \"Instagram: нужен повторный вход, откройте ярлык Instagram для Джарвиса на рабочем столе\", а посты поищи через web_search запросами site:instagram.com ТЕМА.\nНовые полезные аккаунты (производители, бренды, дистрибьюторы продуктов, не блогеры-однодневки) допиши в конец раздела Instagram файла источников, по одному в строке в виде https://www.instagram.com/имя/ . Не дублируй те, что уже есть, не больше 5 новых за раз, остальной файл не меняй.\n\nШаг 5. Пришли сводку:\n- Рынок: не больше 10 пунктов, в каждом источник, суть в 1-2 предложениях и ссылка.\n- Instagram: до 5 пунктов. Если ничего свежего не нашлось, одной строкой.\n- \"Что может пригодиться Вам\": 2-3 практические мысли (новинки, тренды, цены, поставщики, идеи для своих роликов).\nЕсли нового почти нет, так и напиши одной строкой.\n\nЭкономия: открывай не больше 25 страниц, session_search не используй.",
+      "prompt": "Ты - Джарвис, ассистент Рустама. Рустам занимается производством и дистрибуцией продуктов питания: кондитерка, колбасная продукция, соки, питьевая вода, мёд, витаминные смеси, сухари/снеки, газировка, продукция из Китая. Составь короткую сводку по рынку продуктов питания в России на сегодня. Ищи новости, изменения цен на сырьё, изменения в регулировании, новости конкурентов. ВАЖНО - халяль-фильтр: исключи из сводки любые упоминания свинины, производителей свинины и продукции из свинины. Колбасные изделия и мясо - только с пометкой халяль. Формат: 1. Сырьё (цены, дефицит, тренды) - 3-5 пунктов. 2. Халяль-колбасы и мясо (новинки, бренды, цены) - 2-3 пункта. 3. Дистрибьюторы СКФО - свежая информация по дистрибьюторам продуктов питания в Северо-Кавказском федеральном округе: название компании, ФИО директора, на кого оформлена, штат, годовой оборот, с каким количеством торговых точек работают, зона покрытия. 4. Рецепты - найди актуальные рецепты для промышленного/производственного применения: пирожные, крекеры, сушёное мясо, сухари, джусболлы. С ингредиентами и краткой технологией. 2-3 рецепта на каждую категорию. 5. Конкуренты (кондитерка, соки, вода, снеки) - 3-5 пунктов. 6. Регулирование и законы - 1-2 пункта, если есть важное. Ответь на русском, стиль - дворецкий Джарвис (вежливо, коротко, по делу). Без эмодзи. В конце - источники (ссылки).\n\n7. Instagram (через свой браузер, вход уже выполнен). Через browser_navigate открой поиск https://www.instagram.com/explore/search/keyword/?q=ТЕМА по 3-4 темам Рустама (каждый день разные по кругу: кондитерка, колбасы халяль, соки, вода, мёд, снеки, сухари, газировка, продукты из Китая) и 3-5 аккаунтов из раздела Instagram файла C:\\Users\\Пользователь\\Documents\\JarvisVault\\Источники сводки.md . В поиске видны только картинки, поэтому открой до 5 свежих постов или Reels (адреса instagram.com/p/... или /reel/...) и прочитай подпись через browser_snapshot. Отбирай производителей, бренды и дистрибьюторов (не кафе и не блогеров). Для каждого: аккаунт, что за контент (новинка, акция, ролик с ИИ-аватаром, рецепт, производство), суть одной фразой и ссылка. Новые полезные аккаунты допиши в конец раздела Instagram этого файла (не больше 5, без дублей, остальное не меняй). Только смотри: ничего не лайкай и не пиши. Если видишь страницу входа, одной строкой: \"Instagram: нужен повторный вход, откройте ярлык Instagram для Джарвиса\".\n\nДополнительные источники (Telegram-каналы и сайты) бери из файла C:\\Users\\Пользователь\\Documents\\JarvisVault\\Источники сводки.md .\n\nОграничения: для раздела 3 не больше 4 поисков; если ФИО, оборот или штат не найдены в открытых источниках, пиши \"нет в открытых источниках\" и дальше не ищи. Вся сводка: не больше 25 страниц и не дольше 15 минут. Помощников (delegate_task) не используй, делай сам.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -434,21 +408,24 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-10-25T07:55:00+03:00",
-      "last_run_at": null,
-      "last_status": null,
-      "last_error": null,
+      "next_run_at": "2026-10-27T07:55:00+03:00",
+      "last_run_at": "2026-10-26T16:23:07.759814+03:00",
+      "last_status": "error",
+      "last_error": "interrupted",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "last_failure": null,
-      "failure_streak": 0,
+      "last_failure": {
+        "at": "2026-10-26T16:23:07.759814+03:00",
+        "detail": "interrupted"
+      },
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -461,8 +438,17 @@
       "enabled_toolsets": null,
       "workdir": null,
       "attach_to_session": false,
-      "fire_claim": null
+      "fire_claim": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-26T07:55:00+03:00",
+        "dispatched_at": "2026-10-26T16:21:13.997409+03:00",
+        "lateness_seconds": 30374.0,
+        "kind": "catch_up"
+      },
+      "canonical_completions": [
+        "1e448220b7884469a5c53c9cba0deed0"
+      ]
     }
   ],
-  "updated_at": "2026-10-24T22:02:12.456793+03:00"
+  "updated_at": "2026-10-26T22:02:30.354682+03:00"
 }
