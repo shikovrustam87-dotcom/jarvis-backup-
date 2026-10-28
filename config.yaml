@@ -8,6 +8,7 @@ attachments:
 plugins:
   enabled:
     - disk-cleanup
+    - fish-audio
     - hermes-dpapi-secrets
     - hermes-resetwatch
     - kanban-graph
@@ -26,7 +27,7 @@ plugins:
     - clinepass
     - jarvis-switch
 model:
-  default: deepseek/deepseek-v4-pro
+  default: deepseek/deepseek-v4-flash
   provider: openrouter
   base_url: https://openrouter.ai/api/v1
 kanban:
@@ -190,10 +191,10 @@ platform_toolsets:
   google_chat:
     - hermes-google_chat
 stt:
-  provider: groq
+  provider: local
   enabled: true
   local:
-    model: medium
+    model: small
     device: cpu
     compute_type: int8
     initial_prompt: Джарвис, Джарвис, Джарвис, Рустам, Hermes, Намаз, Фаджр, Зухр, Аср, Магриб, Иша
@@ -212,7 +213,7 @@ code_execution:
   max_tool_calls: 50
 delegation:
   max_iterations: 60
-  model: deepseek/deepseek-v4-flash
+  model: deepseek/deepseek-v4-pro
   provider: aitunnel
 display:
   compact: false
@@ -225,7 +226,7 @@ display:
   streaming: true
   skin: jarvis
   show_reasoning: false
-  tool_progress: false
+  tool_progress: all
   interim_assistant_messages: false
   in_app_tours: true
   in_app_tips: true
@@ -233,6 +234,8 @@ display:
     enabled: true
     slug: snow-dragon
     scale: 0.66
+  interface: cli
+  personality: pirate
 telemetry:
   shared_metrics:
     enabled: false
@@ -273,7 +276,7 @@ tts:
       type: command
       format: wav
       voice_compatible: false
-      command: C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/4bb31d1577bc47f6b2f700f40f44aa76/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/tools/tts_sapi.py {input_path} {output_path}
+      command: C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/81823ea00c2f422da62c6ae4945875b4/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/tools/tts_sapi.py {input_path} {output_path}
     voice_auto:
       type: command
       format: wav
@@ -282,6 +285,8 @@ tts:
   piper:
     voice: ru_RU-dmitri-medium
     voices_dir: 'C:\Users\Пользователь\AppData\Local\hermes\cache\piper-voices'
+  fish-audio:
+    voice: 9cc9f84a0e6c461bab1ab3c045d52240
 voice:
   auto_tts: true
 command_allowlist:
