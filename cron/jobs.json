@@ -25,15 +25,15 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 8
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-10-28T08:00:00+03:00",
-      "last_run_at": "2026-10-27T08:02:52.444039+03:00",
+      "next_run_at": "2026-10-29T08:00:00+03:00",
+      "last_run_at": "2026-10-28T08:05:30.705276+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -56,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-27T08:00:00+03:00",
-        "dispatched_at": "2026-10-27T08:00:59.852571+03:00",
-        "lateness_seconds": 59.9,
+        "scheduled_at": "2026-10-28T08:00:00+03:00",
+        "dispatched_at": "2026-10-28T08:00:17.843091+03:00",
+        "lateness_seconds": 17.8,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "ce7ebb57c2614b1ab73078f46fbe23d5"
+        "2d5fd8137a0e4c0ea06be0efea116dd0"
       ]
     },
     {
@@ -220,24 +220,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-10-28T22:00:00+03:00",
-      "last_run_at": "2026-10-27T22:02:31.626161+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-10-29T22:00:00+03:00",
+      "last_run_at": "2026-10-28T22:01:39.383183+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 402: This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-10-21T22:00:16.426299+03:00",
-        "detail": "RuntimeError: HTTP 401: Недействительный токен. Токен должен быть создан в нашем сервисе aitunnel.ru"
+        "at": "2026-10-28T22:01:39.383183+03:00",
+        "detail": "RuntimeError: HTTP 402: This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits."
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -254,67 +254,15 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-27T22:00:00+03:00",
-        "dispatched_at": "2026-10-27T22:00:58.277712+03:00",
-        "lateness_seconds": 58.3,
+        "scheduled_at": "2026-10-28T22:00:00+03:00",
+        "dispatched_at": "2026-10-28T22:00:09.113398+03:00",
+        "lateness_seconds": 9.1,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "37e416e133794e2d97f1bb56bbe31cfc"
+        "bccf2655b285479094d51221eaa565d7"
       ]
-    },
-    {
-      "id": "c41d4d25baa3",
-      "name": "Утренний отчёт Джарвиса",
-      "prompt": "Проверь статус четырёх задач: 1) Переключатель F9/F10 (файл C:/Users/Пользователь/Desktop/Для Джарвиса/jarvis_switch.py и 1_ВИЗУАЛ.bat) — работает ли он. 2) Синтез речи TTS — проверь конфиг tts.provider в C:/Users/Пользователь/AppData/Local/hermes/config.yaml, проверь что скрипт tts_sapi.py существует. 3) Мессенджеры — проверь какие коннекторы подключены (manage_connections status). 4) Извлечение знаний из Instagram/VK/Facebook — проверь логи делегированной задачи в C:/Users/Пользователь/AppData/Local/hermes/cache/delegation/live/deleg_b5494823/task-0.log, есть ли результаты. Составь краткий отчёт по-русски: что сделано, что работает, что не работает, что нужно сделать. Отправь отчёт в этот чат.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "once",
-        "run_at": "2026-10-21T08:00:00+03:00",
-        "display": "once at 2026-10-21 08:00"
-      },
-      "schedule_display": "once at 2026-10-21 08:00",
-      "repeat": {
-        "times": 1,
-        "completed": 1
-      },
-      "enabled": false,
-      "state": "completed",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-10-20T01:53:46.185044+03:00",
-      "next_run_at": null,
-      "last_run_at": "2026-10-21T08:02:02.247838+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "last_failure": null,
-      "failure_streak": 0,
-      "deliver": "telegram",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "596611073",
-        "chat_name": ". .",
-        "thread_id": null,
-        "user_id": "596611073",
-        "scope_id": null
-      },
-      "enabled_toolsets": null,
-      "workdir": null,
-      "run_claim": null,
-      "fire_claim": null
     },
     {
       "id": "5e82fef373a0",
@@ -341,15 +289,15 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-10-28T22:00:00+03:00",
-      "last_run_at": "2026-10-27T22:01:22.747018+03:00",
+      "next_run_at": "2026-10-29T22:00:00+03:00",
+      "last_run_at": "2026-10-28T22:00:53.140118+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -376,13 +324,13 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-27T22:00:00+03:00",
-        "dispatched_at": "2026-10-27T22:00:58.277712+03:00",
-        "lateness_seconds": 58.3,
+        "scheduled_at": "2026-10-28T22:00:00+03:00",
+        "dispatched_at": "2026-10-28T22:00:09.113398+03:00",
+        "lateness_seconds": 9.1,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "83b590a62654428285c6f3ae2ca01f04"
+        "af19bb656e834169a5117dbd191df337"
       ]
     },
     {
@@ -408,15 +356,15 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-10-28T07:55:00+03:00",
-      "last_run_at": "2026-10-27T08:01:03.388815+03:00",
+      "next_run_at": "2026-10-29T07:55:00+03:00",
+      "last_run_at": "2026-10-28T08:04:54.238746+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -440,15 +388,15 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-27T07:55:00+03:00",
-        "dispatched_at": "2026-10-27T07:55:59.845478+03:00",
-        "lateness_seconds": 59.8,
+        "scheduled_at": "2026-10-28T07:55:00+03:00",
+        "dispatched_at": "2026-10-28T07:55:17.826275+03:00",
+        "lateness_seconds": 17.8,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "beb53a2f5c1647e197d399d8bbb31fb6"
+        "3de6af4161fa479f929e577c787cf3ac"
       ]
     }
   ],
-  "updated_at": "2026-10-27T22:02:33.143983+03:00"
+  "updated_at": "2026-10-28T22:01:39.386038+03:00"
 }

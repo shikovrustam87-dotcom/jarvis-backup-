@@ -8,7 +8,6 @@ attachments:
 plugins:
   enabled:
     - disk-cleanup
-    - fish-audio
     - hermes-dpapi-secrets
     - hermes-resetwatch
     - kanban-graph
@@ -25,6 +24,7 @@ plugins:
     - adaption
     - adwhispr
     - clinepass
+    - fish-audio
     - jarvis-switch
 model:
   default: deepseek/deepseek-v4-flash
@@ -270,7 +270,7 @@ tts:
   edge:
     voice: ru-RU-DmitryNeural
     speed: 1.0
-  provider: piper
+  provider: dmitry
   providers:
     sapi:
       type: command
@@ -282,8 +282,14 @@ tts:
       format: wav
       voice_compatible: false
       command: C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/tools/tts_auto.py {input_path} {output_path}
+    dmitry:
+      type: command
+      command: C:\Users\Пользователь\AppData\Local\hermes\tools\python-3.14.7+20260901-win32-x64\python.exe C:\Users\Пользователь\AppData\Local\JarvisTools\dmitry_tts2.py {input_path} {output_path}
+      timeout: 90
+      output_format: mp3
+      voice_compatible: true
   piper:
-    voice: ru_RU-dmitri-medium
+    voice: ru_RU-denis-medium
     voices_dir: 'C:\Users\Пользователь\AppData\Local\hermes\cache\piper-voices'
   fish-audio:
     voice: 9cc9f84a0e6c461bab1ab3c045d52240
