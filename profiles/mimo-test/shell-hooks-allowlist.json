@@ -1,0 +1,10 @@
+{
+  "approvals": [
+    {
+      "approved_at": "2026-10-29T09:55:34.180384Z",
+      "command": "C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/hooks/guard.py",
+      "event": "pre_tool_call",
+      "script_mtime_at_approval": "2026-10-23T20:16:51.411758Z"
+    }
+  ]
+}

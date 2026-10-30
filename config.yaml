@@ -27,7 +27,7 @@ plugins:
     - fish-audio
     - jarvis-switch
 model:
-  default: deepseek/deepseek-v4-flash
+  default: xiaomi/mimo-v2.6-flash
   provider: openrouter
   base_url: https://openrouter.ai/api/v1
 kanban:
@@ -191,7 +191,7 @@ platform_toolsets:
   google_chat:
     - hermes-google_chat
 stt:
-  provider: local
+  provider: groq
   enabled: true
   local:
     model: small
@@ -284,8 +284,8 @@ tts:
       command: C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/tools/tts_auto.py {input_path} {output_path}
     dmitry:
       type: command
-      command: C:\Users\Пользователь\AppData\Local\hermes\tools\python-3.14.7+20260901-win32-x64\python.exe C:\Users\Пользователь\AppData\Local\JarvisTools\dmitry_tts2.py {input_path} {output_path}
-      timeout: 90
+      command: C:\Users\Пользователь\AppData\Local\hermes\tools\python-3.14.7+20260901-win32-x64\python.exe C:\Users\Пользователь\AppData\Local\JarvisTools\dmitry_tts4.py {input_path} {output_path}
+      timeout: 200
       output_format: mp3
       voice_compatible: true
   piper:
@@ -297,6 +297,7 @@ voice:
   auto_tts: true
 command_allowlist:
   - access to Hermes secrets (Windows path)
+  - command parser limit or malformed executable payload
   - cua:bring_to_front:background
   - cua:click:background
   - cua:click:foreground
@@ -355,7 +356,13 @@ auxiliary:
     provider: openrouter
     model: qwen/qwen3.8-omni-flash
 wake_word:
-  enabled: false
+  enabled: true
+  sensitivity: 0.5
+  confirmation_frames: 4
+  provider: sherpa
+  phrase: Hey Jarvis
+  sherpa:
+    model_dir: C:\Users\Public\.hermes-kws
 fallback_providers:
   - provider: openrouter
     model: deepseek/deepseek-v4-flash

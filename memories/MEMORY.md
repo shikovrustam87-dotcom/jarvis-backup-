@@ -1,6 +1,6 @@
 Windows Hermes install: the managed Python is `$LOCALAPPDATA/hermes/tools/python-*/python.exe` — the version dir name is partly masked in tool output, so resolve it with a glob (`ls -d .../tools/python-*/`), never a copied literal path (a literal fails with 'No such file or directory'). Install Python extras with `python.exe -c "import pm; pm.sync_venv(['<extra>'], explicit=True)"` run from the hermes-agent source dir.
 §
-STT on this machine: local faster-whisper (extra `stt-whisper`), `stt.provider: local`, `stt.local.model: small`, `stt.language: ru`. No cloud STT key configured.
+STT: stt.provider groq (whisper-large-v3, ключ в .env, ~2 с, проверено вживую); локальный faster-whisper small — запасной, откат = stt.provider: local (конфиг кэшится по подписи, без перезапуска). TTS: JarvisTools/dmitry_tts4.py — первым Яндекс SpeechKit (YANDEX_API_KEY в .env, kirill/neutral, ~0.8 с), откат на edge + тёплый Piper (piper_warm.py, 18734, 4–5 с); ffmpeg — JarvisTools/ffmpeg.exe.
 §
 Рустам общается с Hermes голосом (диктовка, русский) и не набирает команды в терминал вручную — ввод с голоса/перепечатка ломают команды. Механические шаги (правка конфигов, append в .env, проверки) делать за него самому; ему оставлять только действие, которое может сделать лишь он (вставить секрет, нажать кнопку), и проверять результат чтением файла, а не по слову «готово».
 §
@@ -8,8 +8,6 @@ Windows Hermes: файл `$LOCALAPPDATA/hermes/.env` имеет CRLF-перев�
 §
 Windows-аккаунт кириллический (`Пользователь`): MSYS bash искажает вывод нативных команд и реестра на таких путях (mojibake, `grep -P` падает). Юникод-данные (реестр, имена значений) читать и писать через PowerShell — не через `reg`/grep.
 §
-База знаний Рустама — Obsidian vault: `C:\Users\Пользователь\Documents\JarvisVault` (путь также в .env как `OBSIDIAN_VAULT_PATH`). Структура: raw/ (источники, только добавлять), wiki/ (страницы знаний, кратко по-русски, ссылки [[...]]), daily/ (ГГГГ-ММ-ДД.md), inbox/ (мысли владельца), index.md (оглавление), log.md (журнал). Полные правила ведения — в файле `ПРАВИЛА.md` в корне базы; перед работой с базой читать его и следовать ему.
-§
-NOTE: memory is full. Do not add more entries this session.
+База знаний — Obsidian vault `C:\Users\Пользователь\Documents\JarvisVault` (OBSIDIAN_VAULT_PATH в .env): raw/ (источники, только добавлять), wiki/ (по-русски), daily/, inbox/, index.md, log.md; правила — ПРАВИЛА.md в корне (читать).
 §
 Instagram: вход в браузере, instagram.com/explore/search/keyword/?q=СЛОВО. Только смотреть. Навык: instagram-search. Источники: JarvisVault/Источники сводки.md

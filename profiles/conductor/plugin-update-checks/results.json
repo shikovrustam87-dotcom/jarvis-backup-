@@ -3,7 +3,7 @@
     "name": "hermes-dpapi-secrets",
     "class": "catalog",
     "current": "c1651a401370013493903883d7ec4a1c90731b41",
-    "latest": "b26b92760b2bfc36a91c280af96b0171c4d00267",
+    "latest": "5bad3fb2baf04ce6befecfefce6d14f4c9c98934",
     "update_available": true,
     "needs_fixing": null,
     "min_hermes": null,

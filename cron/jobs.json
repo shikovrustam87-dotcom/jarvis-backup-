@@ -25,15 +25,15 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-10-29T08:00:00+03:00",
-      "last_run_at": "2026-10-28T08:05:30.705276+03:00",
+      "next_run_at": "2026-10-30T08:00:00+03:00",
+      "last_run_at": "2026-10-29T08:03:06.184823+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -56,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-28T08:00:00+03:00",
-        "dispatched_at": "2026-10-28T08:00:17.843091+03:00",
-        "lateness_seconds": 17.8,
+        "scheduled_at": "2026-10-29T08:00:00+03:00",
+        "dispatched_at": "2026-10-29T08:00:09.501211+03:00",
+        "lateness_seconds": 9.5,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "2d5fd8137a0e4c0ea06be0efea116dd0"
+        "6e20459ca6b1417db325c13ae94c9033"
       ]
     },
     {
@@ -220,24 +220,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-10-29T22:00:00+03:00",
-      "last_run_at": "2026-10-28T22:01:39.383183+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 402: This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.",
+      "next_run_at": "2026-10-30T22:00:00+03:00",
+      "last_run_at": "2026-10-29T22:03:34.657640+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-10-28T22:01:39.383183+03:00",
         "detail": "RuntimeError: HTTP 402: This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits."
       },
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -254,14 +254,14 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-28T22:00:00+03:00",
-        "dispatched_at": "2026-10-28T22:00:09.113398+03:00",
-        "lateness_seconds": 9.1,
+        "scheduled_at": "2026-10-29T22:00:00+03:00",
+        "dispatched_at": "2026-10-29T22:00:53.608558+03:00",
+        "lateness_seconds": 53.6,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "bccf2655b285479094d51221eaa565d7"
+        "323701d9c55549e9bc221c411455665f"
       ]
     },
     {
@@ -289,15 +289,15 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 8
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-10-29T22:00:00+03:00",
-      "last_run_at": "2026-10-28T22:00:53.140118+03:00",
+      "next_run_at": "2026-10-30T22:00:00+03:00",
+      "last_run_at": "2026-10-29T22:01:55.938728+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -324,13 +324,13 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-28T22:00:00+03:00",
-        "dispatched_at": "2026-10-28T22:00:09.113398+03:00",
-        "lateness_seconds": 9.1,
+        "scheduled_at": "2026-10-29T22:00:00+03:00",
+        "dispatched_at": "2026-10-29T22:00:53.608558+03:00",
+        "lateness_seconds": 53.6,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "af19bb656e834169a5117dbd191df337"
+        "0bb434fbdaab4aebba8787484b346e54"
       ]
     },
     {
@@ -356,15 +356,15 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-10-29T07:55:00+03:00",
-      "last_run_at": "2026-10-28T08:04:54.238746+03:00",
+      "next_run_at": "2026-10-30T07:55:00+03:00",
+      "last_run_at": "2026-10-29T09:48:53.597735+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -388,15 +388,15 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-28T07:55:00+03:00",
-        "dispatched_at": "2026-10-28T07:55:17.826275+03:00",
-        "lateness_seconds": 17.8,
+        "scheduled_at": "2026-10-29T07:55:00+03:00",
+        "dispatched_at": "2026-10-29T07:55:09.380880+03:00",
+        "lateness_seconds": 9.4,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "3de6af4161fa479f929e577c787cf3ac"
+        "21e873011a5b49338fe43918249003f5"
       ]
     }
   ],
-  "updated_at": "2026-10-28T22:01:39.386038+03:00"
+  "updated_at": "2026-10-29T22:03:37.978842+03:00"
 }
