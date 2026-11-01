@@ -148,6 +148,9 @@ gateway:
   api_server:
     max_concurrent_runs: 10
     history_tool_output_max_chars: 0
+    enabled: true
+    key: 2WAFkxYtDDeCK_9uSHGK2sGlipXPkTulhwFMvRUgCyM
+    cors_origins: http://127.0.0.1:8765,http://localhost:8765
 platform_toolsets:
   cli:
     - a2a
@@ -295,6 +298,7 @@ tts:
     voice: 9cc9f84a0e6c461bab1ab3c045d52240
 voice:
   auto_tts: true
+  barge_in: false
 command_allowlist:
   - access to Hermes secrets (Windows path)
   - command parser limit or malformed executable payload
@@ -303,6 +307,7 @@ command_allowlist:
   - cua:click:foreground
   - cua:focus_app:background
   - execute_code
+  - force kill processes (taskkill /F)
   - script execution via -e/-c flag
 known_plugin_toolsets:
   cli:
@@ -356,13 +361,15 @@ auxiliary:
     provider: openrouter
     model: qwen/qwen3.8-omni-flash
 wake_word:
-  enabled: true
-  sensitivity: 0.5
-  confirmation_frames: 4
-  provider: sherpa
-  phrase: Hey Jarvis
+  enabled: false
+  sensitivity: 0.6
+  confirmation_frames: 3
+  provider: openwakeword
+  phrase: hey jarvis
   sherpa:
     model_dir: C:\Users\Public\.hermes-kws
+  openwakeword:
+    model: hey_jarvis
 fallback_providers:
   - provider: openrouter
     model: deepseek/deepseek-v4-flash

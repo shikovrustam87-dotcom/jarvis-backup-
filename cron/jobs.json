@@ -25,24 +25,24 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-10-30T08:00:00+03:00",
-      "last_run_at": "2026-10-29T08:03:06.184823+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-11-01T08:00:00+03:00",
+      "last_run_at": "2026-10-31T09:21:18.452894+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:596611073)",
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-10-26T16:23:07.860553+03:00",
-        "detail": "interrupted"
+        "at": "2026-10-31T09:21:18.452894+03:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -56,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-29T08:00:00+03:00",
-        "dispatched_at": "2026-10-29T08:00:09.501211+03:00",
-        "lateness_seconds": 9.5,
-        "kind": "on_time"
+        "scheduled_at": "2026-10-31T08:00:00+03:00",
+        "dispatched_at": "2026-10-31T09:10:16.952768+03:00",
+        "lateness_seconds": 4217.0,
+        "kind": "late"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "6e20459ca6b1417db325c13ae94c9033"
+        "5ac18af339e447ac96540d0338b67d43"
       ]
     },
     {
@@ -220,15 +220,15 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 13
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-10-30T22:00:00+03:00",
-      "last_run_at": "2026-10-29T22:03:34.657640+03:00",
+      "next_run_at": "2026-11-01T22:00:00+03:00",
+      "last_run_at": "2026-10-31T22:02:18.249343+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -254,14 +254,14 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-29T22:00:00+03:00",
-        "dispatched_at": "2026-10-29T22:00:53.608558+03:00",
-        "lateness_seconds": 53.6,
+        "scheduled_at": "2026-10-31T22:00:00+03:00",
+        "dispatched_at": "2026-10-31T22:00:34.808080+03:00",
+        "lateness_seconds": 34.8,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "323701d9c55549e9bc221c411455665f"
+        "0d4479c690124a348756e8cd505de312"
       ]
     },
     {
@@ -289,15 +289,15 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 8
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-10-30T22:00:00+03:00",
-      "last_run_at": "2026-10-29T22:01:55.938728+03:00",
+      "next_run_at": "2026-11-01T22:00:00+03:00",
+      "last_run_at": "2026-10-31T22:01:22.033361+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -324,13 +324,13 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-29T22:00:00+03:00",
-        "dispatched_at": "2026-10-29T22:00:53.608558+03:00",
-        "lateness_seconds": 53.6,
+        "scheduled_at": "2026-10-31T22:00:00+03:00",
+        "dispatched_at": "2026-10-31T22:00:34.808080+03:00",
+        "lateness_seconds": 34.8,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "0bb434fbdaab4aebba8787484b346e54"
+        "b07131e03a7542a3835082862c8d1d8c"
       ]
     },
     {
@@ -356,24 +356,24 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-10-30T07:55:00+03:00",
-      "last_run_at": "2026-10-29T09:48:53.597735+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-11-01T07:55:00+03:00",
+      "last_run_at": "2026-10-31T09:21:18.025883+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again.",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:596611073)",
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-10-26T16:23:07.759814+03:00",
-        "detail": "interrupted"
+        "at": "2026-10-31T09:21:18.025883+03:00",
+        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -388,15 +388,15 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-29T07:55:00+03:00",
-        "dispatched_at": "2026-10-29T07:55:09.380880+03:00",
-        "lateness_seconds": 9.4,
-        "kind": "on_time"
+        "scheduled_at": "2026-10-31T07:55:00+03:00",
+        "dispatched_at": "2026-10-31T09:10:16.952768+03:00",
+        "lateness_seconds": 4517.0,
+        "kind": "late"
       },
       "canonical_completions": [
-        "21e873011a5b49338fe43918249003f5"
+        "9972c73cbff043f39cf5f728a36c3ac8"
       ]
     }
   ],
-  "updated_at": "2026-10-29T22:03:37.978842+03:00"
+  "updated_at": "2026-10-31T22:02:19.795119+03:00"
 }
