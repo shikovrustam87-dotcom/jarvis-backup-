@@ -6,8 +6,6 @@ Windows Hermes: файл `$LOCALAPPDATA/hermes/.env` имеет CRLF-перев�
 §
 База знаний — Obsidian vault `C:\Users\Пользователь\Documents\JarvisVault` (OBSIDIAN_VAULT_PATH в .env): raw/ (источники, только добавлять), wiki/ (по-русски), daily/, inbox/, index.md, log.md; правила — ПРАВИЛА.md в корне (читать).
 §
-Chrome speechSynthesis gate: требует user gesture (click/key) для speak(); ошибка 'not-allowed' до первого жеста. Фикс: volume=0 warm-up speak при первом взаимодействии (unlockTTS). sticky — хватает на всю сессию.
-§
 Фоновый terminal-джоб идёт через WSL (свой Python без uvicorn/vosk) — сервисы 8000/8001 там падают. Windows-сервисы: execute_code → subprocess.Popen([glob-py, script], creationflags=DETACHED_PROCESS|CREATE_NEW_PROCESS_GROUP, stdout→лог) — живут без сессии. Ловушка: распознавание vosk не открывает кириллицу в пути модели — в vosk_server.py есть ascii_path() (8.3).
 §
-Визуал (figura_sveta_v1.html): проверять результат самому — скриншот через computer_use capture + vision_analyze, а не просить Рустама присылать/смотреть. Он прямо попросил: «на будущее сам проверяй визуал проверяя изображение».
+Визуал: только http://127.0.0.1:8765/figura_sveta_v1.html — сервер visual_server.py в «Для Джарвиса» (автозапуск в jarvis_http.ps1); этот origin единственный в api_server.cors_origins, с file:// ядро 8642 браузеру недоступно. vosk 8001 (Python311, PYTHONPATH не наследовать), TTS 8000/synthesize, ядро 8642/v1/chat/completions. speak() ждёт жест — unlockTTS. Визуал проверять самому: computer_use capture + vision_analyze, не просить Рустама.
