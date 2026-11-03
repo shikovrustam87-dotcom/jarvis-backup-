@@ -1,9 +1,9 @@
 {
-  "last_report_path": "C:\\Users\\Пользователь\\AppData\\Local\\hermes\\profiles\\security\\logs\\curator\\20261026-142316",
-  "last_run_at": "2026-10-26T14:23:16.183435+00:00",
-  "last_run_duration_seconds": 1.648152,
-  "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
+  "last_report_path": "C:\\Users\\Пользователь\\AppData\\Local\\hermes\\profiles\\security\\logs\\curator\\20261102-194252",
+  "last_run_at": "2026-11-02T19:42:52.107700+00:00",
+  "last_run_duration_seconds": 1.480318,
+  "last_run_summary": "auto: 5 marked stale; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": null,
   "paused": false,
-  "run_count": 1
+  "run_count": 2
 }

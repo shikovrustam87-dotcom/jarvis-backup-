@@ -25,24 +25,24 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 13
+        "completed": 14
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-11-02T08:00:00+03:00",
-      "last_run_at": "2026-11-01T08:07:56.718511+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-11-03T08:00:00+03:00",
+      "last_run_at": "2026-11-02T08:01:40.353455+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 402: This request requires more credits, or fewer max_tokens. You requested up to 27985 tokens, but can only afford 25440. To increase, visit https://openrouter.ai/settings/credits and add more credits",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-10-31T09:21:18.452894+03:00",
-        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+        "at": "2026-11-02T08:01:40.353455+03:00",
+        "detail": "RuntimeError: HTTP 402: This request requires more credits, or fewer max_tokens. You requested up to 27985 tokens, but can only afford 25440. To increase, visit https://openrouter.ai/settings/credits and add more credits"
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -56,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-11-01T08:00:00+03:00",
-        "dispatched_at": "2026-11-01T08:00:35.056163+03:00",
-        "lateness_seconds": 35.1,
+        "scheduled_at": "2026-11-02T08:00:00+03:00",
+        "dispatched_at": "2026-11-02T08:00:35.749829+03:00",
+        "lateness_seconds": 35.7,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "9deb3b343a4b4c86b8bbc02ad52c83e5"
+        "08cea342df3e47d888eb8f6f4dd6d752"
       ]
     },
     {
@@ -154,24 +154,24 @@
       "schedule_display": "every monday at 9am",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:28:45.732649+03:00",
-      "next_run_at": "2026-11-02T09:00:00+03:00",
-      "last_run_at": "2026-10-26T16:23:07.164064+03:00",
+      "next_run_at": "2026-11-09T09:00:00+03:00",
+      "last_run_at": "2026-11-02T09:01:42.385058+03:00",
       "last_status": "error",
-      "last_error": "interrupted",
+      "last_error": "RuntimeError: HTTP 402: This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-10-26T16:23:07.164064+03:00",
-        "detail": "interrupted"
+        "at": "2026-11-02T09:01:42.385058+03:00",
+        "detail": "RuntimeError: HTTP 402: This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits."
       },
-      "failure_streak": 1,
+      "failure_streak": 2,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -185,14 +185,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-10-26T09:00:00+03:00",
-        "dispatched_at": "2026-10-26T16:21:13.997409+03:00",
-        "lateness_seconds": 26474.0,
-        "kind": "catch_up"
+        "scheduled_at": "2026-11-02T09:00:00+03:00",
+        "dispatched_at": "2026-11-02T09:00:35.803168+03:00",
+        "lateness_seconds": 35.8,
+        "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "e2824f546fd5477ca32d3e06ff2fb67c"
+        "c15f6bb8a8ad41ffb9ef73c093cea83a"
       ]
     },
     {
@@ -220,24 +220,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 14
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-11-02T22:00:00+03:00",
-      "last_run_at": "2026-11-01T22:03:10.631157+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-11-03T22:00:00+03:00",
+      "last_run_at": "2026-11-02T22:01:46.546767+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 403: { \"success\": false, \"error\": \"Access denied by security policy.\" }",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:596611073)",
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-10-28T22:01:39.383183+03:00",
-        "detail": "RuntimeError: HTTP 402: This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits."
+        "at": "2026-11-02T22:01:46.546767+03:00",
+        "detail": "RuntimeError: HTTP 403: { \"success\": false, \"error\": \"Access denied by security policy.\" }"
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -254,14 +254,14 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-01T22:00:00+03:00",
-        "dispatched_at": "2026-11-01T22:00:35.693653+03:00",
-        "lateness_seconds": 35.7,
+        "scheduled_at": "2026-11-02T22:00:00+03:00",
+        "dispatched_at": "2026-11-02T22:00:00.492254+03:00",
+        "lateness_seconds": 0.5,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "fe69d7d5fd3942da8a82dbcedd67ebf9"
+        "c1393e3c7e354cbca761c45b770c8fc6"
       ]
     },
     {
@@ -289,24 +289,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-11-02T22:00:00+03:00",
-      "last_run_at": "2026-11-01T22:02:08.324981+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-11-03T22:00:00+03:00",
+      "last_run_at": "2026-11-02T22:01:44.463282+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 403: { \"success\": false, \"error\": \"Access denied by security policy.\" }",
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:596611073)",
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-10-25T22:01:10.547276+03:00",
-        "detail": "[CRON_FAILURE]\nСэр, баланс OpenRouter не проверить удалось. Причина ошибки: \\\"ОШИБКА запроса activity (HTTP Error 401: Unauthorized)\\\". Подробности о ошибке приведены ниже.\n\n{\"name\": \"error\", \"parameters\": {\"original\": \"activity\", \"code\": \"401\", \"message\": \"Activity is Unauthorized\"}}\n\n⚠️ File-mutation verifier: 1 file edit(s) FAILED this turn despite any wording above that may suggest otherwise. Run `git status` or `read_file` to confirm what actually landed.\n  • `OpenRouter.csv` — [patch] Failed to read file: `C:\\Users\\Пользователь\\OpenRouter.csv`"
+        "at": "2026-11-02T22:01:44.463282+03:00",
+        "detail": "RuntimeError: HTTP 403: { \"success\": false, \"error\": \"Access denied by security policy.\" }"
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -324,13 +324,13 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-01T22:00:00+03:00",
-        "dispatched_at": "2026-11-01T22:00:35.693653+03:00",
-        "lateness_seconds": 35.7,
+        "scheduled_at": "2026-11-02T22:00:00+03:00",
+        "dispatched_at": "2026-11-02T22:00:00.492254+03:00",
+        "lateness_seconds": 0.5,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "0e5cacc39d324828aba6f496f59f3780"
+        "231c9f30845a454a8d13670130847171"
       ]
     },
     {
@@ -356,24 +356,24 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-11-02T07:55:00+03:00",
-      "last_run_at": "2026-11-01T08:02:21.264073+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-11-03T07:55:00+03:00",
+      "last_run_at": "2026-11-02T07:56:05.880609+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 402: This request requires more credits, or fewer max_tokens. You requested up to 32696 tokens, but can only afford 30899. To increase, visit https://openrouter.ai/settings/credits and add more credits",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-10-31T09:21:18.025883+03:00",
-        "detail": "RuntimeError: Hermes can't reach the model provider. You may be offline. Check your internet connection and try again."
+        "at": "2026-11-02T07:56:05.880609+03:00",
+        "detail": "RuntimeError: HTTP 402: This request requires more credits, or fewer max_tokens. You requested up to 32696 tokens, but can only afford 30899. To increase, visit https://openrouter.ai/settings/credits and add more credits"
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -388,15 +388,15 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-01T07:55:00+03:00",
-        "dispatched_at": "2026-11-01T07:55:35.047706+03:00",
-        "lateness_seconds": 35.0,
+        "scheduled_at": "2026-11-02T07:55:00+03:00",
+        "dispatched_at": "2026-11-02T07:55:35.756007+03:00",
+        "lateness_seconds": 35.8,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "7e00e87301dd4b5ba3cfa5761f54840b"
+        "622bf6e081b14602baf1d3efab189b62"
       ]
     }
   ],
-  "updated_at": "2026-11-01T22:03:12.015412+03:00"
+  "updated_at": "2026-11-02T22:01:55.503439+03:00"
 }
