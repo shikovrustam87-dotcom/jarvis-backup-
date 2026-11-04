@@ -299,6 +299,7 @@ tts:
 voice:
   auto_tts: true
   barge_in: false
+  voice_chat_mode: chained
 command_allowlist:
   - access to Hermes secrets (Windows path)
   - command parser limit or malformed executable payload
