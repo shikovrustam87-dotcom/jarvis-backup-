@@ -1,0 +1,14 @@
+{
+  "openviking": {
+    "catalog": {
+      "name": "openviking",
+      "pin": "e855796c83f9eb575d9b0f3082926660730f6a63",
+      "repo": "https://github.com/volcengine/OpenViking",
+      "sha": "e855796c83f9eb575d9b0f3082926660730f6a63",
+      "tier": "community"
+    },
+    "pinned": true,
+    "revision": "e855796c83f9eb575d9b0f3082926660730f6a63",
+    "source": "https://github.com/volcengine/OpenViking#examples/hermes-plugin"
+  }
+}

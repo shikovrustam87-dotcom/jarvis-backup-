@@ -1,4 +1,4 @@
-_config_version: 51
+_config_version: 52
 database:
   journal_mode: wal
 runtime:
@@ -39,8 +39,6 @@ terminal:
   container_persistent: true
 browser:
   inactivity_timeout: 120
-  extension_control:
-    enabled: false
 tool_loop_guardrails:
   warnings_enabled: true
   hard_stop_enabled: false

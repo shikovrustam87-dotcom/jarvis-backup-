@@ -1,4 +1,4 @@
-_config_version: 51
+_config_version: 52
 database:
   journal_mode: wal
 runtime:
@@ -28,8 +28,11 @@ plugins:
     - jarvis-switch
 model:
   default: xiaomi/mimo-v2.6-flash
-  provider: openrouter
-  base_url: https://openrouter.ai/api/v1
+  provider: custom
+  # NeuralGate — единый сетевой шлюз нейросетей: одна подписка/ключ, без OpenRouter-кредитов.
+  # api.neuralgate.ru доступен без VPN, в РФ. Ключ кладётся в env (NEURALGATE_API_KEY,
+  # либо CUSTOM_API_KEY / OPENAI_API_KEY / OPENROUTER_API_KEY, в зависимости от окружения).
+  base_url: https://api.neuralgate.ru/v1
 kanban:
   review_dispatch: true
 cron:
@@ -48,8 +51,6 @@ terminal:
 browser:
   cdp_url: http://127.0.0.1:9222
   inactivity_timeout: 120
-  extension_control:
-    enabled: false
   use_real_profile: true
 tool_loop_guardrails:
   warnings_enabled: true
@@ -381,6 +382,21 @@ providers:
     name: AITUNNEL
     base_url: https://api.aitunnel.ru/v1
     key_env: AITUNNEL_API_KEY
+
+  neuralgate:
+    name: NEURALGATE
+    base_url: https://api.neuralgate.ru/v1
+    key_env: NEURALGATE_API_KEY
+    # Единый сетевой шлюз нейросетей: одна подписка покрывает все модели, без OpenRouter-кредитов.
+    # Ключ в env NEURALGATE_API_KEY (или CUSTOM_API_KEY / OPENAI_API_KEY / OPENROUTER_API_KEY).
+
+  softhive:
+    name: SOFTHIVE (via Groq)
+    base_url: https://api.groq.com/openai/v1
+    key_env: GROQ_API_KEY
+    # Каталог SoftHive.ru: карточка «Llama 3.3-70B (Groq)» — бесплатный API-эндпоинт,
+    # без привязки карты, работает из РФ. Другие карточки SoftHive (Mistral и т.д.)
+    # добавляются в этот же раздел. 
 approvals:
   destructive_slash_confirm: false
 hooks:

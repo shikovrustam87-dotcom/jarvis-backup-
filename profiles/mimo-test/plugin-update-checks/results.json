@@ -1,1 +1,17 @@
-[]
+[
+  {
+    "name": "openviking",
+    "class": "catalog",
+    "current": "e855796c83f9eb575d9b0f3082926660730f6a63",
+    "latest": "e855796c83f9eb575d9b0f3082926660730f6a63",
+    "update_available": false,
+    "needs_fixing": null,
+    "min_hermes": ">=0.21.4",
+    "reason": "",
+    "checked_install": {
+      "source": "https://github.com/volcengine/OpenViking#examples/hermes-plugin",
+      "revision": "e855796c83f9eb575d9b0f3082926660730f6a63",
+      "pinned": true
+    }
+  }
+]

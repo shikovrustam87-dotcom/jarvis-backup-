@@ -3,10 +3,10 @@
     "name": "hermes-dpapi-secrets",
     "class": "catalog",
     "current": "c1651a401370013493903883d7ec4a1c90731b41",
-    "latest": "c1651a401370013493903883d7ec4a1c90731b41",
-    "update_available": false,
+    "latest": "5bad3fb2baf04ce6befecfefce6d14f4c9c98934",
+    "update_available": true,
     "needs_fixing": null,
-    "min_hermes": null,
+    "min_hermes": ">=0.21.4",
     "reason": "",
     "checked_install": {
       "source": "https://github.com/Yicheng-Mark/hermes-dpapi-secrets",

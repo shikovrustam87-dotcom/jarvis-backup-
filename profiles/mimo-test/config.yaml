@@ -1,4 +1,4 @@
-_config_version: 51
+_config_version: 52
 database:
   journal_mode: wal
 runtime:
@@ -48,8 +48,6 @@ terminal:
 browser:
   cdp_url: http://127.0.0.1:9222
   inactivity_timeout: 120
-  extension_control:
-    enabled: false
   use_real_profile: true
 tool_loop_guardrails:
   warnings_enabled: true
