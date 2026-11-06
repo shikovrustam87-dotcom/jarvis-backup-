@@ -27,12 +27,14 @@ plugins:
     - fish-audio
     - jarvis-switch
 model:
-  default: xiaomi/mimo-v2.6-flash
-  provider: custom
+  default: mimo-v2.6-pro
+  provider: aitunnel
   # NeuralGate — единый сетевой шлюз нейросетей: одна подписка/ключ, без OpenRouter-кредитов.
   # api.neuralgate.ru доступен без VPN, в РФ. Ключ кладётся в env (NEURALGATE_API_KEY,
   # либо CUSTOM_API_KEY / OPENAI_API_KEY / OPENROUTER_API_KEY, в зависимости от окружения).
-  base_url: https://api.neuralgate.ru/v1
+  base_url: https://api.aitunnel.ru/v1
+  api_mode: chat_completions
+  key_env: AITUNNEL_API_KEY
 kanban:
   review_dispatch: true
 cron:
@@ -373,10 +375,26 @@ wake_word:
   openwakeword:
     model: hey_jarvis
 fallback_providers:
-  - provider: openrouter
-    model: deepseek/deepseek-v4-flash
+  - provider: blockrun
+    model: nvidia/gpt-oss-120b
+    base_url: https://blockrun.ai/api/v1
   - provider: groq
     model: openai/gpt-oss-120b
+  - provider: ovh
+    model: Meta-Llama-3_3-70B-Instruct
+    base_url: https://oai.endpoints.kepler.ai.cloud.ovh.net/v1
+  - provider: llm7
+    model: nemotron-3-nano:30b
+    base_url: https://api.llm7.io/v1
+  - provider: jarvisclaw
+    model: auto/free
+    base_url: https://api.jarvisclaw.ai/v1
+  - provider: freeai
+    model: Qwen/Qwen3-30B-A3B-Instruct
+    base_url: https://api.free.ai/v1
+  - provider: pollinations
+    model: openai-fast
+    base_url: https://text.pollinations.ai/openai
 providers:
   aitunnel:
     name: AITUNNEL
@@ -397,6 +415,43 @@ providers:
     # Каталог SoftHive.ru: карточка «Llama 3.3-70B (Groq)» — бесплатный API-эндпоинт,
     # без привязки карты, работает из РФ. Другие карточки SoftHive (Mistral и т.д.)
     # добавляются в этот же раздел. 
+  echo:
+    base_url: http://127.0.0.1:8899/v1
+    extra_headers:
+      X-Echo-Test: abc
+    name: echo
+  ovh:
+    extra_headers:
+      Authorization: Bearer
+    name: OVHcloud anon
+    base_url: https://oai.endpoints.kepler.ai.cloud.ovh.net/v1
+  blockrun:
+    name: BlockRun
+    base_url: https://blockrun.ai/api/v1
+  llm7:
+    name: LLM7
+    base_url: https://api.llm7.io/v1
+  pollinations:
+    name: Pollinations
+    base_url: https://text.pollinations.ai/openai
+  jarvisclaw:
+    name: JarvisClaw
+    base_url: https://api.jarvisclaw.ai/v1
+    extra_headers:
+      Authorization: ''
+  freeai:
+    name: Free.ai
+    base_url: https://api.free.ai/v1
+  kilo:
+    name: Kilo Gateway
+    base_url: https://api.kilo.ai/api/gateway
+    extra_headers:
+      Authorization: ''
+  flm:
+    name: flm
+    base_url: https://flm.stonech.at/v1
+    extra_headers:
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
 approvals:
   destructive_slash_confirm: false
 hooks:

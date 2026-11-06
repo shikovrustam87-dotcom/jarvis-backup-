@@ -25,24 +25,24 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-11-05T08:00:00+03:00",
-      "last_run_at": "2026-11-04T08:00:30.985725+03:00",
+      "next_run_at": "2026-11-06T08:00:00+03:00",
+      "last_run_at": "2026-11-05T08:00:54.988068+03:00",
       "last_status": "error",
-      "last_error": "RuntimeError: HTTP 402: This request requires more credits, or fewer max_tokens. You requested up to 7012 tokens, but can only afford 5661. To increase, visit https://openrouter.ai/settings/credits and add more credits",
+      "last_error": "RuntimeError: HTTP 402: Prompt tokens limit exceeded: 23853 > 7990. To increase, visit https://openrouter.ai/settings/credits and add more credits",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-04T08:00:30.985725+03:00",
-        "detail": "RuntimeError: HTTP 402: This request requires more credits, or fewer max_tokens. You requested up to 7012 tokens, but can only afford 5661. To increase, visit https://openrouter.ai/settings/credits and add more credits"
+        "at": "2026-11-05T08:00:54.988068+03:00",
+        "detail": "RuntimeError: HTTP 402: Prompt tokens limit exceeded: 23853 > 7990. To increase, visit https://openrouter.ai/settings/credits and add more credits"
       },
-      "failure_streak": 3,
+      "failure_streak": 4,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -56,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-11-04T08:00:00+03:00",
-        "dispatched_at": "2026-11-04T08:00:11.009596+03:00",
-        "lateness_seconds": 11.0,
+        "scheduled_at": "2026-11-05T08:00:00+03:00",
+        "dispatched_at": "2026-11-05T08:00:34.443739+03:00",
+        "lateness_seconds": 34.4,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "abc1ced1193841d7bcc3b609586ce4dc"
+        "635e31e7baf1419fb81b8773dbaae754"
       ]
     },
     {
@@ -220,24 +220,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-11-05T22:00:00+03:00",
-      "last_run_at": "2026-11-04T22:01:01.211064+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 402: This request requires more credits, or fewer max_tokens. You requested up to 131072 tokens, but can only afford 4334. To increase, visit https://openrouter.ai/settings/credits and add more credits",
+      "next_run_at": "2026-11-06T22:00:00+03:00",
+      "last_run_at": "2026-11-05T22:05:02.904812+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-04T22:01:01.211064+03:00",
         "detail": "RuntimeError: HTTP 402: This request requires more credits, or fewer max_tokens. You requested up to 131072 tokens, but can only afford 4334. To increase, visit https://openrouter.ai/settings/credits and add more credits"
       },
-      "failure_streak": 3,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -254,14 +254,14 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-04T22:00:00+03:00",
-        "dispatched_at": "2026-11-04T22:00:37.149713+03:00",
-        "lateness_seconds": 37.1,
+        "scheduled_at": "2026-11-05T22:00:00+03:00",
+        "dispatched_at": "2026-11-05T22:00:34.905072+03:00",
+        "lateness_seconds": 34.9,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "872ed268ab784045b486c914a77a3edb"
+        "873e1defa1534358a98e9a2908a2cede"
       ]
     },
     {
@@ -289,24 +289,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 14
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-11-05T22:00:00+03:00",
-      "last_run_at": "2026-11-04T22:01:25.308759+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: Prompt tokens limit exceeded: 11496 > 8668. To increase, visit https://openrouter.ai/settings/credits and add more credits",
+      "next_run_at": "2026-11-06T22:00:00+03:00",
+      "last_run_at": "2026-11-05T22:01:51.612553+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-04T22:01:25.308759+03:00",
         "detail": "RuntimeError: Prompt tokens limit exceeded: 11496 > 8668. To increase, visit https://openrouter.ai/settings/credits and add more credits"
       },
-      "failure_streak": 3,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -324,13 +324,13 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-04T22:00:00+03:00",
-        "dispatched_at": "2026-11-04T22:00:37.149713+03:00",
-        "lateness_seconds": 37.1,
+        "scheduled_at": "2026-11-05T22:00:00+03:00",
+        "dispatched_at": "2026-11-05T22:00:34.905072+03:00",
+        "lateness_seconds": 34.9,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "95638e759e6c4a15a4bc33c611d67d96"
+        "eeca4fa90fc24e4386fc3eb1e607b379"
       ]
     },
     {
@@ -356,24 +356,24 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 13
+        "completed": 14
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-11-05T07:55:00+03:00",
-      "last_run_at": "2026-11-04T07:55:48.825382+03:00",
+      "next_run_at": "2026-11-06T07:55:00+03:00",
+      "last_run_at": "2026-11-05T07:55:52.623541+03:00",
       "last_status": "error",
-      "last_error": "RuntimeError: HTTP 402: This request requires more credits, or fewer max_tokens. You requested up to 12824 tokens, but can only afford 8775. To increase, visit https://openrouter.ai/settings/credits and add more credits",
+      "last_error": "RuntimeError: HTTP 402: Prompt tokens limit exceeded: 21342 > 7990. To increase, visit https://openrouter.ai/settings/credits and add more credits",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-04T07:55:48.825382+03:00",
-        "detail": "RuntimeError: HTTP 402: This request requires more credits, or fewer max_tokens. You requested up to 12824 tokens, but can only afford 8775. To increase, visit https://openrouter.ai/settings/credits and add more credits"
+        "at": "2026-11-05T07:55:52.623541+03:00",
+        "detail": "RuntimeError: HTTP 402: Prompt tokens limit exceeded: 21342 > 7990. To increase, visit https://openrouter.ai/settings/credits and add more credits"
       },
-      "failure_streak": 3,
+      "failure_streak": 4,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -388,15 +388,15 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-04T07:55:00+03:00",
-        "dispatched_at": "2026-11-04T07:55:11.005135+03:00",
-        "lateness_seconds": 11.0,
+        "scheduled_at": "2026-11-05T07:55:00+03:00",
+        "dispatched_at": "2026-11-05T07:55:34.435856+03:00",
+        "lateness_seconds": 34.4,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "af36dbd3f2c24cb3a1167e20f0202279"
+        "21645f8707404b7ca5a589bebac48bdd"
       ]
     }
   ],
-  "updated_at": "2026-11-04T22:01:25.324564+03:00"
+  "updated_at": "2026-11-05T22:05:14.681661+03:00"
 }
