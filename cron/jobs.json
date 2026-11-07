@@ -25,24 +25,24 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-11-06T08:00:00+03:00",
-      "last_run_at": "2026-11-05T08:00:54.988068+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 402: Prompt tokens limit exceeded: 23853 > 7990. To increase, visit https://openrouter.ai/settings/credits and add more credits",
+      "next_run_at": "2026-11-07T08:00:00+03:00",
+      "last_run_at": "2026-11-06T08:03:21.114104+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-05T08:00:54.988068+03:00",
         "detail": "RuntimeError: HTTP 402: Prompt tokens limit exceeded: 23853 > 7990. To increase, visit https://openrouter.ai/settings/credits and add more credits"
       },
-      "failure_streak": 4,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -56,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-11-05T08:00:00+03:00",
-        "dispatched_at": "2026-11-05T08:00:34.443739+03:00",
-        "lateness_seconds": 34.4,
+        "scheduled_at": "2026-11-06T08:00:00+03:00",
+        "dispatched_at": "2026-11-06T08:00:35.240002+03:00",
+        "lateness_seconds": 35.2,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "635e31e7baf1419fb81b8773dbaae754"
+        "3723ca9af9374baeb15eb16e4491c991"
       ]
     },
     {
@@ -220,15 +220,15 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 18
+        "completed": 19
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-11-06T22:00:00+03:00",
-      "last_run_at": "2026-11-05T22:05:02.904812+03:00",
+      "next_run_at": "2026-11-07T22:00:00+03:00",
+      "last_run_at": "2026-11-06T22:03:35.290632+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -254,14 +254,14 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-05T22:00:00+03:00",
-        "dispatched_at": "2026-11-05T22:00:34.905072+03:00",
-        "lateness_seconds": 34.9,
+        "scheduled_at": "2026-11-06T22:00:00+03:00",
+        "dispatched_at": "2026-11-06T22:00:35.660107+03:00",
+        "lateness_seconds": 35.7,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "873e1defa1534358a98e9a2908a2cede"
+        "370c05249a774b27957a6fc0b9a6c1a3"
       ]
     },
     {
@@ -289,15 +289,15 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 15
+        "completed": 16
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-11-06T22:00:00+03:00",
-      "last_run_at": "2026-11-05T22:01:51.612553+03:00",
+      "next_run_at": "2026-11-07T22:00:00+03:00",
+      "last_run_at": "2026-11-06T22:02:10.436057+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -324,13 +324,13 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-05T22:00:00+03:00",
-        "dispatched_at": "2026-11-05T22:00:34.905072+03:00",
-        "lateness_seconds": 34.9,
+        "scheduled_at": "2026-11-06T22:00:00+03:00",
+        "dispatched_at": "2026-11-06T22:00:35.660107+03:00",
+        "lateness_seconds": 35.7,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "eeca4fa90fc24e4386fc3eb1e607b379"
+        "267e0a15edc3402dac1500a6c98300fd"
       ]
     },
     {
@@ -356,24 +356,24 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 14
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-11-06T07:55:00+03:00",
-      "last_run_at": "2026-11-05T07:55:52.623541+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 402: Prompt tokens limit exceeded: 21342 > 7990. To increase, visit https://openrouter.ai/settings/credits and add more credits",
+      "next_run_at": "2026-11-07T07:55:00+03:00",
+      "last_run_at": "2026-11-06T08:00:50.421761+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-05T07:55:52.623541+03:00",
         "detail": "RuntimeError: HTTP 402: Prompt tokens limit exceeded: 21342 > 7990. To increase, visit https://openrouter.ai/settings/credits and add more credits"
       },
-      "failure_streak": 4,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -388,15 +388,66 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-05T07:55:00+03:00",
-        "dispatched_at": "2026-11-05T07:55:34.435856+03:00",
-        "lateness_seconds": 34.4,
+        "scheduled_at": "2026-11-06T07:55:00+03:00",
+        "dispatched_at": "2026-11-06T07:55:35.189022+03:00",
+        "lateness_seconds": 35.2,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "21645f8707404b7ca5a589bebac48bdd"
+        "089d9d09682a4c868602feaac129f0e6"
       ]
+    },
+    {
+      "id": "429e6958c7fd",
+      "name": "blood reminder",
+      "prompt": "Remind the user to call the mobile agent tomorrow at 10am.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "display": "every day at 10am"
+      },
+      "schedule_display": "every day at 10am",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-06T17:42:01.234994+03:00",
+      "next_run_at": "2026-11-07T10:00:00+03:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow"
     }
   ],
-  "updated_at": "2026-11-05T22:05:14.681661+03:00"
+  "updated_at": "2026-11-06T22:03:39.264877+03:00"
 }
