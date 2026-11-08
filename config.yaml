@@ -12,10 +12,10 @@ plugins:
     - hermes-resetwatch
     - kanban-graph
     - memory-wiki
-    - mnemosyne-dashboard
-    - obsidian-jarvis
-    - openviking
-    - security-guidance
+    - appflowy
+    - voice-studio
+    - open-whispr
+    - open-generative
   clone_timeout_seconds: 300
   disabled:
     - 0bull
