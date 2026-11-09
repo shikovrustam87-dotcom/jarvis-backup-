@@ -6,10 +6,8 @@ Windows Hermes: `$LOCALAPPDATA/hermes/.env` с CRLF — дописывать с 
 §
 База знаний — Obsidian vault `C:\Users\Пользователь\Documents\JarvisVault` (OBSIDIAN_VAULT_PATH в .env): raw/ (источники, только добавлять), wiki/ (по-русски), daily/, inbox/, index.md, log.md; правила — ПРАВИЛА.md в корне (читать).
 §
-Фоновый terminal-джоб идёт через WSL (без uvicorn/vosk) — сервисы 8000/8001 там падают. Windows-сервисы: execute_code → subprocess.Popen([glob-py, script], creationflags=DETACHED_PROCESS|CREATE_NEW_PROCESS_GROUP, stdout→лог) — живут без сессии. Vosk не открывает кириллицу в пути — ascii_path() (8.3) в vosk_server.py.
-§
 Визуал: только http://127.0.0.1:8765/figura_sveta_v1.html (visual_server.py, автозапуск jarvis_http.ps1; origin в api_server.cors_origins). vosk 8001 (Python311, PYTHONPATH не наследовать), TTS 8000/synthesize, ядро 8642. speak() ждёт unlockTTS. Проверять: computer_use capture + vision_analyze.
 §
-IPv6 сломан (TLS/DNS виснет) — фикс 05.11.2026: ipv6_off_all.ps1 (UAC) гасит ms_tcpip6 на всех адаптерах + реестр Tcpip6\Parameters DisabledComponents=0xFF (постоянно после ребута); всё по IPv4 (dzen, aitunnel). dzen в hosts (95.163.218.220). routing.json Happ не действует — не полагаться.
+Telegram-магазин Рустама развернут в C:/Users/Пользователь/jarvis-shop-bot/. Технологии: aiogram 3 + SQLite. Файлы: bot.py (бот), requirements.txt, .env (нужно заполнить токены), README_SETUP.md (инструкция). Бот поддерживает каталог, корзину, заказ с телефоном/адресом, оплату онлайн через ЮKassa или наличными при получении, уведомления админу. Нужно: токен от @BotFather, платёжный токен ЮKassa (или пусто для наличных), свой Telegram ID в ADMIN_IDS. Запуск: .venv\Scripts\activate && python bot.py. Для 24/7 — перенести на VPS.
 §
-План Рустама: позже установить find-skills (Vercel) — `npx skills add https://github.com/vercel-labs/skills --skill find-skills`; после команды, проверив аудит на skills.sh.
+Инструмент patch некорректно обрабатывает Python-файлы с экранированными обратными слэшами (\n, \t) — возникает ошибка 'Escape-drift detected'. Для правок таких файлов использовать execute_code (read + write) вместо patch.

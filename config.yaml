@@ -27,14 +27,13 @@ plugins:
     - fish-audio
     - jarvis-switch
 model:
-  default: mimo-v2.6-pro
-  provider: aitunnel
+  default: deepseek/deepseek-v4.1-flash
+  provider: nous
   # NeuralGate — единый сетевой шлюз нейросетей: одна подписка/ключ, без OpenRouter-кредитов.
   # api.neuralgate.ru доступен без VPN, в РФ. Ключ кладётся в env (NEURALGATE_API_KEY,
   # либо CUSTOM_API_KEY / OPENAI_API_KEY / OPENROUTER_API_KEY, в зависимости от окружения).
-  base_url: https://api.aitunnel.ru/v1
+  base_url: https://inference-api.nousresearch.com/v1
   api_mode: chat_completions
-  key_env: AITUNNEL_API_KEY
 kanban:
   review_dispatch: true
 cron:
@@ -242,6 +241,7 @@ display:
     scale: 0.66
   interface: cli
   personality: pirate
+  language: ru
 telemetry:
   shared_metrics:
     enabled: false
@@ -294,6 +294,7 @@ tts:
       timeout: 60
       output_format: wav
       voice_compatible: true
+      voice: Charon
   piper:
     voice: ru_RU-denis-medium
     voices_dir: 'C:\Users\Пользователь\AppData\Local\hermes\cache\piper-voices'

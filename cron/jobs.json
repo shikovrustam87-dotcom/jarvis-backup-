@@ -25,24 +25,24 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 19
+        "completed": 20
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-11-08T08:00:00+03:00",
-      "last_run_at": "2026-11-07T08:03:03.426052+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-11-09T08:00:00+03:00",
+      "last_run_at": "2026-11-08T08:00:42.738403+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: ⚠️ No reply: every provider in the fallback chain kept failing over, so the turn stopped instead of retrying forever. Send `continue` or switch provider.",
+      "last_delivery_error": "delivery error: Telegram send failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed (target telegram:596611073)",
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-05T08:00:54.988068+03:00",
-        "detail": "RuntimeError: HTTP 402: Prompt tokens limit exceeded: 23853 > 7990. To increase, visit https://openrouter.ai/settings/credits and add more credits"
+        "at": "2026-11-08T08:00:42.738403+03:00",
+        "detail": "RuntimeError: ⚠️ No reply: every provider in the fallback chain kept failing over, so the turn stopped instead of retrying forever. Send `continue` or switch provider."
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -56,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-11-07T08:00:00+03:00",
-        "dispatched_at": "2026-11-07T08:00:35.786038+03:00",
-        "lateness_seconds": 35.8,
+        "scheduled_at": "2026-11-08T08:00:00+03:00",
+        "dispatched_at": "2026-11-08T08:00:18.330999+03:00",
+        "lateness_seconds": 18.3,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "984949a79db0469b8530f496e13b3a29"
+        "fe811808639449d69bd48ab7bca80fd7"
       ]
     },
     {
@@ -91,15 +91,15 @@
       "schedule_display": "every sunday at 8pm",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:27:28.370436+03:00",
-      "next_run_at": "2026-11-08T20:00:00+03:00",
-      "last_run_at": "2026-11-01T20:07:20.151586+03:00",
+      "next_run_at": "2026-11-15T20:00:00+03:00",
+      "last_run_at": "2026-11-08T20:03:13.406480+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -119,14 +119,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-11-01T20:00:00+03:00",
-        "dispatched_at": "2026-11-01T20:00:35.642809+03:00",
-        "lateness_seconds": 35.6,
+        "scheduled_at": "2026-11-08T20:00:00+03:00",
+        "dispatched_at": "2026-11-08T20:00:26.143078+03:00",
+        "lateness_seconds": 26.1,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "3a011b95085344e5b8f9c43b861c9485"
+        "82c43acaba7d4347950826b57f5a0efe"
       ]
     },
     {
@@ -220,24 +220,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 20
+        "completed": 21
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-11-08T22:00:00+03:00",
-      "last_run_at": "2026-11-07T22:01:31.644954+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: ⚠️ No reply: every provider in the fallback chain kept failing over, so the turn stopped instead of retrying forever. Send `continue` or switch provider.",
-      "last_delivery_error": "delivery error: Telegram send failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed (target telegram:596611073)",
+      "next_run_at": "2026-11-09T22:00:00+03:00",
+      "last_run_at": "2026-11-08T22:02:21.817491+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-07T22:01:31.644954+03:00",
         "detail": "RuntimeError: ⚠️ No reply: every provider in the fallback chain kept failing over, so the turn stopped instead of retrying forever. Send `continue` or switch provider."
       },
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -254,14 +254,14 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-07T22:00:00+03:00",
-        "dispatched_at": "2026-11-07T22:00:57.744536+03:00",
-        "lateness_seconds": 57.7,
+        "scheduled_at": "2026-11-08T22:00:00+03:00",
+        "dispatched_at": "2026-11-08T22:00:27.624939+03:00",
+        "lateness_seconds": 27.6,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "89239de90dbd4f9c845868398a7f40f4"
+        "b0f8aea196464151b7a65ac8179d07f4"
       ]
     },
     {
@@ -289,24 +289,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-11-08T22:00:00+03:00",
-      "last_run_at": "2026-11-07T22:01:31.621356+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: ⚠️ No reply: every provider in the fallback chain kept failing over, so the turn stopped instead of retrying forever. Send `continue` or switch provider.",
-      "last_delivery_error": "delivery error: Telegram send failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed (target telegram:596611073)",
+      "next_run_at": "2026-11-09T22:00:00+03:00",
+      "last_run_at": "2026-11-08T22:01:37.806414+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-07T22:01:31.621356+03:00",
         "detail": "RuntimeError: ⚠️ No reply: every provider in the fallback chain kept failing over, so the turn stopped instead of retrying forever. Send `continue` or switch provider."
       },
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -324,13 +324,13 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-07T22:00:00+03:00",
-        "dispatched_at": "2026-11-07T22:00:57.744536+03:00",
-        "lateness_seconds": 57.7,
+        "scheduled_at": "2026-11-08T22:00:00+03:00",
+        "dispatched_at": "2026-11-08T22:00:27.624939+03:00",
+        "lateness_seconds": 27.6,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "91b2ac7fd3124debba13d9c0e2edbebc"
+        "2e2a969ef67749ad9b7f3923f7a61a4d"
       ]
     },
     {
@@ -356,24 +356,24 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-11-08T07:55:00+03:00",
-      "last_run_at": "2026-11-07T07:59:18.497327+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-11-09T07:55:00+03:00",
+      "last_run_at": "2026-11-08T07:55:42.006558+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: ⚠️ No reply: every provider in the fallback chain kept failing over, so the turn stopped instead of retrying forever. Send `continue` or switch provider.",
+      "last_delivery_error": "delivery error: Telegram send failed: httpx.ConnectError: [Errno 11001] getaddrinfo failed (target telegram:596611073)",
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-05T07:55:52.623541+03:00",
-        "detail": "RuntimeError: HTTP 402: Prompt tokens limit exceeded: 21342 > 7990. To increase, visit https://openrouter.ai/settings/credits and add more credits"
+        "at": "2026-11-08T07:55:42.006558+03:00",
+        "detail": "RuntimeError: ⚠️ No reply: every provider in the fallback chain kept failing over, so the turn stopped instead of retrying forever. Send `continue` or switch provider."
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -388,13 +388,13 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-07T07:55:00+03:00",
-        "dispatched_at": "2026-11-07T07:55:35.892028+03:00",
-        "lateness_seconds": 35.9,
+        "scheduled_at": "2026-11-08T07:55:00+03:00",
+        "dispatched_at": "2026-11-08T07:55:18.318197+03:00",
+        "lateness_seconds": 18.3,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "b397469829c646fb8de7ea70e5ad48f2"
+        "8145e31a4b094f8dacc7a53279348f2d"
       ]
     },
     {
@@ -420,24 +420,24 @@
       "schedule_display": "every day at 10am",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-06T17:42:01.234994+03:00",
-      "next_run_at": "2026-11-08T10:00:00+03:00",
-      "last_run_at": "2026-11-07T10:01:11.198313+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: ⚠️ No reply: every provider in the fallback chain kept failing over, so the turn stopped instead of retrying forever. Send `continue` or switch provider.",
+      "next_run_at": "2026-11-09T10:00:00+03:00",
+      "last_run_at": "2026-11-08T10:00:36.241430+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-07T10:01:11.198313+03:00",
         "detail": "RuntimeError: ⚠️ No reply: every provider in the fallback chain kept failing over, so the turn stopped instead of retrying forever. Send `continue` or switch provider."
       },
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -451,16 +451,16 @@
       "workdir": null,
       "timezone": "Europe/Moscow",
       "last_dispatch": {
-        "scheduled_at": "2026-11-07T10:00:00+03:00",
-        "dispatched_at": "2026-11-07T10:00:35.886693+03:00",
-        "lateness_seconds": 35.9,
+        "scheduled_at": "2026-11-08T10:00:00+03:00",
+        "dispatched_at": "2026-11-08T10:00:18.413986+03:00",
+        "lateness_seconds": 18.4,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "26a1ad4f3b144e31b250530373d216ef"
+        "91e995d8363845ab843ea06490a71ce8"
       ]
     }
   ],
-  "updated_at": "2026-11-07T22:01:32.349731+03:00"
+  "updated_at": "2026-11-08T22:02:22.857927+03:00"
 }
