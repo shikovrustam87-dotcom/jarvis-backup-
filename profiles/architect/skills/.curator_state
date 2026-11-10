@@ -1,9 +1,9 @@
 {
-  "last_report_path": "C:\\Users\\Пользователь\\AppData\\Local\\hermes\\profiles\\architect\\logs\\curator\\20261102-194244",
-  "last_run_at": "2026-11-02T19:42:44.304011+00:00",
-  "last_run_duration_seconds": 2.257789,
-  "last_run_summary": "auto: 3 marked stale; llm: skipped (consolidation off)",
+  "last_report_path": "C:\\Users\\Пользователь\\AppData\\Local\\hermes\\profiles\\architect\\logs\\curator\\20261109-202606",
+  "last_run_at": "2026-11-09T20:26:06.882237+00:00",
+  "last_run_duration_seconds": 3.658069,
+  "last_run_summary": "auto: 2 marked stale; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": null,
   "paused": false,
-  "run_count": 2
+  "run_count": 3
 }

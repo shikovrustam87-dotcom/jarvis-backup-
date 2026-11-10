@@ -8,6 +8,4 @@ Windows Hermes: `$LOCALAPPDATA/hermes/.env` с CRLF — дописывать с 
 §
 Визуал: только http://127.0.0.1:8765/figura_sveta_v1.html (visual_server.py, автозапуск jarvis_http.ps1; origin в api_server.cors_origins). vosk 8001 (Python311, PYTHONPATH не наследовать), TTS 8000/synthesize, ядро 8642. speak() ждёт unlockTTS. Проверять: computer_use capture + vision_analyze.
 §
-Telegram-магазин Рустама развернут в C:/Users/Пользователь/jarvis-shop-bot/. Технологии: aiogram 3 + SQLite. Файлы: bot.py (бот), requirements.txt, .env (нужно заполнить токены), README_SETUP.md (инструкция). Бот поддерживает каталог, корзину, заказ с телефоном/адресом, оплату онлайн через ЮKassa или наличными при получении, уведомления админу. Нужно: токен от @BotFather, платёжный токен ЮKassa (или пусто для наличных), свой Telegram ID в ADMIN_IDS. Запуск: .venv\Scripts\activate && python bot.py. Для 24/7 — перенести на VPS.
-§
-Инструмент patch некорректно обрабатывает Python-файлы с экранированными обратными слэшами (\n, \t) — возникает ошибка 'Escape-drift detected'. Для правок таких файлов использовать execute_code (read + write) вместо patch.
+Hermes Mobile v3.0.1 connected via Happ tunnel (Android↔Windows). API Server at http://10.6.7.1:8642 (health: 200). API_SERVER_KEY=2WAFkxYtDDeCK_9uSHGK2sGlipXPkTulhwFMvRUgCyM. TCP proxy: 10.6.7.1:8642 → 127.0.0.1:8642 (PID 22688). config.yaml platforms.api_server.extra.host=0.0.0.0. Happ tunnel: Windows 10.6.7.1, Android 10.6.7.2, port 57208.
