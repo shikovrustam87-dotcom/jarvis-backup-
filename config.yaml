@@ -27,13 +27,14 @@ plugins:
     - fish-audio
     - jarvis-switch
 model:
-  default: deepseek/deepseek-v4.1-flash
-  provider: nous
+  default: mimo-v2.6-flash
+  provider: aitunnel
   # NeuralGate — единый сетевой шлюз нейросетей: одна подписка/ключ, без OpenRouter-кредитов.
   # api.neuralgate.ru доступен без VPN, в РФ. Ключ кладётся в env (NEURALGATE_API_KEY,
   # либо CUSTOM_API_KEY / OPENAI_API_KEY / OPENROUTER_API_KEY, в зависимости от окружения).
-  base_url: https://inference-api.nousresearch.com/v1
+  base_url: https://api.aitunnel.ru/v1
   api_mode: chat_completions
+  key_env: AITUNNEL_API_KEY
 kanban:
   review_dispatch: true
 cron:

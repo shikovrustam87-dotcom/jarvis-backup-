@@ -9,3 +9,7 @@ Windows Hermes: `$LOCALAPPDATA/hermes/.env` с CRLF — дописывать с 
 Визуал: только http://127.0.0.1:8765/figura_sveta_v1.html (visual_server.py, автозапуск jarvis_http.ps1; origin в api_server.cors_origins). vosk 8001 (Python311, PYTHONPATH не наследовать), TTS 8000/synthesize, ядро 8642. speak() ждёт unlockTTS. Проверять: computer_use capture + vision_analyze.
 §
 Hermes Mobile v3.0.1 connected via Happ tunnel (Android↔Windows). API Server at http://10.6.7.1:8642 (health: 200). API_SERVER_KEY=2WAFkxYtDDeCK_9uSHGK2sGlipXPkTulhwFMvRUgCyM. TCP proxy: 10.6.7.1:8642 → 127.0.0.1:8642 (PID 22688). config.yaml platforms.api_server.extra.host=0.0.0.0. Happ tunnel: Windows 10.6.7.1, Android 10.6.7.2, port 57208.
+§
+Hermes Mobile must use HTTP (not TLS/mTLS) to connect to API server at http://100.118.249.102:8642, as the local server only supports HTTP on port 8642.
+§
+1C client 8.3.27.1688 installed at C:\Program Files\1cv8\8.3.27.1688\, comcntr.dll present at bin\comcntr.dll. Python 3.11.6 with pywin32 312 installed, win32com import verified working.
