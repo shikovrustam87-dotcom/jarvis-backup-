@@ -1,9 +1,9 @@
 {
-  "last_report_path": "C:\\Users\\Пользователь\\AppData\\Local\\hermes\\profiles\\mimo-test\\logs\\curator\\20261105-110315",
-  "last_run_at": "2026-11-05T11:03:15.067381+00:00",
-  "last_run_duration_seconds": 1.10399,
+  "last_report_path": "C:\\Users\\Пользователь\\AppData\\Local\\hermes\\profiles\\mimo-test\\logs\\curator\\20261112-123531",
+  "last_run_at": "2026-11-12T12:35:31.469293+00:00",
+  "last_run_duration_seconds": 1.367588,
   "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": null,
   "paused": false,
-  "run_count": 1
+  "run_count": 2
 }

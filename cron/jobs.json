@@ -25,24 +25,24 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 23
+        "completed": 24
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-11-12T08:00:00+03:00",
-      "last_run_at": "2026-11-11T20:13:29.104312+03:00",
+      "next_run_at": "2026-11-13T08:00:00+03:00",
+      "last_run_at": "2026-11-12T08:02:27.793541+03:00",
       "last_status": "error",
       "last_error": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-11T20:13:29.104312+03:00",
+        "at": "2026-11-12T08:02:27.793541+03:00",
         "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
       },
-      "failure_streak": 1,
+      "failure_streak": 2,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -56,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-11-11T08:00:00+03:00",
-        "dispatched_at": "2026-11-11T20:12:39.452103+03:00",
-        "lateness_seconds": 43959.5,
-        "kind": "catch_up"
+        "scheduled_at": "2026-11-12T08:00:00+03:00",
+        "dispatched_at": "2026-11-12T08:00:20.870945+03:00",
+        "lateness_seconds": 20.9,
+        "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "2d7b0d035c2e4ac2b28eca8749cf6be4"
+        "6a32630aed3741e28e3caaf0f46b40a3"
       ]
     },
     {
@@ -220,24 +220,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 24
+        "completed": 25
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-11-12T22:00:00+03:00",
-      "last_run_at": "2026-11-11T22:05:31.826518+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-11-13T22:00:00+03:00",
+      "last_run_at": "2026-11-12T22:00:47.103338+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-07T22:01:31.644954+03:00",
-        "detail": "RuntimeError: ⚠️ No reply: every provider in the fallback chain kept failing over, so the turn stopped instead of retrying forever. Send `continue` or switch provider."
+        "at": "2026-11-12T22:00:47.103338+03:00",
+        "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -254,14 +254,14 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-11T22:00:00+03:00",
-        "dispatched_at": "2026-11-11T22:00:20.449370+03:00",
-        "lateness_seconds": 20.4,
+        "scheduled_at": "2026-11-12T22:00:00+03:00",
+        "dispatched_at": "2026-11-12T22:00:21.065415+03:00",
+        "lateness_seconds": 21.1,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "90813dd924d2441983e4c0eb21ff5434"
+        "462a1fc983af4e03962d4c150d6ffd9d"
       ]
     },
     {
@@ -289,24 +289,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 21
+        "completed": 22
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-11-12T22:00:00+03:00",
-      "last_run_at": "2026-11-11T22:00:57.433737+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера.",
+      "next_run_at": "2026-11-13T22:00:00+03:00",
+      "last_run_at": "2026-11-12T22:00:51.106440+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-11T22:00:57.433737+03:00",
         "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
       },
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -324,13 +324,13 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-11T22:00:00+03:00",
-        "dispatched_at": "2026-11-11T22:00:20.449370+03:00",
-        "lateness_seconds": 20.4,
+        "scheduled_at": "2026-11-12T22:00:00+03:00",
+        "dispatched_at": "2026-11-12T22:00:21.065415+03:00",
+        "lateness_seconds": 21.1,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "c66c171c9cf1489dab9e7eac9a424404"
+        "16aea7cbf2634342be9e85a89c4639c0"
       ]
     },
     {
@@ -356,24 +356,24 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 20
+        "completed": 21
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-11-12T07:55:00+03:00",
-      "last_run_at": "2026-11-11T20:13:29.150010+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера.",
-      "last_delivery_error": null,
+      "next_run_at": "2026-11-13T07:55:00+03:00",
+      "last_run_at": "2026-11-12T08:05:19.724367+03:00",
+      "last_status": "delivery_failed",
+      "last_error": null,
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:596611073)",
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-11T20:13:29.150010+03:00",
         "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
       },
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -388,13 +388,13 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-11T07:55:00+03:00",
-        "dispatched_at": "2026-11-11T20:12:39.452103+03:00",
-        "lateness_seconds": 44259.5,
-        "kind": "catch_up"
+        "scheduled_at": "2026-11-12T07:55:00+03:00",
+        "dispatched_at": "2026-11-12T07:55:20.840013+03:00",
+        "lateness_seconds": 20.8,
+        "kind": "on_time"
       },
       "canonical_completions": [
-        "e08afa74ed114060b2de307cfb0126f3"
+        "8532cc53d5024e4fb62a7db38a5678d6"
       ]
     },
     {
@@ -420,24 +420,24 @@
       "schedule_display": "every day at 10am",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-06T17:42:01.234994+03:00",
-      "next_run_at": "2026-11-12T10:00:00+03:00",
-      "last_run_at": "2026-11-11T20:13:29.170954+03:00",
+      "next_run_at": "2026-11-13T10:00:00+03:00",
+      "last_run_at": "2026-11-12T10:00:28.394061+03:00",
       "last_status": "error",
       "last_error": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-11T20:13:29.170954+03:00",
+        "at": "2026-11-12T10:00:28.394061+03:00",
         "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
       },
-      "failure_streak": 1,
+      "failure_streak": 2,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -451,14 +451,14 @@
       "workdir": null,
       "timezone": "Europe/Moscow",
       "last_dispatch": {
-        "scheduled_at": "2026-11-11T10:00:00+03:00",
-        "dispatched_at": "2026-11-11T20:12:39.452103+03:00",
-        "lateness_seconds": 36759.5,
-        "kind": "catch_up"
+        "scheduled_at": "2026-11-12T10:00:00+03:00",
+        "dispatched_at": "2026-11-12T10:00:01.136666+03:00",
+        "lateness_seconds": 1.1,
+        "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "e9307e44da5a42c589155291e1d0d5f2"
+        "d65a4b385f8540ed99300c96b1747ab4"
       ]
     },
     {
@@ -519,5 +519,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-11T22:05:32.905716+03:00"
+  "updated_at": "2026-11-12T22:00:52.089546+03:00"
 }

@@ -1,4 +1,4 @@
-_config_version: 52
+_config_version: 53
 database:
   journal_mode: wal
 runtime:
@@ -7,15 +7,23 @@ attachments:
   storage: hermes-home
 plugins:
   enabled:
-    - disk-cleanup
-    - hermes-dpapi-secrets
-    - hermes-resetwatch
-    - kanban-graph
-    - memory-wiki
+    - advanced-delegation
+    - agent-importers
     - appflowy
-    - voice-studio
-    - open-whispr
+    - disk-cleanup
+    - hermes-browser-extension
+    - hermes-dpapi-secrets
+    - hermes-psfn-avatar
+    - hermes-resetwatch
+    - intents-pay
+    - kanban-graph
+    - langfuse
+    - memory-wiki
+    - omh
     - open-generative
+    - open-whispr
+    - provider-status
+    - voice-studio
   clone_timeout_seconds: 300
   disabled:
     - 0bull
@@ -26,6 +34,7 @@ plugins:
     - clinepass
     - fish-audio
     - jarvis-switch
+  auto_apply: true
 model:
   default: mimo-v2.6-flash
   provider: aitunnel
@@ -178,24 +187,34 @@ platform_toolsets:
     - vision
     - web
     - x_search
+    - avatar
   telegram:
     - hermes-telegram
+    - avatar
   discord:
     - hermes-discord
+    - avatar
   whatsapp:
     - hermes-whatsapp
+    - avatar
   slack:
     - hermes-slack
+    - avatar
   signal:
     - hermes-signal
+    - avatar
   qqbot:
     - hermes-qqbot
+    - avatar
   yuanbao:
     - hermes-yuanbao
+    - avatar
   teams:
     - hermes-teams
+    - avatar
   google_chat:
     - hermes-google_chat
+    - avatar
 stt:
   provider: yandex
   enabled: true
@@ -475,3 +494,8 @@ hooks:
 hooks_auto_accept: true
 web:
   search_backend: ddgs
+dashboard:
+  theme: midnight
+  font: system-serif
+_left_core_installed:
+  - langfuse
