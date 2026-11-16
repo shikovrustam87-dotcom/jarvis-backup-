@@ -36,14 +36,12 @@ plugins:
     - jarvis-switch
   auto_apply: true
 model:
-  default: mimo-v2.6-flash
-  provider: aitunnel
+  default: huihui-qwen3.8-27b-abliterated
+  provider: lmstudio
   # NeuralGate — единый сетевой шлюз нейросетей: одна подписка/ключ, без OpenRouter-кредитов.
   # api.neuralgate.ru доступен без VPN, в РФ. Ключ кладётся в env (NEURALGATE_API_KEY,
   # либо CUSTOM_API_KEY / OPENAI_API_KEY / OPENROUTER_API_KEY, в зависимости от окружения).
-  base_url: https://api.aitunnel.ru/v1
-  api_mode: chat_completions
-  key_env: AITUNNEL_API_KEY
+  base_url: http://127.0.0.1:1234/v1
 kanban:
   review_dispatch: true
 cron:

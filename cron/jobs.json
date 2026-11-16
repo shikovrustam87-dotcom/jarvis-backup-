@@ -25,24 +25,24 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 25
+        "completed": 27
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-11-14T08:00:00+03:00",
-      "last_run_at": "2026-11-13T08:00:42.459454+03:00",
+      "next_run_at": "2026-11-16T08:00:00+03:00",
+      "last_run_at": "2026-11-15T09:21:25.442410+03:00",
       "last_status": "error",
-      "last_error": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера.",
+      "last_error": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K).",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-13T08:00:42.459454+03:00",
-        "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
+        "at": "2026-11-15T09:21:25.442410+03:00",
+        "detail": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K)."
       },
-      "failure_streak": 3,
+      "failure_streak": 5,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -56,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-11-13T08:00:00+03:00",
-        "dispatched_at": "2026-11-13T08:00:20.981526+03:00",
-        "lateness_seconds": 21.0,
-        "kind": "on_time"
+        "scheduled_at": "2026-11-15T08:00:00+03:00",
+        "dispatched_at": "2026-11-15T09:18:34.874961+03:00",
+        "lateness_seconds": 4714.9,
+        "kind": "late"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "34cb07341ee54b348f62477af1195daf"
+        "0a8cb3ca24bc46bd9c694353f3cfdcc5"
       ]
     },
     {
@@ -91,21 +91,24 @@
       "schedule_display": "every sunday at 8pm",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:27:28.370436+03:00",
-      "next_run_at": "2026-11-15T20:00:00+03:00",
-      "last_run_at": "2026-11-08T20:03:13.406480+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-11-22T20:00:00+03:00",
+      "last_run_at": "2026-11-15T20:01:04.511334+03:00",
+      "last_status": "error",
+      "last_error": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K).",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "last_failure": null,
-      "failure_streak": 0,
+      "last_failure": {
+        "at": "2026-11-15T20:01:04.511334+03:00",
+        "detail": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K)."
+      },
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -119,14 +122,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-11-08T20:00:00+03:00",
-        "dispatched_at": "2026-11-08T20:00:26.143078+03:00",
-        "lateness_seconds": 26.1,
+        "scheduled_at": "2026-11-15T20:00:00+03:00",
+        "dispatched_at": "2026-11-15T20:00:31.795394+03:00",
+        "lateness_seconds": 31.8,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "82c43acaba7d4347950826b57f5a0efe"
+        "0936dc1fbc274b1e950ce6706c2e1d9d"
       ]
     },
     {
@@ -220,24 +223,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 26
+        "completed": 28
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-11-14T22:00:00+03:00",
-      "last_run_at": "2026-11-13T22:03:37.894186+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-11-16T22:00:00+03:00",
+      "last_run_at": "2026-11-15T22:02:16.101386+03:00",
+      "last_status": "error",
+      "last_error": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K).",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-12T22:00:47.103338+03:00",
-        "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
+        "at": "2026-11-15T22:02:16.101386+03:00",
+        "detail": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K)."
       },
-      "failure_streak": 0,
+      "failure_streak": 2,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -254,14 +257,14 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-13T22:00:00+03:00",
-        "dispatched_at": "2026-11-13T22:00:21.327961+03:00",
-        "lateness_seconds": 21.3,
+        "scheduled_at": "2026-11-15T22:00:00+03:00",
+        "dispatched_at": "2026-11-15T22:00:11.871442+03:00",
+        "lateness_seconds": 11.9,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "354d9d3dc6284312851f42d8743611ea"
+        "1432d105fa6e47a99df220b63aa9b9ab"
       ]
     },
     {
@@ -289,24 +292,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 23
+        "completed": 25
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-11-14T22:00:00+03:00",
-      "last_run_at": "2026-11-13T22:01:15.254959+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-11-16T22:00:00+03:00",
+      "last_run_at": "2026-11-15T22:01:08.996137+03:00",
+      "last_status": "error",
+      "last_error": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K).",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-11T22:00:57.433737+03:00",
-        "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
+        "at": "2026-11-15T22:01:08.996137+03:00",
+        "detail": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K)."
       },
-      "failure_streak": 0,
+      "failure_streak": 2,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -324,13 +327,13 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-13T22:00:00+03:00",
-        "dispatched_at": "2026-11-13T22:00:21.327961+03:00",
-        "lateness_seconds": 21.3,
+        "scheduled_at": "2026-11-15T22:00:00+03:00",
+        "dispatched_at": "2026-11-15T22:00:11.871442+03:00",
+        "lateness_seconds": 11.9,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "1543bcae50e44b20afb05cb3c35a2b0d"
+        "9b4c7f432f7f406ebf3af9f22785b184"
       ]
     },
     {
@@ -356,24 +359,24 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 22
+        "completed": 24
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-11-14T07:55:00+03:00",
-      "last_run_at": "2026-11-13T07:56:08.574770+03:00",
+      "next_run_at": "2026-11-16T07:55:00+03:00",
+      "last_run_at": "2026-11-15T09:19:20.980841+03:00",
       "last_status": "error",
-      "last_error": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера.",
+      "last_error": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K).",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-13T07:56:08.574770+03:00",
-        "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
+        "at": "2026-11-15T09:19:20.980841+03:00",
+        "detail": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K)."
       },
-      "failure_streak": 1,
+      "failure_streak": 3,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -388,13 +391,13 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-13T07:55:00+03:00",
-        "dispatched_at": "2026-11-13T07:55:20.975950+03:00",
-        "lateness_seconds": 21.0,
-        "kind": "on_time"
+        "scheduled_at": "2026-11-15T07:55:00+03:00",
+        "dispatched_at": "2026-11-15T09:18:34.874961+03:00",
+        "lateness_seconds": 5014.9,
+        "kind": "late"
       },
       "canonical_completions": [
-        "9ff4de600458418bb64db209e20af1e8"
+        "761df6a3c8b74a6d83378e6ba4d46db9"
       ]
     },
     {
@@ -420,24 +423,24 @@
       "schedule_display": "every day at 10am",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-06T17:42:01.234994+03:00",
-      "next_run_at": "2026-11-14T10:00:00+03:00",
-      "last_run_at": "2026-11-13T10:00:42.538336+03:00",
+      "next_run_at": "2026-11-16T10:00:00+03:00",
+      "last_run_at": "2026-11-15T10:00:40.349339+03:00",
       "last_status": "error",
-      "last_error": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера.",
-      "last_delivery_error": null,
+      "last_error": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K).",
+      "last_delivery_error": "live adapter send failed: send_path_degraded; live adapter delivery to telegram:596611073 failed: send_path_degraded; delivery error: Telegram send failed: httpx.ConnectError:  (target telegram:596611073); queued text for telegram:596611073 for redelivery once the live adapter reconnects",
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-13T10:00:42.538336+03:00",
-        "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
+        "at": "2026-11-15T10:00:40.349339+03:00",
+        "detail": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K)."
       },
-      "failure_streak": 3,
+      "failure_streak": 5,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -451,14 +454,14 @@
       "workdir": null,
       "timezone": "Europe/Moscow",
       "last_dispatch": {
-        "scheduled_at": "2026-11-13T10:00:00+03:00",
-        "dispatched_at": "2026-11-13T10:00:21.000791+03:00",
-        "lateness_seconds": 21.0,
+        "scheduled_at": "2026-11-15T10:00:00+03:00",
+        "dispatched_at": "2026-11-15T10:00:34.854767+03:00",
+        "lateness_seconds": 34.9,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "9c5d5ca4724e4e178861facb39812335"
+        "698f537bfb6d462db83608f4bd4b4bee"
       ]
     },
     {
@@ -519,5 +522,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-13T22:03:39.240105+03:00"
+  "updated_at": "2026-11-15T22:02:16.115087+03:00"
 }
