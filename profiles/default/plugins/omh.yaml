@@ -1,0 +1,8 @@
+omh_home: ~/.omh
+entries:
+  omh:
+    settings:
+      profile_stores:
+        default: ~/.omh
+        mistral: ~/.omh/mistral
+        together: ~/.omh/together

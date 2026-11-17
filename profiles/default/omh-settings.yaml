@@ -1,0 +1,3 @@
+omh_home: ~/.omh
+profile_stores:
+  default: ~/.omh
