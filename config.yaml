@@ -9,8 +9,7 @@ agent:
 approvals:
   destructive_slash_confirm: false
 attachments:
-  storage: "C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\
-    \u044C/AppData/Local/hermes/hermes-home"
+  storage: "C:/Users/Пользователь/AppData/Local/hermes/hermes-home"
 auth:
   adopt_external_logins: true
   codex_login_flow: device_code
@@ -42,23 +41,23 @@ code_execution:
   max_tool_calls: 50
   timeout: 300
 command_allowlist:
-- access to Hermes secrets (Windows path)
-- command parser limit or malformed executable payload
-- cua:bring_to_front:background
-- cua:click:background
-- cua:click:foreground
-- cua:focus_app:background
-- execute_code
-- force kill processes (taskkill /F)
-- in-place edit of Hermes config/env
-- overwrite project env/config file
-- recursive delete
-- script execution via -e/-c flag
+  - access to Hermes secrets (Windows path)
+  - command parser limit or malformed executable payload
+  - cua:bring_to_front:background
+  - cua:click:background
+  - cua:click:foreground
+  - cua:focus_app:background
+  - execute_code
+  - force kill processes (taskkill /F)
+  - in-place edit of Hermes config/env
+  - overwrite project env/config file
+  - recursive delete
+  - script execution via -e/-c flag
 compression:
   checkpoint_required: false
   codex_app_server_auto: native
   codex_gpt55_autoraise: true
-  codex_responses_compact_threshold: null
+  codex_responses_compact_threshold:
   codex_responses_native: false
   enabled: true
   hygiene_max_turn_hold_seconds: 10
@@ -76,7 +75,7 @@ compression:
 cron:
   catch_up_missed: true
 dashboard:
-  theme: midnight
+  theme: default
 database:
   journal_mode: wal
 delegation:
@@ -106,27 +105,27 @@ display:
   suppress_warning_notifications: false
   tool_progress: all
 fallback_providers:
-- base_url: https://blockrun.ai/api/v1
-  model: nvidia/gpt-oss-120b
-  provider: blockrun
-- base_url: https://api.groq.com/openai/v1
-  model: openai/gpt-oss-120b
-  provider: groq
-- base_url: https://oai.endpoints.kepler.ai.cloud.ovh.net/v1
-  model: meta-llama-3-70b
-  provider: ovh
-- base_url: https://api.llm7.io/v1
-  model: nemotron-3-nano-30b
-  provider: llm7
-- base_url: https://api.jarvisclaw.ai/v1
-  model: auto/free
-  provider: jarvisclaw
-- base_url: https://api.free.ai/v1
-  model: qwen3-30b-a3b
-  provider: freeai
-- base_url: https://text.pollinations.ai/openai
-  model: openai-fast
-  provider: pollinations
+  - base_url: https://blockrun.ai/api/v1
+    model: nvidia/gpt-oss-120b
+    provider: blockrun
+  - base_url: https://api.groq.com/openai/v1
+    model: openai/gpt-oss-120b
+    provider: groq
+  - base_url: https://oai.endpoints.kepler.ai.cloud.ovh.net/v1
+    model: meta-llama-3-70b
+    provider: ovh
+  - base_url: https://api.llm7.io/v1
+    model: nemotron-3-nano-30b
+    provider: llm7
+  - base_url: https://api.jarvisclaw.ai/v1
+    model: auto/free
+    provider: jarvisclaw
+  - base_url: https://api.free.ai/v1
+    model: qwen3-30b-a3b
+    provider: freeai
+  - base_url: https://text.pollinations.ai/openai
+    model: openai-fast
+    provider: pollinations
 gateway:
   allow_all_users: false
   api_server:
@@ -173,47 +172,44 @@ gateway:
 group_sessions_per_user: true
 hooks:
   pre_tool_call:
-  - command: "C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\
-      \u043B\u044C/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe\
-      \ C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\
-      \u044C/AppData/Local/hermes/hooks/guard.py"
-    matcher: terminal|execute_code
-    timeout: 10
+    - command: "C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/hooks/guard.py"
+      matcher: terminal|execute_code
+      timeout: 10
 hooks_auto_accept: true
 kanban:
   review_dispatch: true
 known_builtin_toolsets:
   cli:
-  - browser
-  - clarify
-  - code_execution
-  - computer_use
-  - connections
-  - context_engine
-  - cronjob
-  - delegation
-  - discord
-  - discord_admin
-  - file
-  - image_gen
-  - kanban
-  - memory
-  - session_search
-  - skills
-  - stt
-  - terminal
-  - todo
-  - tts
-  - video
-  - video_gen
-  - vision
-  - web
-  - x_search
-  - yuanbao
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - connections
+    - context_engine
+    - cronjob
+    - delegation
+    - discord
+    - discord_admin
+    - file
+    - image_gen
+    - kanban
+    - memory
+    - session_search
+    - skills
+    - stt
+    - terminal
+    - todo
+    - tts
+    - video
+    - video_gen
+    - vision
+    - web
+    - x_search
+    - yuanbao
 known_plugin_toolsets:
   cli:
-  - a2a
-max_concurrent_sessions: null
+    - a2a
+max_concurrent_sessions:
 memory:
   memory_char_limit: 2200
   memory_enabled: true
@@ -226,63 +222,65 @@ memory:
   user_char_limit: 1375
   user_profile_enabled: true
 model:
-  default: openai-fast
-  provider: pollinations
+  default: qwen3.5-9b-mtp
+  provider: lmstudio
+  base_url: http://127.0.0.1:1234/v1
+  api_mode: chat_completions
 onboarding:
   seen:
     busy_input_prompt: true
 platform_toolsets:
   cli:
-  - a2a
-  - browser
-  - clarify
-  - code_execution
-  - computer_use
-  - connections
-  - cronjob
-  - delegation
-  - file
-  - image_gen
-  - kanban
-  - memory
-  - session_search
-  - skills
-  - terminal
-  - todo
-  - tts
-  - video
-  - video_gen
-  - vision
-  - web
-  - x_search
-  - avatar
+    - a2a
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - connections
+    - cronjob
+    - delegation
+    - file
+    - image_gen
+    - kanban
+    - memory
+    - session_search
+    - skills
+    - terminal
+    - todo
+    - tts
+    - video
+    - video_gen
+    - vision
+    - web
+    - x_search
+    - avatar
   discord:
-  - hermes-discord
-  - avatar
+    - hermes-discord
+    - avatar
   google_chat:
-  - hermes-google_chat
-  - avatar
+    - hermes-google_chat
+    - avatar
   qqbot:
-  - hermes-qqbot
-  - avatar
+    - hermes-qqbot
+    - avatar
   signal:
-  - hermes-signal
-  - avatar
+    - hermes-signal
+    - avatar
   slack:
-  - hermes-slack
-  - avatar
+    - hermes-slack
+    - avatar
   teams:
-  - hermes-teams
-  - avatar
+    - hermes-teams
+    - avatar
   telegram:
-  - hermes-telegram
-  - avatar
+    - hermes-telegram
+    - avatar
   whatsapp:
-  - hermes-whatsapp
-  - avatar
+    - hermes-whatsapp
+    - avatar
   yuanbao:
-  - hermes-yuanbao
-  - avatar
+    - hermes-yuanbao
+    - avatar
 platforms:
   api_server:
     enabled: true
@@ -302,31 +300,31 @@ plugins:
   auto_apply: true
   clone_timeout_seconds: 300
   disabled:
-  - 0bull
-  - account-pool
-  - acedatacloud-media
-  - adaption
-  - adwhispr
-  - clinepass
-  - fish-audio
-  - jarvis-switch
+    - 0bull
+    - account-pool
+    - acedatacloud-media
+    - adaption
+    - adwhispr
+    - clinepass
+    - fish-audio
+    - jarvis-switch
   enabled:
-  - advanced-delegation
-  - agent-importers
-  - appflowy
-  - disk-cleanup
-  - hermes-browser-extension
-  - hermes-dpapi-secrets
-  - hermes-psfn-avatar
-  - hermes-resetwatch
-  - intents-pay
-  - kanban-graph
-  - memory-wiki
-  - omh
-  - open-generative
-  - open-whispr
-  - provider-status
-  - voice-studio
+    - advanced-delegation
+    - agent-importers
+    - appflowy
+    - disk-cleanup
+    - hermes-browser-extension
+    - hermes-dpapi-secrets
+    - hermes-psfn-avatar
+    - hermes-resetwatch
+    - intents-pay
+    - kanban-graph
+    - memory-wiki
+    - omh
+    - open-generative
+    - open-whispr
+    - provider-status
+    - voice-studio
 prompt_caching:
   cache_ttl: 5m
 providers:
@@ -346,8 +344,7 @@ providers:
   flm:
     base_url: https://flm.stonech.at/v1
     extra_headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
-        like Gecko) Chrome/131.0.0.0 Safari/537.36
+      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
     name: flm
   freeai:
     base_url: https://api.free.ai/v1
@@ -396,11 +393,7 @@ stt:
   local:
     compute_type: int8
     device: cpu
-    initial_prompt: "\u0414\u0436\u0430\u0440\u0432\u0438\u0441, \u0414\u0436\u0430\
-      \u0440\u0432\u0438\u0441, \u0414\u0436\u0430\u0440\u0432\u0438\u0441, \u0420\
-      \u0443\u0441\u0442\u0430\u043C, Hermes, \u041D\u0430\u043C\u0430\u0437, \u0424\
-      \u0430\u0434\u0436\u0440, \u0417\u0443\u0445\u0440, \u0410\u0441\u0440, \u041C\
-      \u0430\u0433\u0440\u0438\u0431, \u0418\u0448\u0430"
+    initial_prompt: "Джарвис, Джарвис, Джарвис, Рустам, Hermes, Намаз, Фаджр, Зухр, Аср, Магриб, Иша"
     language: ru
     model: small
   openai:
@@ -411,10 +404,7 @@ stt:
   provider: yandex
   providers:
     yandex:
-      command: "C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\
-        \u043B\u044C/AppData/Local/hermes/tools/python-3.14.7+202****0901-win32-x64/python.exe\
-        \ C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\
-        \u044C/AppData/Local/JarvisTools/yandex_stt.py {input_path} {output_dir}"
+      command: "C:/Users/Пользователь/AppData/Local/hermes/tools/python-3.14.7+202****0901-win32-x64/python.exe C:/Users/Пользователь/AppData/Local/JarvisTools/yandex_stt.py {input_path} {output_dir}"
       type: command
 telemetry:
   shared_metrics:
@@ -452,42 +442,28 @@ tts:
     voice: 9cc9f84a0e6c461bab1ab3c045d52240
   piper:
     voice: ru_RU-denis-medium
-    voices_dir: "C:\\Users\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\
-      \u0435\u043B\u044C\\AppData\\Local\\hermes\\cache\\piper-voices"
+    voices_dir: "C:\\Users\\Пользователь\\AppData\\Local\\hermes\\cache\\piper-voices"
   provider: yandex
   providers:
     gemini:
-      command: "C:\\\\Users\\\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\
-        \u0435\u043B\u044C\\\\AppData\\\\Local\\\\hermes\\\\tools\\\\python-3.14.7+202****0901-win32-x64\\\
-        \\python.exe C:\\\\Users\\\\\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\
-        \u0442\u0435\u043B\u044C\\\\AppData\\\\Local\\\\JarvisTools\\\\gemini_tts_v3.py\
-        \ {input_path} {output_path}"
+      command: "C:\\\\Users\\\\Пользователь\\\\AppData\\\\Local\\\\hermes\\\\tools\\\\python-3.14.7+202****0901-win32-x64\\\\python.exe C:\\\\Users\\\\Пользователь\\\\AppData\\\\Local\\\\JarvisTools\\\\gemini_tts_v3.py {input_path} {output_path}"
       output_format: wav
       timeout: 60
       type: command
       voice: Charon
       voice_compatible: true
     sapi:
-      command: "C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\
-        \u043B\u044C/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/81823ea00c2f422da62c6ae4945875b4/venv/Scripts/python.exe\
-        \ C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\
-        \u044C/AppData/Local/hermes/tools/tts_sapi.py {input_path} {output_path}"
+      command: "C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/81823ea00c2f422da62c6ae4945875b4/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/tools/tts_sapi.py {input_path} {output_path}"
       format: wav
       type: command
       voice_compatible: false
     voice_auto:
-      command: "C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\
-        \u043B\u044C/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe\
-        \ C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\
-        \u044C/AppData/Local/hermes/tools/tts_auto.py {input_path} {output_path}"
+      command: "C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/tools/tts_auto.py {input_path} {output_path}"
       format: wav
       type: command
       voice_compatible: false
   yandex:
-    command: "C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\
-      \u043B\u044C/AppData/Local/hermes/tools/python-3.14.9+20261021-win32-x64/python.exe\
-      \ C:/Users/\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\
-      \u044C/AppData/Local/JarvisTools/yandex_tts_ermil.py {input_path} {output_path}"
+    command: "C:/Users/Пользователь/AppData/Local/hermes/tools/python-3.14.9+20261021-win32-x64/python.exe C:/Users/Пользователь/AppData/Local/JarvisTools/yandex_tts_ermil.py {input_path} {output_path}"
     format: mp3
     type: command
     voice: ermil

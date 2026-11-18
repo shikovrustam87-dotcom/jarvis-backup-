@@ -5,7 +5,7 @@ arxiv:b72304a3d6a64b801d5c03f2413e2821
 ascii-video:ef426288e59d90dfb5c9d6b93678b015
 baoyu-infographic:cd1b394ca2c1e7a33797126eb624eb66
 blocked-page-recovery:a698aa28fc8c39a1127f26b8d8aa343a
-claude-code:4760266fef8b5b23bdcc9cc59ac1e345
+claude-code:8038eb0eadd870a89f2ff90c07fe2961
 claude-design:d2f6dc934eb7df1dd90d3e7216f7cecd
 codebase-inspection:1775b8518df273a4d671c4afe54696b4
 codex:4c716449fd88683f8832a682da60ee85
@@ -16,9 +16,9 @@ dogfood:80e7fccebb13e4e3c47587cdcd4a2c75
 email-inbox-triage:e1a93e160552107366dd009159e5fa1a
 findmy:7435a65c3e7bd7c162f22db27a1c91a5
 github:1015462846c11037cf4cd08ae622e3a8
-google-workspace:0afb5f4fe378d2a2039a26e53f805ecb
+google-workspace:5fe5ca6c6aa2f3576785dae03a08452c
 grounded-citations:f6186f29ebe4ed6fce1e5727b5c4a892
-hermes-agent:e5e9508d723a55a898e45cf45471870c
+hermes-agent:794e920b55a5c2a4b6f971ee03f45f7c
 himalaya:c08e32ca75e273d79773266f514c5b23
 humanizer:e0e8c8be91ccf05c8ca1601d63439ea8
 imessage:f545da0f5cc64dd9ee1ffd2b7733a11b
@@ -27,7 +27,7 @@ maps:0f4c08095eab9e889351b48f90961d4c
 meeting-action-items:64b9fc27471b089911636417373f7173
 microsoft-office:fe3589f1c6d430555cb2b501682c2335
 obsidian:7db3d16697eabd5881fc4bb04eae0713
-p5js:ddbc09411e4761da58f2e9a0bc1a0ae7
+p5js:90a7ed21ce00a084967e494f66dfeace
 pdf:06212ca09cfafc3a4b2684610da2beaa
 popular-web-designs:bb2979b00ab5800a41cecf30ee895620
 product-price-monitor:0f4ee987727a024a6810013acabdbcc5
