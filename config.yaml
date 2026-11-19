@@ -89,8 +89,8 @@ display:
   busy_input_mode: interrupt
   cleanup_progress: false
   compact: false
-  in_app_tips: true
-  in_app_tours: true
+  in_app_tips: false
+  in_app_tours: false
   interface: cli
   interim_assistant_messages: false
   language: ru
