@@ -1,4 +1,4 @@
-_config_version: 53
+_config_version: 54
 agent:
   fast_auto_seconds: 60
   max_turns: 90
@@ -104,29 +104,6 @@ display:
   streaming: true
   suppress_warning_notifications: false
   tool_progress: all
-fallback_providers:
-  - base_url: https://blockrun.ai/api/v1
-    model: nvidia/gpt-oss-120b
-    provider: blockrun
-  - base_url: https://api.groq.com/openai/v1
-    model: openai/gpt-oss-120b
-    provider: groq
-  - base_url: https://oai.endpoints.kepler.ai.cloud.ovh.net/v1
-    model: meta-llama-3-70b
-    provider: ovh
-  - base_url: https://api.llm7.io/v1
-    model: nemotron-3-nano-30b
-    provider: llm7
-  - base_url: https://api.jarvisclaw.ai/v1
-    model: auto/free
-    provider: jarvisclaw
-  - base_url: https://api.free.ai/v1
-    model: qwen3-30b-a3b
-    provider: freeai
-  - base_url: https://text.pollinations.ai/openai
-    model: openai-fast
-    provider: pollinations
-gateway:
   allow_all_users: false
   api_server:
     cors_origins: http://127.0.0.1:8765,http://localhost:8765
@@ -404,7 +381,7 @@ stt:
   provider: yandex
   providers:
     yandex:
-      command: "C:/Users/Пользователь/AppData/Local/hermes/tools/python-3.14.7+202****0901-win32-x64/python.exe C:/Users/Пользователь/AppData/Local/JarvisTools/yandex_stt.py {input_path} {output_dir}"
+      command: "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File C:/hermes/cache/scratch/yandex_stt_wrapper.ps1 {input_path} {output_dir}"
       type: command
 telemetry:
   shared_metrics:
@@ -489,3 +466,5 @@ wake_word:
     model_dir: C:\Users\Public\.hermes-kws
 web:
   search_backend: ddgs
+gateway:
+  multiplex_profiles: true

@@ -25,24 +25,24 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 30
+        "completed": 32
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-11-19T08:00:00+03:00",
-      "last_run_at": "2026-11-18T08:00:35.126111+03:00",
-      "last_status": "error",
-      "last_error": "ValueError: Model qwen3.5-9b-mtp has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K).",
+      "next_run_at": "2026-11-21T08:00:00+03:00",
+      "last_run_at": "2026-11-20T17:20:19.378604+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-18T08:00:35.126111+03:00",
-        "detail": "ValueError: Model qwen3.5-9b-mtp has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K)."
+        "at": "2026-11-19T08:03:13.151489+03:00",
+        "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
       },
-      "failure_streak": 2,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -56,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-11-18T08:00:00+03:00",
-        "dispatched_at": "2026-11-18T08:00:23.702047+03:00",
-        "lateness_seconds": 23.7,
-        "kind": "on_time"
+        "scheduled_at": "2026-11-20T08:00:00+03:00",
+        "dispatched_at": "2026-11-20T17:18:09.430331+03:00",
+        "lateness_seconds": 33489.4,
+        "kind": "catch_up"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "e41a1f4513e94eaba72796fbf923d4b8"
+        "52ab88b2d7c8452291f8249602a16f2d"
       ]
     },
     {
@@ -223,24 +223,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 31
+        "completed": 33
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-11-19T22:00:00+03:00",
-      "last_run_at": "2026-11-18T22:04:50.579268+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера.",
-      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:596611073)",
+      "next_run_at": "2026-11-21T22:00:00+03:00",
+      "last_run_at": "2026-11-20T22:01:01.690446+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-18T22:04:50.579268+03:00",
         "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
       },
-      "failure_streak": 2,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -257,16 +257,16 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-18T22:00:00+03:00",
-        "dispatched_at": "2026-11-18T22:00:37.327599+03:00",
-        "lateness_seconds": 37.3,
+        "scheduled_at": "2026-11-20T22:00:00+03:00",
+        "dispatched_at": "2026-11-20T22:00:11.677606+03:00",
+        "lateness_seconds": 11.7,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "e3fde5fd35524c9dba164356f4ec2a4b"
+        "4da112dd5a484e899feea8eda4d950fe"
       ],
-      "last_delivery_reached_none": true
+      "last_delivery_reached_none": null
     },
     {
       "id": "5e82fef373a0",
@@ -293,24 +293,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 28
+        "completed": 30
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-11-19T22:00:00+03:00",
-      "last_run_at": "2026-11-18T22:04:50.527930+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера.",
-      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:596611073)",
+      "next_run_at": "2026-11-21T22:00:00+03:00",
+      "last_run_at": "2026-11-20T22:00:39.384179+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-18T22:04:50.527930+03:00",
         "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
       },
-      "failure_streak": 5,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -328,15 +328,15 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-18T22:00:00+03:00",
-        "dispatched_at": "2026-11-18T22:00:37.327599+03:00",
-        "lateness_seconds": 37.3,
+        "scheduled_at": "2026-11-20T22:00:00+03:00",
+        "dispatched_at": "2026-11-20T22:00:11.677606+03:00",
+        "lateness_seconds": 11.7,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "1ad23eb194cc475eb5017409898b2b37"
+        "701c3fab06ba4a9d8360852672a4c56c"
       ],
-      "last_delivery_reached_none": true
+      "last_delivery_reached_none": null
     },
     {
       "id": "e59af8f4fdc1",
@@ -361,24 +361,24 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 27
+        "completed": 29
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-11-19T07:55:00+03:00",
-      "last_run_at": "2026-11-18T07:55:37.389207+03:00",
-      "last_status": "error",
-      "last_error": "ValueError: Model qwen3.5-9b-mtp has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K).",
+      "next_run_at": "2026-11-21T07:55:00+03:00",
+      "last_run_at": "2026-11-20T17:20:19.515555+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-18T07:55:37.389207+03:00",
-        "detail": "ValueError: Model qwen3.5-9b-mtp has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K)."
+        "at": "2026-11-19T07:58:26.610825+03:00",
+        "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
       },
-      "failure_streak": 2,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -393,13 +393,13 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-18T07:55:00+03:00",
-        "dispatched_at": "2026-11-18T07:55:23.715458+03:00",
-        "lateness_seconds": 23.7,
-        "kind": "on_time"
+        "scheduled_at": "2026-11-20T07:55:00+03:00",
+        "dispatched_at": "2026-11-20T17:18:09.430331+03:00",
+        "lateness_seconds": 33789.4,
+        "kind": "catch_up"
       },
       "canonical_completions": [
-        "0fa58907d5ba447ebe05e3ebd898e2e9"
+        "c4efb9832c3e450faada480846a258c5"
       ]
     },
     {
@@ -425,24 +425,24 @@
       "schedule_display": "every day at 10am",
       "repeat": {
         "times": null,
-        "completed": 12
+        "completed": 13
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-06T17:42:01.234994+03:00",
-      "next_run_at": "2026-11-19T10:00:00+03:00",
-      "last_run_at": "2026-11-18T10:00:29.158772+03:00",
-      "last_status": "error",
-      "last_error": "ValueError: Model qwen3.5-9b-mtp has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K).",
+      "next_run_at": "2026-11-21T10:00:00+03:00",
+      "last_run_at": "2026-11-20T17:21:50.076463+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-18T10:00:29.158772+03:00",
         "detail": "ValueError: Model qwen3.5-9b-mtp has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K)."
       },
-      "failure_streak": 2,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -456,14 +456,14 @@
       "workdir": null,
       "timezone": "Europe/Moscow",
       "last_dispatch": {
-        "scheduled_at": "2026-11-18T10:00:00+03:00",
-        "dispatched_at": "2026-11-18T10:00:23.747451+03:00",
-        "lateness_seconds": 23.7,
-        "kind": "on_time"
+        "scheduled_at": "2026-11-19T10:00:00+03:00",
+        "dispatched_at": "2026-11-20T17:18:09.430331+03:00",
+        "lateness_seconds": 112689.4,
+        "kind": "catch_up"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "65ea884f6b1d42b388c1a2670fb6fa23"
+        "ae0a6e1c5edf43bfaa349da7905c515a"
       ]
     },
     {
@@ -524,5 +524,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-18T22:06:46.203746+03:00"
+  "updated_at": "2026-11-20T22:01:03.225522+03:00"
 }

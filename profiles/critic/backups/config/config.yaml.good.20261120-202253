@@ -1,4 +1,4 @@
-_config_version: 51
+_config_version: 54
 database:
   journal_mode: wal
 runtime:
@@ -7,14 +7,21 @@ attachments:
   storage: hermes-home
 plugins:
   enabled:
+    - 0bull
+    - account-pool
+    - acedatacloud-media
+    - adaption
+    - adwhispr
     - disk-cleanup
+    - jarvis-switch
+    - obsidian-jarvis
     - security-guidance
   clone_timeout_seconds: 300
   disabled: []
 model:
-  default: deepseek/deepseek-v4.1-flash
-  provider: openrouter
-  base_url: https://openrouter.ai/api/v1
+  default: openai/gpt-5.5
+  provider: aitunnel
+  base_url: https://api.aitunnel.ru/v1
 kanban:
   review_dispatch: true
 cron:
@@ -32,8 +39,6 @@ terminal:
   container_persistent: true
 browser:
   inactivity_timeout: 120
-  extension_control:
-    enabled: false
 tool_loop_guardrails:
   warnings_enabled: true
   hard_stop_enabled: false
@@ -81,9 +86,9 @@ streaming:
 skills:
   creation_nudge_interval: 15
 agent:
-  max_turns: 150
+  max_turns: 50
   verbose: false
-  reasoning_effort: medium
+  reasoning_effort: ultra
   service_tier: ''
   fast_auto_seconds: 60
   personalities: {}
@@ -146,24 +151,34 @@ platform_toolsets:
     - vision
     - web
     - x_search
+    - acedatacloud-face
   telegram:
     - hermes-telegram
+    - acedatacloud-face
   discord:
     - hermes-discord
+    - acedatacloud-face
   whatsapp:
     - hermes-whatsapp
+    - acedatacloud-face
   slack:
     - hermes-slack
+    - acedatacloud-face
   signal:
     - hermes-signal
+    - acedatacloud-face
   qqbot:
     - hermes-qqbot
+    - acedatacloud-face
   yuanbao:
     - hermes-yuanbao
+    - acedatacloud-face
   teams:
     - hermes-teams
+    - acedatacloud-face
   google_chat:
     - hermes-google_chat
+    - acedatacloud-face
 stt:
   provider: groq
   enabled: true
@@ -200,6 +215,8 @@ display:
   show_reasoning: false
   tool_progress: false
   interim_assistant_messages: false
+  in_app_tours: true
+  in_app_tips: true
 telemetry:
   shared_metrics:
     enabled: false
@@ -216,14 +233,22 @@ updates:
 onboarding:
   seen:
     busy_input_prompt: true
+    profile_build_offered: true
 tts:
   edge:
     voice: ru-RU-DmitryNeural
     speed: 1.0
   provider: edge
+  providers:
+    sapi:
+      type: command
+      format: wav
+      voice_compatible: false
+      command: C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/4bb31d1577bc47f6b2f700f40f44aa76/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/tools/tts_sapi.py {input_path} {output_path}
 voice:
   auto_tts: true
 command_allowlist:
+  - access to Hermes secrets (Windows path)
   - script execution via -e/-c flag
 known_plugin_toolsets:
   cli:
@@ -258,15 +283,15 @@ known_builtin_toolsets:
     - yuanbao
 auxiliary:
   vision:
-    provider: openrouter
+    provider: aitunnel
   web_extract:
-    provider: openrouter
+    provider: aitunnel
   compression:
-    provider: openrouter
+    provider: aitunnel
   title_generation:
-    provider: openrouter
+    provider: aitunnel
   session_search:
-    provider: openrouter
+    provider: aitunnel
 wake_word:
   enabled: false
 fallback_providers:
@@ -275,7 +300,7 @@ fallback_providers:
   - provider: gemini
     model: gemini-3-flash-preview
   - provider: groq
-    model: qwen/qwen3.8-27b
+    model: qwen3.8-omni-flash
   - provider: nous
     model: reflection/beam-1.0-501b-a23b:free
   - provider: nous
