@@ -10,3 +10,5 @@
 User prefers I handle restarts and fixes myself without asking for confirmation going forward ('на будущее делай это без меня').
 §
 User wants all communication in Russian.
+§
+Рустам предпочитает, чтобы я самостоятельно решал технические задачи и исправления без запроса подтверждения — 'на будущее делай это без меня'.

@@ -231,33 +231,43 @@ platform_toolsets:
     - web
     - x_search
     - avatar
+    - look_at_this
   discord:
     - hermes-discord
     - avatar
+    - look_at_this
   google_chat:
     - hermes-google_chat
     - avatar
+    - look_at_this
   qqbot:
     - hermes-qqbot
     - avatar
+    - look_at_this
   signal:
     - hermes-signal
     - avatar
+    - look_at_this
   slack:
     - hermes-slack
     - avatar
+    - look_at_this
   teams:
     - hermes-teams
     - avatar
+    - look_at_this
   telegram:
     - hermes-telegram
     - avatar
+    - look_at_this
   whatsapp:
     - hermes-whatsapp
     - avatar
+    - look_at_this
   yuanbao:
     - hermes-yuanbao
     - avatar
+    - look_at_this
 platforms:
   api_server:
     enabled: true
@@ -284,24 +294,8 @@ plugins:
     - adwhispr
     - clinepass
     - fish-audio
-    - jarvis-switch
   enabled:
-    - advanced-delegation
-    - agent-importers
-    - appflowy
-    - disk-cleanup
-    - hermes-browser-extension
-    - hermes-dpapi-secrets
-    - hermes-psfn-avatar
-    - hermes-resetwatch
-    - intents-pay
-    - kanban-graph
-    - memory-wiki
-    - omh
-    - open-generative
-    - open-whispr
-    - provider-status
-    - voice-studio
+    - jarvis-switch
 prompt_caching:
   cache_ttl: 5m
 providers:
