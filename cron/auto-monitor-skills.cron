@@ -1,0 +1,12 @@
+# Cron job configuration for automatic skill monitoring
+# This file contains scheduled tasks for Jarvis self-improvement system
+# Run weekly: every Sunday at 02:00 AM
+
+# Automatic skill search and analysis (weekly)
+0 2 * * 0 cd /c/Users/Пользователь/AppData/Local/hermes/cache/scratch && python3 auto_monitor_skills.py >> /c/Users/Пользователь/AppData/Local/hermes/logs/auto-monitor-$(date +%Y-%m-%d).log 2>&1
+
+# Description of scheduled tasks:
+# - Weekly analysis of new skills on hermes-agent.nousresearch.com
+# - Monitoring arxiv for AI self-improvement papers
+# - Analysis of Hermes Agent documentation for expansion opportunities
+# - Results saved to Obsidian wiki/technology/ and raw/

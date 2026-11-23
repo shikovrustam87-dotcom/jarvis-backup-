@@ -25,15 +25,15 @@
       "schedule_display": "every day at 8am",
       "repeat": {
         "times": null,
-        "completed": 33
+        "completed": 34
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-11-22T08:00:00+03:00",
-      "last_run_at": "2026-11-21T08:03:35.070765+03:00",
+      "next_run_at": "2026-11-23T08:00:00+03:00",
+      "last_run_at": "2026-11-22T08:01:59.816796+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -56,14 +56,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-11-21T08:00:00+03:00",
-        "dispatched_at": "2026-11-21T08:00:42.514551+03:00",
-        "lateness_seconds": 42.5,
+        "scheduled_at": "2026-11-22T08:00:00+03:00",
+        "dispatched_at": "2026-11-22T08:00:58.055644+03:00",
+        "lateness_seconds": 58.1,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "496f350834bf43748986d8c2ea4fe26c"
+        "b9a99e3594474ec39920a4c8984040fd"
       ]
     },
     {
@@ -91,24 +91,24 @@
       "schedule_display": "every sunday at 8pm",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:27:28.370436+03:00",
-      "next_run_at": "2026-11-22T20:00:00+03:00",
-      "last_run_at": "2026-11-15T20:01:04.511334+03:00",
-      "last_status": "error",
-      "last_error": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K).",
+      "next_run_at": "2026-11-29T20:00:00+03:00",
+      "last_run_at": "2026-11-22T20:05:43.240955+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-15T20:01:04.511334+03:00",
         "detail": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K)."
       },
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -122,14 +122,14 @@
       "workdir": null,
       "attach_to_session": true,
       "last_dispatch": {
-        "scheduled_at": "2026-11-15T20:00:00+03:00",
-        "dispatched_at": "2026-11-15T20:00:31.795394+03:00",
-        "lateness_seconds": 31.8,
+        "scheduled_at": "2026-11-22T20:00:00+03:00",
+        "dispatched_at": "2026-11-22T20:00:58.328697+03:00",
+        "lateness_seconds": 58.3,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "0936dc1fbc274b1e950ce6706c2e1d9d"
+        "f49bf7abf8174ca38f04179da51ffd9a"
       ]
     },
     {
@@ -223,24 +223,24 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 34
+        "completed": 35
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-11-22T22:00:00+03:00",
-      "last_run_at": "2026-11-21T22:04:58.654046+03:00",
-      "last_status": "error",
-      "last_error": "interrupted",
+      "next_run_at": "2026-11-23T22:00:00+03:00",
+      "last_run_at": "2026-11-22T22:02:20.446756+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-21T22:04:58.654046+03:00",
         "detail": "interrupted"
       },
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -257,14 +257,14 @@
       ],
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-21T22:00:00+03:00",
-        "dispatched_at": "2026-11-21T22:00:42.736719+03:00",
-        "lateness_seconds": 42.7,
+        "scheduled_at": "2026-11-22T22:00:00+03:00",
+        "dispatched_at": "2026-11-22T22:00:58.387888+03:00",
+        "lateness_seconds": 58.4,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "833296ee8438419aae49511716e872af"
+        "38ed5a18ffba4150a99ffafebc3de0e9"
       ],
       "last_delivery_reached_none": null
     },
@@ -293,18 +293,18 @@
       "schedule_display": "every day at 10pm",
       "repeat": {
         "times": null,
-        "completed": 31
+        "completed": 32
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
-      "next_run_at": "2026-11-22T22:00:00+03:00",
-      "last_run_at": "2026-11-21T22:01:10.326683+03:00",
-      "last_status": "delivery_failed",
+      "next_run_at": "2026-11-23T22:00:00+03:00",
+      "last_run_at": "2026-11-22T22:01:30.279848+03:00",
+      "last_status": "ok",
       "last_error": null,
-      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:596611073)",
+      "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-18T22:04:50.527930+03:00",
@@ -328,15 +328,15 @@
       "attach_to_session": true,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-21T22:00:00+03:00",
-        "dispatched_at": "2026-11-21T22:00:42.736719+03:00",
-        "lateness_seconds": 42.7,
+        "scheduled_at": "2026-11-22T22:00:00+03:00",
+        "dispatched_at": "2026-11-22T22:00:58.387888+03:00",
+        "lateness_seconds": 58.4,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "c71b68937f54475d8d8f4b469a380192"
+        "863bdab106b045869e6f6c6de49ac6f5"
       ],
-      "last_delivery_reached_none": true
+      "last_delivery_reached_none": null
     },
     {
       "id": "e59af8f4fdc1",
@@ -361,15 +361,15 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 30
+        "completed": 31
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-11-22T07:55:00+03:00",
-      "last_run_at": "2026-11-21T07:59:17.111108+03:00",
+      "next_run_at": "2026-11-23T07:55:00+03:00",
+      "last_run_at": "2026-11-22T07:59:45.339095+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -393,13 +393,13 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-21T07:55:00+03:00",
-        "dispatched_at": "2026-11-21T07:55:42.508825+03:00",
-        "lateness_seconds": 42.5,
+        "scheduled_at": "2026-11-22T07:55:00+03:00",
+        "dispatched_at": "2026-11-22T07:55:58.049273+03:00",
+        "lateness_seconds": 58.0,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "0faa68127eda477faff2f0e57e36422d"
+        "e91bd1b1d8cd4a9c89ee8fac1a3b534e"
       ]
     },
     {
@@ -425,15 +425,15 @@
       "schedule_display": "every day at 10am",
       "repeat": {
         "times": null,
-        "completed": 14
+        "completed": 15
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-06T17:42:01.234994+03:00",
-      "next_run_at": "2026-11-22T10:00:00+03:00",
-      "last_run_at": "2026-11-21T10:01:14.680945+03:00",
+      "next_run_at": "2026-11-23T10:00:00+03:00",
+      "last_run_at": "2026-11-22T10:01:17.675342+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -456,14 +456,14 @@
       "workdir": null,
       "timezone": "Europe/Moscow",
       "last_dispatch": {
-        "scheduled_at": "2026-11-21T10:00:00+03:00",
-        "dispatched_at": "2026-11-21T10:00:42.550394+03:00",
-        "lateness_seconds": 42.6,
+        "scheduled_at": "2026-11-22T10:00:00+03:00",
+        "dispatched_at": "2026-11-22T10:00:58.106934+03:00",
+        "lateness_seconds": 58.1,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "557e3c38a5d54a39bae8f10bfa4c2c77"
+        "699350245b3d450b832423ae8f38f195"
       ]
     },
     {
@@ -524,5 +524,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-21T22:04:59.017448+03:00"
+  "updated_at": "2026-11-22T22:02:21.071868+03:00"
 }
