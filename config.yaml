@@ -83,27 +83,6 @@ delegation:
   model: deepseek/deepseek-v4-pro
   provider: aitunnel
 display:
-  background_process_notifications: concise
-  bell_on_complete: false
-  bell_on_prompt: false
-  busy_input_mode: interrupt
-  cleanup_progress: false
-  compact: false
-  in_app_tips: false
-  in_app_tours: false
-  interface: cli
-  interim_assistant_messages: false
-  language: ru
-  personality: pirate
-  pet:
-    enabled: true
-    scale: 0.66
-    slug: snow-dragon
-  show_reasoning: false
-  skin: jarvis
-  streaming: true
-  suppress_warning_notifications: false
-  tool_progress: all
   allow_all_users: false
   api_server:
     cors_origins: http://127.0.0.1:8765,http://localhost:8765
@@ -112,12 +91,23 @@ display:
     key: 2WAFkxYtDDeCK_9uSHGK2sGlipXPkTulhwFMvRUgCyM
     max_concurrent_runs: 10
   auto_multiplex_migration: true
+  background_process_notifications: concise
+  bell_on_complete: false
+  bell_on_prompt: false
   bot_loop_guard:
     cooldown_seconds: 600
     enabled: true
     max_events: 20
     window_seconds: 300
+  busy_input_mode: interrupt
+  cleanup_progress: false
+  compact: false
   delivery_ledger: true
+  in_app_tips: false
+  in_app_tours: false
+  interface: cli
+  interim_assistant_messages: false
+  language: ru
   loop_watchdog: true
   loop_watchdog_max_strikes: 3
   loop_watchdog_probe_interval_s: 30.0
@@ -127,6 +117,11 @@ display:
   message_timestamps:
     enabled: false
   multiplex_profiles: true
+  personality: pirate
+  pet:
+    enabled: true
+    scale: 0.66
+    slug: snow-dragon
   platform_connect_timeout: 30
   profile_routes: []
   respawn_storm:
@@ -138,14 +133,21 @@ display:
     window_seconds: 60
   scale_to_zero:
     idle_timeout_minutes: 2
+  show_reasoning: false
   signal_interrupt_grace_timeout: 1
+  skin: jarvis
   startup_watchdog: true
   startup_watchdog_timeout_seconds: 300
+  streaming: true
   strict: false
+  suppress_warning_notifications: false
+  tool_progress: all
   trust_env: true
   trust_recent_files: true
   trust_recent_files_seconds: 600
   write_sessions_json: true
+gateway:
+  multiplex_profiles: true
 group_sessions_per_user: true
 hooks:
   pre_tool_call:
@@ -199,10 +201,10 @@ memory:
   user_char_limit: 1375
   user_profile_enabled: true
 model:
+  api_mode: chat_completions
+  base_url: http://127.0.0.1:1234/v1
   default: qwen3.5-9b-mtp
   provider: lmstudio
-  base_url: http://127.0.0.1:1234/v1
-  api_mode: chat_completions
 onboarding:
   seen:
     busy_input_prompt: true
@@ -295,6 +297,8 @@ plugins:
     - clinepass
     - fish-audio
   enabled:
+    - hermes-mobile
+    - hermes-mobile-plugin
     - jarvis-switch
 prompt_caching:
   cache_ttl: 5m
@@ -375,7 +379,7 @@ stt:
   provider: yandex
   providers:
     yandex:
-      command: "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File C:/hermes/cache/scratch/yandex_stt_wrapper.ps1 {input_path} {output_dir}"
+      command: C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File C:/hermes/cache/scratch/yandex_stt_wrapper.ps1 {input_path} {output_dir}
       type: command
 telemetry:
   shared_metrics:
@@ -460,5 +464,3 @@ wake_word:
     model_dir: C:\Users\Public\.hermes-kws
 web:
   search_backend: ddgs
-gateway:
-  multiplex_profiles: true

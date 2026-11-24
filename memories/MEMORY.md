@@ -13,3 +13,5 @@ Hermes Mobile v3.0.1 connected via Happ tunnel (Android↔Windows). API Server a
 Hermes Mobile must use HTTP (not TLS/mTLS) to connect to API server at http://100.118.249.102:8642, as the local server only supports HTTP on port 8642.
 §
 1C client 8.3.27.1688 installed at C:\Program Files\1cv8\8.3.27.1688\, comcntr.dll present at bin\comcntr.dll. Python 3.11.6 with pywin32 312 installed, win32com import verified working.
+§
+Hermes gateway cannot be restarted/stopped from inside the gateway process itself - this is a security restriction that blocks SIGTERM propagation. Must run 'hermes gateway restart --cli' from a separate shell outside the running gateway.

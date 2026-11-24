@@ -96,7 +96,7 @@
     "view_count": 1
   },
   "image-to-video-slideshow": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:23:55.695213+00:00",
     "created_at": "2026-10-21T06:01:30.276770+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -107,12 +107,12 @@
     "patch_count": 1,
     "patch_generation": 1,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 1,
     "view_count": 1
   },
   "jarvis-hud": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:23:55.821118+00:00",
     "created_at": "2026-10-19T00:44:38.240531+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -123,12 +123,12 @@
     "patch_count": 28,
     "patch_generation": 28,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 21,
     "view_count": 21
   },
   "jarvis-plugin": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:23:55.960935+00:00",
     "created_at": "2026-10-19T14:02:17.746496+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -139,12 +139,12 @@
     "patch_count": 2,
     "patch_generation": 2,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 6,
     "view_count": 6
   },
   "kabardian-genealogy-research": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:23:56.102886+00:00",
     "created_at": "2026-10-21T06:07:13.778177+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -155,7 +155,7 @@
     "patch_count": 8,
     "patch_generation": 8,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 11,
     "view_count": 11
   },
@@ -208,7 +208,7 @@
     "view_count": 2
   },
   "video-download-edit": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:23:56.256414+00:00",
     "created_at": "2026-10-19T00:44:39.163637+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -219,12 +219,12 @@
     "patch_count": 4,
     "patch_generation": 4,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 6,
     "view_count": 6
   },
   "voice-replies": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:23:56.448934+00:00",
     "created_at": "2026-10-19T10:58:43.781358+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -235,7 +235,7 @@
     "patch_count": 5,
     "patch_generation": 5,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 10,
     "view_count": 10
   },
@@ -256,7 +256,7 @@
     "view_count": 2
   },
   "windows-cleanup": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:23:56.675881+00:00",
     "created_at": "2026-10-18T23:23:52.932729+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -267,12 +267,12 @@
     "patch_count": 11,
     "patch_generation": 11,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 20,
     "view_count": 20
   },
   "windows-defender": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:23:56.873345+00:00",
     "created_at": "2026-10-21T07:49:10.964272+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -283,12 +283,12 @@
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 1,
     "view_count": 1
   },
   "windows-software-installation": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:23:57.050385+00:00",
     "created_at": "2026-10-20T19:05:14.260878+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -299,12 +299,12 @@
     "patch_count": 3,
     "patch_generation": 3,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 3,
     "view_count": 3
   },
   "windows-window-switching": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:23:57.314661+00:00",
     "created_at": "2026-10-20T05:43:44.591374+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -315,7 +315,7 @@
     "patch_count": 1,
     "patch_generation": 1,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 6,
     "view_count": 6
   },

@@ -32,7 +32,7 @@
     "view_count": 61
   },
   "jarvis-hud": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:24:00.362809+00:00",
     "created_at": "2026-10-19T00:44:38.240531+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -43,12 +43,12 @@
     "patch_count": 28,
     "patch_generation": 28,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 17,
     "view_count": 17
   },
   "jarvis-plugin": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:24:00.500804+00:00",
     "created_at": "2026-10-19T14:02:17.746496+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -59,7 +59,7 @@
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 1,
     "view_count": 1
   },
@@ -96,7 +96,7 @@
     "view_count": 1
   },
   "video-download-edit": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:24:00.647485+00:00",
     "created_at": "2026-10-19T00:44:39.163637+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -107,12 +107,12 @@
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 2,
     "view_count": 2
   },
   "voice-replies": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:24:00.869980+00:00",
     "created_at": "2026-10-19T10:58:43.781358+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -123,7 +123,7 @@
     "patch_count": 3,
     "patch_generation": 3,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 4,
     "view_count": 4
   },
@@ -144,7 +144,7 @@
     "view_count": 2
   },
   "windows-cleanup": {
-    "archived_at": null,
+    "archived_at": "2026-11-23T21:24:01.063655+00:00",
     "created_at": "2026-10-18T23:23:52.932729+00:00",
     "created_by": "agent",
     "first_seen_at": null,
@@ -155,7 +155,7 @@
     "patch_count": 11,
     "patch_generation": 11,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 17,
     "view_count": 17
   },
