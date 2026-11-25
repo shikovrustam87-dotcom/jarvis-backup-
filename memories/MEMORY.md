@@ -15,3 +15,7 @@ Hermes Mobile must use HTTP (not TLS/mTLS) to connect to API server at http://10
 1C client 8.3.27.1688 installed at C:\Program Files\1cv8\8.3.27.1688\, comcntr.dll present at bin\comcntr.dll. Python 3.11.6 with pywin32 312 installed, win32com import verified working.
 §
 Hermes gateway cannot be restarted/stopped from inside the gateway process itself - this is a security restriction that blocks SIGTERM propagation. Must run 'hermes gateway restart --cli' from a separate shell outside the running gateway.
+§
+Self-improvement skills follow template-based approach: create reusable templates in references/ (business-tasks/, content-project/, technical-tasks/) then instantiate specific skills from them - more efficient than 95 individual skill files.
+§
+Cron jobs for automated self-improvement are created by agent's discretion after receiving explicit permission from user. Three-tier schedule: daily analysis (23:00), weekly review (Saturday 09:00), research search (Tuesday 15:15).

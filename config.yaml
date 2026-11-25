@@ -1,466 +1,1053 @@
 _config_version: 54
+
+_left_core_installed:
+
+  - langfuse
+
 agent:
+
   fast_auto_seconds: 60
+
   max_turns: 90
+
   personalities: {}
+
   reasoning_effort: medium
+
   service_tier: ''
+
   verbose: false
+
 approvals:
+
   destructive_slash_confirm: false
+
 attachments:
-  storage: "C:/Users/Пользователь/AppData/Local/hermes/hermes-home"
+
+  storage: "C:/Users/Пользовател\nь/AppData/Local/hermes/hermes-home"
+
 auth:
+
   adopt_external_logins: true
+
   codex_login_flow: device_code
+
 auxiliary:
+
   compression:
+
     model: deepseek-v4.1-flash-1017
+
     provider: aitunnel
+
   review:
+
     model: deepseek-v4.1-flash-1017
+
     provider: aitunnel
+
   session_search:
+
     provider: aitunnel
+
   title_generation:
+
     model: deepseek-v4.1-flash-1017
+
     provider: aitunnel
+
   video:
+
     model: qwen/qwen3.8-omni-flash
+
     provider: openrouter
+
   vision:
+
     model: deepseek/deepseek-v4.1-flash
+
     provider: openrouter
+
   web_extract:
+
     provider: aitunnel
+
 browser:
+
   cdp_url: http://127.0.0.1:9222
+
   inactivity_timeout: 120
+
   use_real_profile: true
+
 code_execution:
+
   max_tool_calls: 50
+
   timeout: 300
+
 command_allowlist:
+
   - access to Hermes secrets (Windows path)
+
   - command parser limit or malformed executable payload
+
   - cua:bring_to_front:background
+
   - cua:click:background
+
   - cua:click:foreground
+
   - cua:focus_app:background
+
   - execute_code
+
   - force kill processes (taskkill /F)
+
   - in-place edit of Hermes config/env
+
   - overwrite project env/config file
+
   - recursive delete
+
   - script execution via -e/-c flag
+
+  - shell execution via heredoc
 compression:
+
   checkpoint_required: false
+
   codex_app_server_auto: native
+
   codex_gpt55_autoraise: true
+
   codex_responses_compact_threshold:
+
   codex_responses_native: false
+
   enabled: true
+
   hygiene_max_turn_hold_seconds: 10
+
   idle_compact_after_seconds: 0
+
   max_attempts: 3
+
   min_tail_user_messages: 1
+
   proactive_prune_min_reclaim_tokens: 4096
+
   proactive_prune_min_result_chars: 8000
+
   proactive_prune_tokens: 0
+
   progress_notices: false
+
   protect_first_n: 3
+
   protect_last_n: 20
+
   target_ratio: 0.2
+
   threshold: 0.08
+
 cron:
+
   catch_up_missed: true
+
 dashboard:
-  theme: default
-database:
-  journal_mode: wal
-delegation:
-  max_iterations: 60
-  model: deepseek/deepseek-v4-pro
-  provider: aitunnel
-display:
-  allow_all_users: false
-  api_server:
-    cors_origins: http://127.0.0.1:8765,http://localhost:8765
-    enabled: true
-    history_tool_output_max_chars: 0
-    key: 2WAFkxYtDDeCK_9uSHGK2sGlipXPkTulhwFMvRUgCyM
-    max_concurrent_runs: 10
-  auto_multiplex_migration: true
-  background_process_notifications: concise
-  bell_on_complete: false
-  bell_on_prompt: false
-  bot_loop_guard:
-    cooldown_seconds: 600
-    enabled: true
-    max_events: 20
-    window_seconds: 300
-  busy_input_mode: interrupt
-  cleanup_progress: false
-  compact: false
-  delivery_ledger: true
-  in_app_tips: false
-  in_app_tours: false
-  interface: cli
-  interim_assistant_messages: false
-  language: ru
-  loop_watchdog: true
-  loop_watchdog_max_strikes: 3
-  loop_watchdog_probe_interval_s: 30.0
-  loop_watchdog_probe_timeout_s: 10.0
-  max_inbound_media_bytes: 134217728
-  media_delivery_allow_dirs: []
-  message_timestamps:
-    enabled: false
-  multiplex_profiles: true
-  personality: pirate
-  pet:
-    enabled: true
-    scale: 0.66
-    slug: snow-dragon
-  platform_connect_timeout: 30
-  profile_routes: []
-  respawn_storm:
-    max_starts: 5
-    window_seconds: 120
-  restart_loop_guard:
-    max_gap_seconds: 300
-    max_restarts: 3
-    window_seconds: 60
-  scale_to_zero:
-    idle_timeout_minutes: 2
-  show_reasoning: false
-  signal_interrupt_grace_timeout: 1
-  skin: jarvis
-  startup_watchdog: true
-  startup_watchdog_timeout_seconds: 300
-  streaming: true
-  strict: false
-  suppress_warning_notifications: false
-  tool_progress: all
-  trust_env: true
-  trust_recent_files: true
-  trust_recent_files_seconds: 600
-  write_sessions_json: true
-gateway:
-  multiplex_profiles: true
-group_sessions_per_user: true
-hooks:
-  pre_tool_call:
-    - command: "C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/hooks/guard.py"
-      matcher: terminal|execute_code
-      timeout: 10
-hooks_auto_accept: true
-kanban:
-  review_dispatch: true
-known_builtin_toolsets:
-  cli:
-    - browser
-    - clarify
-    - code_execution
-    - computer_use
-    - connections
-    - context_engine
-    - cronjob
-    - delegation
-    - discord
-    - discord_admin
-    - file
-    - image_gen
-    - kanban
-    - memory
-    - session_search
-    - skills
-    - stt
-    - terminal
-    - todo
-    - tts
-    - video
-    - video_gen
-    - vision
-    - web
-    - x_search
-    - yuanbao
-known_plugin_toolsets:
-  cli:
-    - a2a
-max_concurrent_sessions:
-memory:
-  memory_char_limit: 2200
-  memory_enabled: true
-  nudge_interval: 10
-  openviking:
-    recall_scope: peer
-    use_ovcli_config: false
-  prefetch_spill_enabled: false
-  provider: openviking
-  user_char_limit: 1375
-  user_profile_enabled: true
-model:
-  api_mode: chat_completions
-  base_url: http://127.0.0.1:1234/v1
-  default: qwen3.5-9b-mtp
-  provider: lmstudio
-onboarding:
-  seen:
-    busy_input_prompt: true
-platform_toolsets:
-  cli:
-    - a2a
-    - browser
-    - clarify
-    - code_execution
-    - computer_use
-    - connections
-    - cronjob
-    - delegation
-    - file
-    - image_gen
-    - kanban
-    - memory
-    - session_search
-    - skills
-    - terminal
-    - todo
-    - tts
-    - video
-    - video_gen
-    - vision
-    - web
-    - x_search
-    - avatar
-    - look_at_this
-  discord:
-    - hermes-discord
-    - avatar
-    - look_at_this
-  google_chat:
-    - hermes-google_chat
-    - avatar
-    - look_at_this
-  qqbot:
-    - hermes-qqbot
-    - avatar
-    - look_at_this
-  signal:
-    - hermes-signal
-    - avatar
-    - look_at_this
-  slack:
-    - hermes-slack
-    - avatar
-    - look_at_this
-  teams:
-    - hermes-teams
-    - avatar
-    - look_at_this
-  telegram:
-    - hermes-telegram
-    - avatar
-    - look_at_this
-  whatsapp:
-    - hermes-whatsapp
-    - avatar
-    - look_at_this
-  yuanbao:
-    - hermes-yuanbao
-    - avatar
-    - look_at_this
-platforms:
-  api_server:
-    enabled: true
-    extra:
-      host: 0.0.0.0
-      key: jarvis-local-2026
-  telegram:
-    enabled: true
-    extra:
-      status_indicator: true
-    home_channel:
-      chat_id: '596611073'
-      name: . .
-      platform: telegram
-      user_id: '596611073'
-plugins:
-  auto_apply: true
-  clone_timeout_seconds: 300
-  disabled:
-    - 0bull
-    - account-pool
-    - acedatacloud-media
-    - adaption
-    - adwhispr
-    - clinepass
+
+  hidden_plugins:
+
     - fish-audio
+
+    - hermes-psfn-avatar
+
+  theme: default
+
+database:
+
+  journal_mode: wal
+
+delegation:
+
+  max_iterations: 60
+
+  model: deepseek/deepseek-v4-pro
+
+  provider: aitunnel
+
+display:
+
+  allow_all_users: false
+
+  api_server:
+
+    cors_origins: http://127.0.0.1:8765,http://localhost:8765
+
+    enabled: true
+
+    history_tool_output_max_chars: 0
+
+    key: 2WAFkxYtDDeCK_9uSHGK2sGlipXPkTulhwFMvRUgCyM
+
+    max_concurrent_runs: 10
+
+  auto_multiplex_migration: true
+
+  background_process_notifications: concise
+
+  bell_on_complete: false
+
+  bell_on_prompt: false
+
+  bot_loop_guard:
+
+    cooldown_seconds: 600
+
+    enabled: true
+
+    max_events: 20
+
+    window_seconds: 300
+
+  busy_input_mode: interrupt
+
+  cleanup_progress: false
+
+  compact: false
+
+  delivery_ledger: true
+
+  in_app_tips: false
+
+  in_app_tours: false
+
+  interface: cli
+
+  interim_assistant_messages: false
+
+  language: ru
+
+  loop_watchdog: true
+
+  loop_watchdog_max_strikes: 3
+
+  loop_watchdog_probe_interval_s: 30.0
+
+  loop_watchdog_probe_timeout_s: 10.0
+
+  max_inbound_media_bytes: 134217728
+
+  media_delivery_allow_dirs: []
+
+  message_timestamps:
+
+    enabled: false
+
+  multiplex_profiles: true
+
+  personality: pirate
+
+  pet:
+
+    enabled: true
+
+    scale: 0.66
+
+    slug: snow-dragon
+
+  platform_connect_timeout: 30
+
+  profile_routes: []
+
+  respawn_storm:
+
+    max_starts: 5
+
+    window_seconds: 120
+
+  restart_loop_guard:
+
+    max_gap_seconds: 300
+
+    max_restarts: 3
+
+    window_seconds: 60
+
+  scale_to_zero:
+
+    idle_timeout_minutes: 2
+
+  show_reasoning: false
+
+  signal_interrupt_grace_timeout: 1
+
+  skin: jarvis
+
+  startup_watchdog: true
+
+  startup_watchdog_timeout_seconds: 300
+
+  streaming: true
+
+  strict: false
+
+  suppress_warning_notifications: false
+
+  tool_progress: all
+
+  trust_env: true
+
+  trust_recent_files: true
+
+  trust_recent_files_seconds: 600
+
+  write_sessions_json: true
+
+gateway:
+
+  multiplex_profiles: true
+
+group_sessions_per_user: true
+
+hooks:
+
+  pre_tool_call:
+
+    - command: "C:/Users/Пользовате\nль/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe\n C:/Users/Пользовател\nь/AppData/Local/hermes/hooks/guard.py"
+
+      matcher: terminal|execute_code
+
+      timeout: 10
+
+hooks_auto_accept: true
+
+kanban:
+
+  review_dispatch: true
+
+known_builtin_toolsets:
+
+  cli:
+
+    - browser
+
+    - clarify
+
+    - code_execution
+
+    - computer_use
+
+    - connections
+
+    - context_engine
+
+    - cronjob
+
+    - delegation
+
+    - discord
+
+    - discord_admin
+
+    - file
+
+    - image_gen
+
+    - kanban
+
+    - memory
+
+    - session_search
+
+    - skills
+
+    - stt
+
+    - terminal
+
+    - todo
+
+    - tts
+
+    - video
+
+    - video_gen
+
+    - vision
+
+    - web
+
+    - x_search
+
+    - yuanbao
+
+known_plugin_toolsets:
+
+  cli:
+
+    - a2a
+
+max_concurrent_sessions:
+
+memory:
+
+  memory_char_limit: 8000
+
+  memory_enabled: true
+
+  nudge_interval: 10
+
+  openviking:
+
+    recall_scope: peer
+
+    use_ovcli_config: false
+
+  prefetch_spill_enabled: true
+
+  provider: openviking
+
+  user_char_limit: 4000
+
+  user_profile_enabled: true
+
+model:
+
+  api_mode: chat_completions
+
+  base_url: http://127.0.0.1:1234/v1
+
+  default: qwen3.5-9b-mtp
+
+  provider: lmstudio
+
+onboarding:
+
+  seen:
+
+    busy_input_prompt: true
+
+    tool_progress_prompt: true
+platform_toolsets:
+
+  cli:
+
+    - a2a
+
+    - browser
+
+    - clarify
+
+    - code_execution
+
+    - computer_use
+
+    - connections
+
+    - cronjob
+
+    - delegation
+
+    - file
+
+    - image_gen
+
+    - kanban
+
+    - memory
+
+    - session_search
+
+    - skills
+
+    - terminal
+
+    - todo
+
+    - tts
+
+    - video
+
+    - video_gen
+
+    - vision
+
+    - web
+
+    - x_search
+
+    - avatar
+
+    - look_at_this
+
+    - hermes-browser-extension
+
+    - intents-pay
+
+    - mnemosyne-dashboard
+
+    - provider_status
+
+  discord:
+
+    - hermes-discord
+
+    - avatar
+
+    - look_at_this
+
+    - hermes-browser-extension
+
+    - intents-pay
+
+    - mnemosyne-dashboard
+
+    - provider_status
+
+  google_chat:
+
+    - hermes-google_chat
+
+    - avatar
+
+    - look_at_this
+
+    - hermes-browser-extension
+
+    - intents-pay
+
+    - mnemosyne-dashboard
+
+    - provider_status
+
+  qqbot:
+
+    - hermes-qqbot
+
+    - avatar
+
+    - look_at_this
+
+    - hermes-browser-extension
+
+    - intents-pay
+
+    - mnemosyne-dashboard
+
+    - provider_status
+
+  signal:
+
+    - hermes-signal
+
+    - avatar
+
+    - look_at_this
+
+    - hermes-browser-extension
+
+    - intents-pay
+
+    - mnemosyne-dashboard
+
+    - provider_status
+
+  slack:
+
+    - hermes-slack
+
+    - avatar
+
+    - look_at_this
+
+    - hermes-browser-extension
+
+    - intents-pay
+
+    - mnemosyne-dashboard
+
+    - provider_status
+
+  teams:
+
+    - hermes-teams
+
+    - avatar
+
+    - look_at_this
+
+    - hermes-browser-extension
+
+    - intents-pay
+
+    - mnemosyne-dashboard
+
+    - provider_status
+
+  telegram:
+
+    - hermes-telegram
+
+    - avatar
+
+    - look_at_this
+
+    - hermes-browser-extension
+
+    - intents-pay
+
+    - mnemosyne-dashboard
+
+    - provider_status
+
+  whatsapp:
+
+    - hermes-whatsapp
+
+    - avatar
+
+    - look_at_this
+
+    - hermes-browser-extension
+
+    - intents-pay
+
+    - mnemosyne-dashboard
+
+    - provider_status
+
+  yuanbao:
+
+    - hermes-yuanbao
+
+    - avatar
+
+    - look_at_this
+
+    - hermes-browser-extension
+
+    - intents-pay
+
+    - mnemosyne-dashboard
+
+    - provider_status
+
+platforms:
+
+  api_server:
+
+    enabled: true
+
+    extra:
+
+      host: 0.0.0.0
+
+      key: jarvis-local-2026
+
+  telegram:
+
+    enabled: true
+
+    extra:
+
+      status_indicator: true
+
+    home_channel:
+
+      chat_id: '596611073'
+
+      name: . .
+
+      platform: telegram
+
+      user_id: '596611073'
+
+plugins:
+
+  auto_apply: true
+
+  clone_timeout_seconds: 300
+
+  disabled:
+
+    - 0bull
+
+    - account-pool
+
+    - acedatacloud-media
+
+    - adaption
+
+    - adwhispr
+
+    - clinepass
+
+    - fish-audio
+
   enabled:
+
+    - advanced-delegation
+
+    - agent-importers
+
+    - blender
+
+    - cron_providers/chronos
+
+    - disk-cleanup
+
+    - google_meet
+
+    - hermes-browser-extension
+
+    - hermes-dpapi-secrets
+
     - hermes-mobile
+
     - hermes-mobile-plugin
+
+    - hermes-psfn-avatar
+
+    - hermes-resetwatch
+
+    - intents-pay
+
     - jarvis-switch
+
+    - kanban-graph
+
+    - langfuse
+
+    - look-at-this
+
+    - memory-wiki
+
+    - mnemosyne-dashboard
+
+    - obsidian-jarvis
+
+    - omh
+
+    - provider-status
+
+    - security-guidance
+
+    - teams_pipeline
+
 prompt_caching:
+
   cache_ttl: 5m
+
 providers:
+
   aitunnel:
+
     base_url: https://api.aitunnel.ru/v1
+
     key_env: AITUNNEL_API_KEY
+
     name: AITUNNEL
+
   blockrun:
+
     base_url: https://blockrun.ai/api/v1
+
     default_model: deepseek/deepseek-v4.1-flash
+
     name: BlockRun
+
   echo:
+
     base_url: http://127.0.0.1:8899/v1
+
     extra_headers:
+
       X-Echo-Test: abc
+
     name: echo
+
   flm:
+
     base_url: https://flm.stonech.at/v1
+
     extra_headers:
-      User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+
+      User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,\nlike Gecko) Chrome/131.0.0.0 Safari/537.36"
+
     name: flm
+
   freeai:
+
     base_url: https://api.free.ai/v1
+
     name: Free.ai
+
   jarvisclaw:
+
     base_url: https://api.jarvisclaw.ai/v1
+
     extra_headers:
+
       Authorization: ''
+
     name: JarvisClaw
+
   kilo:
+
     base_url: https://api.kilo.ai/api/gateway
+
     extra_headers:
+
       Authorization: ''
+
     name: Kilo Gateway
+
   llm7:
+
     base_url: https://api.llm7.io/v1
+
     name: LLM7
+
   neuralgate:
+
     base_url: https://api.neuralgate.ru/v1
+
     key_env: NEURALGATE_API_KEY
+
     name: NEURALGATE
+
   ovh:
+
     base_url: https://oai.endpoints.kepler.ai.cloud.ovh.net/v1
+
     extra_headers:
+
       Authorization: Bearer
+
     name: OVHcloud anon
+
   pollinations:
+
     base_url: https://text.pollinations.ai/openai
+
     name: Pollinations
+
   softhive:
+
     base_url: https://api.groq.com/openai/v1
+
     key_env: GROQ_API_KEY
+
     name: SOFTHIVE (via Groq)
+
 runtime:
+
   nofile_soft_limit: 4096
+
 skills:
+
   creation_nudge_interval: 15
+
 streaming:
+
   enabled: false
+
 stt:
   enabled: true
+
   groq:
     language: ru
     model: whisper-large-v3
+
   language: ru
+
   local:
     compute_type: int8
     device: cpu
     initial_prompt: "Джарвис, Джарвис, Джарвис, Рустам, Hermes, Намаз, Фаджр, Зухр, Аср, Магриб, Иша"
     language: ru
-    model: small
+    model: turbo
+
   openai:
     language: ''
     max_retries: 1
     model: whisper-1
     timeout: 60
-  provider: yandex
+
+  provider: local
+
   providers:
-    yandex:
-      command: C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File C:/hermes/cache/scratch/yandex_stt_wrapper.ps1 {input_path} {output_dir}
-      type: command
+    local:
+      type: api
+      base_url: http://127.0.0.1:8001
+
+
+
 telemetry:
+
   shared_metrics:
+
     enabled: false
+
     offer_version: 2
+
     send: false
+
 terminal:
+
   backend: local
+
   container_cpu: 1
+
   container_disk: 51200
+
   container_memory: 5120
+
   container_persistent: true
+
   cwd: .
+
   docker_mount_cwd_to_workspace: false
+
   home_mode: auto
+
   lifetime_seconds: 300
+
   timeout: 180
+
 tool_loop_guardrails:
+
   hard_stop_after:
+
     exact_failure: 3
+
     idempotent_no_progress: 3
+
     same_tool_failure: 5
+
   hard_stop_enabled: true
+
   non_interactive_hard_stop_enabled: true
+
   warn_after:
+
     exact_failure: 2
+
     idempotent_no_progress: 2
+
     same_tool_failure: 3
+
   warnings_enabled: true
+
 tts:
+
   edge:
+
     speed: 1.0
+
     voice: ru-RU-DmitryNeural
+
   fish-audio:
+
     voice: 9cc9f84a0e6c461bab1ab3c045d52240
+
   piper:
+
     voice: ru_RU-denis-medium
-    voices_dir: "C:\\Users\\Пользователь\\AppData\\Local\\hermes\\cache\\piper-voices"
-  provider: yandex
+
+    voices_dir: "C:\\Users\\Пользоват\nель\\AppData\\Local\\hermes\\cache\\piper-voices"
+
+  provider: local
+
   providers:
+
     gemini:
-      command: "C:\\\\Users\\\\Пользователь\\\\AppData\\\\Local\\\\hermes\\\\tools\\\\python-3.14.7+202****0901-win32-x64\\\\python.exe C:\\\\Users\\\\Пользователь\\\\AppData\\\\Local\\\\JarvisTools\\\\gemini_tts_v3.py {input_path} {output_path}"
+
+      command: "C:\\\\Users\\\\Пользоват\nель\\\\AppData\\\\Local\\\\hermes\\\\tools\\\\python-3.14.7+202****0901-win32-x64\\\n\\python.exe C:\\\\Users\\\\Пользова\nтель\\\\AppData\\\\Local\\\\JarvisTools\\\\gemini_tts_v3.py\n {input_path} {output_path}"
+
       output_format: wav
+
       timeout: 60
-      type: command
+
+
       voice: Charon
+
       voice_compatible: true
+
     sapi:
-      command: "C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/81823ea00c2f422da62c6ae4945875b4/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/tools/tts_sapi.py {input_path} {output_path}"
+
+      command: "C:/Users/Пользовате\nль/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/81823ea00c2f422da62c6ae4945875b4/venv/Scripts/python.exe\n C:/Users/Пользовател\nь/AppData/Local/hermes/tools/tts_sapi.py {input_path} {output_path}"
+
       format: wav
-      type: command
+
+
       voice_compatible: false
+
     voice_auto:
-      command: "C:/Users/Пользователь/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe C:/Users/Пользователь/AppData/Local/hermes/tools/tts_auto.py {input_path} {output_path}"
+
+      command: "C:/Users/Пользовате\nль/AppData/Local/hermes/installs/d28855c3bf87b9b6/environments/299d8c93b0614b02bdc2139ee03f896c/venv/Scripts/python.exe\n C:/Users/Пользовател\nь/AppData/Local/hermes/tools/tts_auto.py {input_path} {output_path}"
+
       format: wav
-      type: command
+
+
       voice_compatible: false
+
   yandex:
-    command: "C:/Users/Пользователь/AppData/Local/hermes/tools/python-3.14.9+20261021-win32-x64/python.exe C:/Users/Пользователь/AppData/Local/JarvisTools/yandex_tts_ermil.py {input_path} {output_path}"
-    format: mp3
+
+    command: "C:/Users/Пользовате\nль/AppData/Local/hermes/tools/python-3.14.9+20261021-win32-x64/python.exe\n C:/Users/Пользовател\nь/AppData/Local/JarvisTools/yandex_tts_ermil.py {input_path} {output_path}"
+
+    format: wav
+
     type: command
-    voice: ermil
+
+    voice: filipp
+
     voice_compatible: true
+
+    speed: 0.9
 updates:
+
   backup_keep: 5
+
   check: true
+
   non_interactive_local_changes: stash
+
   pre_update_backup: false
+
 voice:
+
   auto_tts: true
+
   barge_in: false
+
   voice_chat_mode: chained
+
+  gpt_live:
+    voice: ripple
 wake_word:
+
   confirmation_frames: 3
+
   enabled: false
+
   openwakeword:
+
     model: hey_jarvis
+
   phrase: hey jarvis
+
   provider: openwakeword
+
   sensitivity: 0.6
+
   sherpa:
+
     model_dir: C:\Users\Public\.hermes-kws
+
 web:
+
   search_backend: ddgs
+

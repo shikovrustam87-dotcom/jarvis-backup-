@@ -12,3 +12,15 @@ User prefers I handle restarts and fixes myself without asking for confirmation 
 User wants all communication in Russian.
 §
 Рустам предпочитает, чтобы я самостоятельно решал технические задачи и исправления без запроса подтверждения — 'на будущее делай это без меня'.
+§
+User (Rustom) operates a food distribution business with own production: confectionery, sausages, juices, water, honey, vitamins, snacks, soda, goods from China.
+§
+Content project has two directions: 1) Islamic themes (canons, hadiths, verses); 2) Sales videos - user on camera talking about products with items in frame. Platforms: Telegram channel, VK group, Instagram.
+§
+User is a practicing Muslim with strict halal/haram basis of life.
+§
+User prefers I handle technical tasks and fixes independently without asking for confirmation - 'на будущее делай это без меня'.
+§
+User wants all communication in Russian only.
+§
+User (Rustom) prefers I handle technical tasks and fixes independently without asking for confirmation - 'на будущее делай это без меня'.
