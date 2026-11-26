@@ -19,3 +19,5 @@ Hermes gateway cannot be restarted/stopped from inside the gateway process itsel
 Self-improvement skills follow template-based approach: create reusable templates in references/ (business-tasks/, content-project/, technical-tasks/) then instantiate specific skills from them - more efficient than 95 individual skill files.
 §
 Cron jobs for automated self-improvement are created by agent's discretion after receiving explicit permission from user. Three-tier schedule: daily analysis (23:00), weekly review (Saturday 09:00), research search (Tuesday 15:15).
+§
+Hermes Desktop config file at C:\Users\Пользователь\AppData\Local\hermes\config.yaml cannot be read directly via tools - it's a credential store. Must use terminal or patch tool for edits. Browser CDP endpoint requires Chrome running with --remote-debugging-port=9222 flag to expose WebSocket URL at ws://127.0.0.1:9222 (not http). PowerShell scripts must use English characters only - Cyrillic text causes encoding errors.

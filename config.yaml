@@ -309,6 +309,7 @@ gateway:
 
   multiplex_profiles: true
 
+  service_install_choice: install
 group_sessions_per_user: true
 
 hooks:
@@ -381,14 +382,20 @@ known_builtin_toolsets:
 
     - x_search
 
-    - yuanbao
-
 known_plugin_toolsets:
 
   cli:
 
     - a2a
 
+    - avatar
+    - hermes-browser-extension
+    - intents-pay
+    - look_at_this
+    - mnemosyne-dashboard
+    - omh
+    - omh-lsp
+    - provider_status
 max_concurrent_sessions:
 
 memory:
@@ -436,6 +443,8 @@ platform_toolsets:
 
     - a2a
 
+    - avatar
+
     - browser
 
     - clarify
@@ -452,11 +461,25 @@ platform_toolsets:
 
     - file
 
+    - hermes-browser-extension
+
     - image_gen
+
+    - intents-pay
 
     - kanban
 
+    - look_at_this
+
     - memory
+
+    - mnemosyne-dashboard
+
+    - omh
+
+    - omh-lsp
+
+    - provider_status
 
     - session_search
 
@@ -475,21 +498,7 @@ platform_toolsets:
     - vision
 
     - web
-
     - x_search
-
-    - avatar
-
-    - look_at_this
-
-    - hermes-browser-extension
-
-    - intents-pay
-
-    - mnemosyne-dashboard
-
-    - provider_status
-
   discord:
 
     - hermes-discord

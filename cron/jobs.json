@@ -1,138 +1,6 @@
 {
   "jobs": [
     {
-      "id": "e1f05046f771",
-      "name": "Утренняя сводка",
-      "prompt": "Ты — Джарвис, личный ассистент Рустама. Составь утреннюю сводку на сегодня и отправь её в этот чат. Отвечай на русском языке.\n\nСводка должна содержать четыре раздела:\n\n1. **Погода в Шалушке (Кабардино-Балкария)**\nНайди текущую погоду и прогноз на день для населённого пункта Шалушка (Shalushka, Kabardino-Balkaria, Россия). Используй web_search с запросом «погода Шалушка Кабардино-Балкария сегодня» и web_extract для получения деталей. Укажи: температуру, осадки, ветер, общее описание.\n\n2. **Время намаза на сегодня**\nНайди расписание намазов для Шалушки (или Нальчика, если для Шалушки нет отдельных данных) на сегодняшнюю дату. Используй web_search с запросом «время намаза Нальчик ДУМ РФ сегодня» или «prayer times Nalchik Russia method». Используй метод расчёта Духовного управления мусульман России (ДУМ РФ). Укажи времена: Фаджр, Восход, Зухр, Аср, Магриб, Иша.\n\n3. **Напоминания на сегодня**\nС помощью инструмента cronjob_manage (action='list') получи список всех активных cron-задач. Отфильтруй те, которые запланированы на сегодня (по полю next_run_at) и имеют в названии или описании слова «напомин», «remind», «reminder», «задача», «дедлайн» или похожие. Перечисли их с временем срабатывания. Если активных напоминаний на сегодня нет — так и напиши.\n\n4. **Баланс OpenRouter**\nСвежие данные проверки баланса уже подставлены в этот запрос (блок с as_of, ОСТАТОК, расходом за сутки/неделю/месяц и, если есть, разбивка по моделям) — используй их, ничего не выдумывай. Приведи остаток на счёте и расход за сутки. Если в данных есть блок разбивки по моделям — добавь одну строку: на какие модели (1–2 крупнейшие по расходу) ушло больше всего за последние завершённые сутки UTC. Если в твоём предыдущем отчёте из истории был назван прошлый остаток — сравни и покажи, сколько ушло с прошлой проверки. Кратко, 2–4 строки. Если в данных есть строка ОШИБКА — напиши, что баланс проверить не удалось, и приведи текст ошибки.\n\nФормат вывода: красиво оформленное сообщение, кратко и по делу. Начни с «Доброе утро, сэр. Утренняя сводка на <дата>:» и затем четыре раздела.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": "balance_check.py",
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": [
-        "self"
-      ],
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * *",
-        "display": "every day at 8am"
-      },
-      "schedule_display": "every day at 8am",
-      "repeat": {
-        "times": null,
-        "completed": 36
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-10-19T11:20:02.064139+03:00",
-      "next_run_at": "2026-11-25T08:00:00+03:00",
-      "last_run_at": "2026-11-24T08:02:48.723908+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "last_failure": {
-        "at": "2026-11-19T08:03:13.151489+03:00",
-        "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
-      },
-      "failure_streak": 0,
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "596611073",
-        "chat_name": ". .",
-        "thread_id": null,
-        "user_id": "596611073",
-        "scope_id": null
-      },
-      "enabled_toolsets": null,
-      "workdir": null,
-      "attach_to_session": true,
-      "last_dispatch": {
-        "scheduled_at": "2026-11-24T08:00:00+03:00",
-        "dispatched_at": "2026-11-24T08:00:22.473384+03:00",
-        "lateness_seconds": 22.5,
-        "kind": "on_time"
-      },
-      "fire_claim": null,
-      "canonical_completions": [
-        "19bfffbe2d254fa7a4382949ee02207b"
-      ]
-    },
-    {
-      "id": "658eaae7c910",
-      "name": "Недельный отчёт",
-      "prompt": "Ты — Джарвис, личный ассистент Рустама. Составь недельный отчёт и отправь его в этот чат. Отвечай на русском языке, кратко и по делу.\n\n### Что нужно сделать:\n\n1. **Прошлая неделя — итоги.** С помощью инструмента session_search найди разговоры Рустама за последние 7 дней. Извлеки ключевые темы, решения, созданные файлы, выполненные просьбы. Выдели главные достижения.\n\n2. **Напоминания и задачи.** С помощью cronjob_manage (action='list') получи список ВСЕХ cron-задач. Проанализируй:\n   - Какие задачи были выполнены (last_status = 'completed') на этой неделе.\n   - Какие остались активными и не выполненными.\n   - Какие просрочены (next_run_at в прошлом, но задача ещё активна).\n\n3. **Что осталось несделанным.** Из анализа сессий и cron-задач выдели всё, что обсуждалось или планировалось, но не было завершено или отложено.\n\n4. **План на следующую неделю — 3 главных дела.** На основе контекста прошедшей недели и незавершённых задач предложи 3 приоритетных дела на предстоящую неделю. Они должны быть конкретными, реалистичными и учитывать контекст проекта «Джарвис» (голосовой ассистент, HUD, видео, автоматизация).\n\n### Формат вывода:\n\nНачни с «📊 **Недельный отчёт** — <диапазон дат>»\n\nДалее четыре раздела:\n- ✅ Выполнено\n- 📋 Задачи и напоминания\n- ⚠️ Осталось несделанным\n- 🎯 3 главных дела на следующую неделю\n\nБудь конкретен, ссылайся на факты из сессий. Не фантазируй.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": [
-        "self"
-      ],
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 20 * * 0",
-        "display": "every sunday at 8pm"
-      },
-      "schedule_display": "every sunday at 8pm",
-      "repeat": {
-        "times": null,
-        "completed": 5
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-10-19T11:27:28.370436+03:00",
-      "next_run_at": "2026-11-29T20:00:00+03:00",
-      "last_run_at": "2026-11-22T20:05:43.240955+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "last_failure": {
-        "at": "2026-11-15T20:01:04.511334+03:00",
-        "detail": "ValueError: Model huihui-qwen3.8-27b-abliterated has a context window of 8,192 tokens, which is below the minimum 64,000 required by Hermes Agent.  Your local server is serving a 8,192-token window.  Start it with at least 64K context (llama.cpp: -c 64000; vLLM: --max-model-len; Ollama: OLLAMA_CONTEXT_LENGTH=64000 or a Modelfile num_ctx), or set model.ollama_num_ctx in config.yaml to the window it really serves (at least 64K)."
-      },
-      "failure_streak": 0,
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "596611073",
-        "chat_name": ". .",
-        "thread_id": null,
-        "user_id": "596611073",
-        "scope_id": null
-      },
-      "enabled_toolsets": null,
-      "workdir": null,
-      "attach_to_session": true,
-      "last_dispatch": {
-        "scheduled_at": "2026-11-22T20:00:00+03:00",
-        "dispatched_at": "2026-11-22T20:00:58.328697+03:00",
-        "lateness_seconds": 58.3,
-        "kind": "on_time"
-      },
-      "fire_claim": null,
-      "canonical_completions": [
-        "f49bf7abf8174ca38f04179da51ffd9a"
-      ]
-    },
-    {
       "id": "8da903da6036",
       "name": "Радар трендов ИИ",
       "prompt": "Ты — Джарвис, личный ассистент Рустама. Составь еженедельный радар трендов на русском языке. Отвечай кратко, без лишних слов.\n\nНайди 5 главных новостей прошедшей недели в сфере искусственного интеллекта и технологий. Используй web_search с англоязычными запросами (например, «top AI news this week», «biggest tech stories this week») и русскоязычными (например, «главные новости ИИ за неделю»).\n\nДля каждой новости:\n- Один заголовок-предложение (на русском, своими словами, но отражающее суть).\n- Ссылка на авторитетный источник (оригинальная статья, пресс-релиз, проверенное издание — не агрегатор).\n\nФормат:\n📡 **Радар трендов — неделя <диапазон>**\n\n1. <новость> — [источник](url)\n2. <новость> — [источник](url)\n...\n\nВсего ровно 5 пунктов. Сортируй по значимости: самое важное — первым.",
@@ -165,7 +33,7 @@
       "paused_reason": null,
       "created_at": "2026-10-19T11:28:45.732649+03:00",
       "next_run_at": "2026-11-30T09:00:00+03:00",
-      "last_run_at": "2026-11-23T09:03:26.817416+03:00",
+      "last_run_at": "2026-11-25T18:28:09.438305+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -195,78 +63,8 @@
       },
       "fire_claim": null,
       "canonical_completions": [
-        "3772a997481e485d979648d863fe9fd9"
+        "77eba50f3de3453eb1e50abb59f489fc"
       ]
-    },
-    {
-      "id": "b840194e87ab",
-      "name": "Дневник в Obsidian",
-      "prompt": "Ты — Джарвис, личный ассистент Рустама. Создай заметку дня в его базе знаний Obsidian.\n\n**Путь к базе:** `C:\\Users\\Пользователь\\Documents\\JarvisVault`\n\n### Шаги:\n\n1. Прочитай файл `ПРАВИЛА.md` в корне базы и следуй его правилам.\n\n2. С помощью инструмента session_search найди все разговоры Рустама за сегодняшний день. Извлеки:\n   - о чём говорили (темы, вопросы, задачи);\n   - что было сделано/выполнено;\n   - какие напоминания и задачи создавались или выполнялись.\n\n3. Создай файл `daily/<ГГГГ-ММ-ДД>.md` (дата сегодняшняя) со структурой:\n   ```\n   # <ГГГГ-ММ-ДД>\n   \n   ## О чём говорили\n   - ...\n   \n   ## Что сделано\n   - ...\n   \n   ## Напоминания\n   - ...\n   \n   ## Планы на завтра\n   - ...\n   ```\n   Если сегодняшняя заметка уже существует — дополни её, не перезаписывай.\n\n4. Обнови `log.md`: добавь строку с сегодняшней датой и кратким описанием, что добавлено/изменено.\n\n5. Верни краткий отчёт в чат: «📔 Заметка дня за <дата> создана в базе. <одна-две строки сути>».\n\nЕсли за сегодня разговоров не было — всё равно создай заметку с пометкой, что день был тихим. Соблюдай запреты из ПРАВИЛА.md (не удалять файлы, не писать пароли).\n\nЭКОНОМИЯ: session_search вызывай не больше 2 раз и только за сегодня. Заметка не длиннее 20 строк.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": [
-        "self"
-      ],
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 22 * * *",
-        "display": "every day at 10pm"
-      },
-      "schedule_display": "every day at 10pm",
-      "repeat": {
-        "times": null,
-        "completed": 37
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-10-19T11:58:29.793829+03:00",
-      "next_run_at": "2026-11-25T22:00:00+03:00",
-      "last_run_at": "2026-11-24T22:01:36.448675+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "last_delivery_unverified": null,
-      "last_failure": {
-        "at": "2026-11-23T22:02:35.228957+03:00",
-        "detail": "interrupted"
-      },
-      "failure_streak": 0,
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "596611073",
-        "chat_name": ". .",
-        "thread_id": null,
-        "user_id": "596611073",
-        "scope_id": null
-      },
-      "enabled_toolsets": [
-        "file",
-        "session_search",
-        "terminal"
-      ],
-      "workdir": null,
-      "last_dispatch": {
-        "scheduled_at": "2026-11-24T22:00:00+03:00",
-        "dispatched_at": "2026-11-24T22:00:14.271520+03:00",
-        "lateness_seconds": 14.3,
-        "kind": "on_time"
-      },
-      "fire_claim": null,
-      "canonical_completions": [
-        "79106e0baeb94d27b0c4402c8b85068e"
-      ],
-      "last_delivery_reached_none": null
     },
     {
       "id": "5e82fef373a0",
@@ -295,13 +93,13 @@
         "times": null,
         "completed": 34
       },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-11-25T18:48:02.555063+03:00",
       "paused_reason": null,
       "created_at": "2026-10-23T09:26:23.361721+03:00",
       "next_run_at": "2026-11-25T22:00:00+03:00",
-      "last_run_at": "2026-11-24T22:00:40.516557+03:00",
+      "last_run_at": "2026-11-25T18:26:57.793654+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -334,7 +132,7 @@
         "kind": "on_time"
       },
       "canonical_completions": [
-        "5004d5849cef46a5be9f454c38e23606"
+        "2bd16a61a1e845839973e36d2f6d9d66"
       ],
       "last_delivery_reached_none": null
     },
@@ -361,24 +159,24 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 33
+        "completed": 34
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-11-25T07:55:00+03:00",
-      "last_run_at": "2026-11-24T08:03:10.665372+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-11-26T07:55:00+03:00",
+      "last_run_at": "2026-11-25T18:42:49.573637+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 21,790 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-19T07:58:26.610825+03:00",
-        "detail": "RuntimeError: ⚠️ Нет ответа: каждый провайдер в цепочке резервных постоянно переключался на следующий, поэтому ход остановлен вместо бесконечных повторов. Отправьте `continue` или смените провайдера."
+        "at": "2026-11-25T18:42:49.573637+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 21,790 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -393,13 +191,13 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-24T07:55:00+03:00",
-        "dispatched_at": "2026-11-24T07:55:22.485191+03:00",
-        "lateness_seconds": 22.5,
+        "scheduled_at": "2026-11-25T07:55:00+03:00",
+        "dispatched_at": "2026-11-25T07:55:14.503247+03:00",
+        "lateness_seconds": 14.5,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "ef4766900b504a8d8e2302df76f13eec"
+        "926624ed83cd4376ab262b87e0bba243"
       ]
     },
     {
@@ -425,15 +223,15 @@
       "schedule_display": "every day at 10am",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-06T17:42:01.234994+03:00",
-      "next_run_at": "2026-11-25T10:00:00+03:00",
-      "last_run_at": "2026-11-24T10:03:41.369155+03:00",
+      "next_run_at": "2026-11-26T10:00:00+03:00",
+      "last_run_at": "2026-11-25T18:28:53.694567+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -456,14 +254,14 @@
       "workdir": null,
       "timezone": "Europe/Moscow",
       "last_dispatch": {
-        "scheduled_at": "2026-11-24T10:00:00+03:00",
-        "dispatched_at": "2026-11-24T10:00:22.532002+03:00",
-        "lateness_seconds": 22.5,
+        "scheduled_at": "2026-11-25T10:00:00+03:00",
+        "dispatched_at": "2026-11-25T10:00:14.599115+03:00",
+        "lateness_seconds": 14.6,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "09a922627a2845b8a1f94e62f9c8068c"
+        "44b3bc85497d4323bf9955bcbb46c088"
       ]
     },
     {
@@ -524,17 +322,851 @@
       ]
     },
     {
-      "id": "d9218db13e8d",
-      "name": "self-improvement",
-      "prompt": "",
-      "skills": [
-        "self-improvement"
-      ],
-      "skill": "self-improvement",
+      "id": "897df57a6d4a",
+      "name": "balance-check-optimized",
+      "prompt": "Check OpenRouter balance only. Return current balance status in 1 sentence.",
+      "skills": [],
+      "skill": null,
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": "daily_analysis.py",
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * *",
+        "display": "every day at 23:00"
+      },
+      "schedule_display": "every day at 23:00",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T18:48:14.247879+03:00",
+      "next_run_at": "2026-11-26T23:00:00+03:00",
+      "last_run_at": "2026-11-25T23:02:00.161584+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": {
+        "at": "2026-11-25T18:49:16.120714+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 20,610 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+      },
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "29483b8967b040cc81b55e1c8e001373"
+      ],
+      "last_dispatch": {
+        "scheduled_at": "2026-11-25T23:00:00+03:00",
+        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
+        "lateness_seconds": 23.6,
+        "kind": "on_time"
+      }
+    },
+    {
+      "id": "4ae2fb0b0d3b",
+      "name": "weekly-review-optimized",
+      "prompt": "Review completed tasks this week. Count successes and failures only.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 6",
+        "display": "every saturday 09:00"
+      },
+      "schedule_display": "every saturday 09:00",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T18:48:17.917947+03:00",
+      "next_run_at": "2026-11-28T09:00:00+03:00",
+      "last_run_at": "2026-11-25T18:49:15.127885+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 20,608 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": {
+        "at": "2026-11-25T18:49:15.127885+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 20,608 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+      },
+      "failure_streak": 1,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "ae30972203164693bd2c473e45736b4e"
+      ]
+    },
+    {
+      "id": "ac99e6e05238",
+      "name": "daily-analysis-optimized",
+      "prompt": "Analyze today's task completion rate only.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * *",
+        "display": "every day at 23:00"
+      },
+      "schedule_display": "every day at 23:00",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T18:48:26.749608+03:00",
+      "next_run_at": "2026-11-26T23:00:00+03:00",
+      "last_run_at": "2026-11-25T23:05:18.450862+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 39,564 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": {
+        "at": "2026-11-25T23:05:18.450862+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 39,564 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+      },
+      "failure_streak": 2,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "9d9a14c18b0a499aaf0c1ff839afe8c1"
+      ],
+      "last_dispatch": {
+        "scheduled_at": "2026-11-25T23:00:00+03:00",
+        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
+        "lateness_seconds": 23.6,
+        "kind": "on_time"
+      }
+    },
+    {
+      "id": "f3fa63338951",
+      "name": "research-search-optimized",
+      "prompt": "Search web for AI agent optimization news only. Return top 3 headlines.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 15 * * 2",
+        "display": "every tuesday 15:15"
+      },
+      "schedule_display": "every tuesday 15:15",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T18:48:26.830234+03:00",
+      "next_run_at": "2026-12-01T15:15:00+03:00",
+      "last_run_at": "2026-11-25T18:49:15.305751+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 20,609 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": {
+        "at": "2026-11-25T18:49:15.305751+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 20,609 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+      },
+      "failure_streak": 1,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "396db11cf4ed410a90051c1e73127bd6"
+      ]
+    },
+    {
+      "id": "00bb22484928",
+      "name": "obsidian-journal-optimized",
+      "prompt": "Create simple daily note in Obsidian with date and 3 bullet points.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * *",
+        "display": "every day at 22:00"
+      },
+      "schedule_display": "every day at 22:00",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T18:48:26.920701+03:00",
+      "next_run_at": "2026-11-26T22:00:00+03:00",
+      "last_run_at": "2026-11-25T22:02:45.911049+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "c82b0a8dac384d36b56322b09ab68cdc"
+      ],
+      "last_dispatch": {
+        "scheduled_at": "2026-11-25T22:00:00+03:00",
+        "dispatched_at": "2026-11-25T22:00:49.653539+03:00",
+        "lateness_seconds": 49.7,
+        "kind": "on_time"
+      }
+    },
+    {
+      "id": "df906ffd3701",
+      "name": "market-summary-optimized",
+      "prompt": "Check food distribution market news only. Return brief summary.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 7 * * *",
+        "display": "every day at 07:55am"
+      },
+      "schedule_display": "every day at 07:55am",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T18:48:27.036298+03:00",
+      "next_run_at": "2026-11-26T07:55:00+03:00",
+      "last_run_at": "2026-11-25T18:52:42.645161+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "964549d3c3b941179c2040e259868ba9"
+      ]
+    },
+    {
+      "id": "7323a879a95f",
+      "name": "balance-check-terminal",
+      "prompt": "Check OpenRouter balance via terminal command. Return only the numeric balance value in USD.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * *",
+        "display": "every day at 23:00"
+      },
+      "schedule_display": "every day at 23:00",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T18:53:36.807049+03:00",
+      "next_run_at": "2026-11-26T23:00:00+03:00",
+      "last_run_at": "2026-11-25T23:02:04.886007+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "c1c6a7c216ea49ecbc1f5ec0bb802bd7"
+      ],
+      "last_dispatch": {
+        "scheduled_at": "2026-11-25T23:00:00+03:00",
+        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
+        "lateness_seconds": 23.6,
+        "kind": "on_time"
+      }
+    },
+    {
+      "id": "f72170f091c4",
+      "name": "daily-summary-terminal",
+      "prompt": "Count completed tasks today via terminal. Return only the count number.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * *",
+        "display": "every day at 23:00"
+      },
+      "schedule_display": "every day at 23:00",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T18:53:36.909121+03:00",
+      "next_run_at": "2026-11-26T23:00:00+03:00",
+      "last_run_at": "2026-11-25T23:05:18.403149+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 33,236 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": {
+        "at": "2026-11-25T23:05:18.403149+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 33,236 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+      },
+      "failure_streak": 1,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "b9e0e4452afe40fd8769717693723fa3"
+      ],
+      "last_dispatch": {
+        "scheduled_at": "2026-11-25T23:00:00+03:00",
+        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
+        "lateness_seconds": 23.6,
+        "kind": "on_time"
+      }
+    },
+    {
+      "id": "f691d13e8951",
+      "name": "weekly-summary-terminal",
+      "prompt": "Count completed tasks this week via terminal. Return only the count number.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 6",
+        "display": "every saturday 09:00"
+      },
+      "schedule_display": "every saturday 09:00",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T18:53:37.001794+03:00",
+      "next_run_at": "2026-11-28T09:00:00+03:00",
+      "last_run_at": "2026-11-25T18:58:10.297087+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "c515de0e879c4582963dd9f11cc22a3e"
+      ]
+    },
+    {
+      "id": "4ab90e9b3e92",
+      "name": "research-search-terminal",
+      "prompt": "Search web for AI agent optimization news. Return top 3 headlines only.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 15 * * 2",
+        "display": "every tuesday 15:15"
+      },
+      "schedule_display": "every tuesday 15:15",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T18:53:37.099470+03:00",
+      "next_run_at": "2026-12-01T15:15:00+03:00",
+      "last_run_at": "2026-11-25T18:54:32.907893+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "9c20c810806e4df28f7ce8e4506dc4aa"
+      ]
+    },
+    {
+      "id": "716e6661e1e8",
+      "name": "daily-summary-terminal-v2",
+      "prompt": "Count completed tasks today via terminal. Return ONLY the count number (integer). No analysis, no text.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * *",
+        "display": "every day at 23:00"
+      },
+      "schedule_display": "every day at 23:00",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T21:23:31.245142+03:00",
+      "next_run_at": "2026-11-26T23:00:00+03:00",
+      "last_run_at": "2026-11-25T23:05:20.252143+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 70,618 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": {
+        "at": "2026-11-25T23:05:20.252143+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 70,618 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+      },
+      "failure_streak": 2,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "3f06e622650b4b51ba5fffa2d8df9b82"
+      ],
+      "last_dispatch": {
+        "scheduled_at": "2026-11-25T23:00:00+03:00",
+        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
+        "lateness_seconds": 23.6,
+        "kind": "on_time"
+      }
+    },
+    {
+      "id": "362e65b11ad7",
+      "name": "weekly-summary-terminal-v2",
+      "prompt": "Count completed tasks this week via terminal. Return ONLY the count number (integer). No analysis, no text.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 6",
+        "display": "every saturday 09:00"
+      },
+      "schedule_display": "every saturday 09:00",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T21:23:31.363611+03:00",
+      "next_run_at": "2026-11-28T09:00:00+03:00",
+      "last_run_at": "2026-11-25T21:29:13.653849+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 22,267 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": {
+        "at": "2026-11-25T21:29:13.653849+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 22,267 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+      },
+      "failure_streak": 1,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "484d6541f1cb45fd8e5d5d2b78e15c7b"
+      ]
+    },
+    {
+      "id": "6d7568d69ce3",
+      "name": "obsidian-journal-terminal-v2",
+      "prompt": "Create simple daily note in Obsidian with date and 3 bullet points. Use terminal commands only.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * *",
+        "display": "every day at 22:00"
+      },
+      "schedule_display": "every day at 22:00",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T21:23:31.480352+03:00",
+      "next_run_at": "2026-11-26T22:00:00+03:00",
+      "last_run_at": "2026-11-25T22:02:03.707661+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": {
+        "at": "2026-11-25T21:29:13.687963+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 21,873 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+      },
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "5487fac34a5845dea869b925a7cae09e"
+      ],
+      "last_dispatch": {
+        "scheduled_at": "2026-11-25T22:00:00+03:00",
+        "dispatched_at": "2026-11-25T22:00:49.653539+03:00",
+        "lateness_seconds": 49.7,
+        "kind": "on_time"
+      }
+    },
+    {
+      "id": "eeb422685813",
+      "name": "market-summary-terminal-v2",
+      "prompt": "Check food distribution market news only. Return brief summary (1-2 sentences). Use web_search.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 7 * * *",
+        "display": "every day at 07:55am"
+      },
+      "schedule_display": "every day at 07:55am",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T21:23:31.580534+03:00",
+      "next_run_at": "2026-11-26T07:55:00+03:00",
+      "last_run_at": "2026-11-25T21:29:05.546218+03:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "64bc8908b23b4cd3b88f13d090896e47"
+      ]
+    },
+    {
+      "id": "e09b656be379",
+      "name": "self-improvement-daily-terminal-v2",
+      "prompt": "Count completed tasks today via terminal. Return ONLY the count number (integer). No analysis, no text.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
       "no_agent": false,
       "monitor_script": null,
       "monitor_url": null,
@@ -554,18 +1186,18 @@
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
-      "created_at": "2026-11-24T18:19:52.453405+03:00",
-      "next_run_at": "2026-11-25T23:00:00+03:00",
-      "last_run_at": "2026-11-24T23:00:33.832066+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "created_at": "2026-11-25T21:27:48.833929+03:00",
+      "next_run_at": "2026-11-26T23:00:00+03:00",
+      "last_run_at": "2026-11-25T23:05:18.471664+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 22,452 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-24T19:40:17.153471+03:00",
-        "detail": "interrupted"
+        "at": "2026-11-25T23:05:18.471664+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 22,452 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -577,29 +1209,28 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
+      "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "2c222792500c472985cc9d97b6e54c3a"
+        "1845cff82963434198bf86a845669870"
       ],
       "last_dispatch": {
-        "scheduled_at": "2026-11-24T23:00:00+03:00",
-        "dispatched_at": "2026-11-24T23:00:14.295352+03:00",
-        "lateness_seconds": 14.3,
+        "scheduled_at": "2026-11-25T23:00:00+03:00",
+        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
+        "lateness_seconds": 23.6,
         "kind": "on_time"
       }
     },
     {
-      "id": "c9c0264a3766",
-      "name": "self-improvement",
-      "prompt": "",
-      "skills": [
-        "self-improvement"
-      ],
-      "skill": "self-improvement",
+      "id": "4b9c8dc86f88",
+      "name": "self-improvement-weekly-terminal-v2",
+      "prompt": "Count completed tasks this week via terminal. Return ONLY the count number (integer). No analysis, no text.",
+      "skills": [],
+      "skill": null,
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": "weekly_review.py",
+      "script": null,
       "no_agent": false,
       "monitor_script": null,
       "monitor_url": null,
@@ -619,18 +1250,15 @@
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
-      "created_at": "2026-11-24T18:19:54.366078+03:00",
+      "created_at": "2026-11-25T21:27:48.935636+03:00",
       "next_run_at": "2026-11-28T09:00:00+03:00",
-      "last_run_at": "2026-11-24T19:40:17.428767+03:00",
-      "last_status": "error",
-      "last_error": "interrupted",
+      "last_run_at": "2026-11-25T21:31:27.099360+03:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "last_failure": {
-        "at": "2026-11-24T19:40:17.428767+03:00",
-        "detail": "interrupted"
-      },
-      "failure_streak": 1,
+      "last_failure": null,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -642,23 +1270,22 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
+      "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "b13c989810924020ba091abe1eb03cdb"
+        "b23aaf797dd94793b162aa4ed371e0d8"
       ]
     },
     {
-      "id": "ee39069e6fdf",
-      "name": "self-improvement",
-      "prompt": "",
-      "skills": [
-        "self-improvement"
-      ],
-      "skill": "self-improvement",
+      "id": "46ebd9eb2619",
+      "name": "self-improvement-research-terminal-v2",
+      "prompt": "Search web for AI trends and tools. Return brief summary (3-5 bullet points). Use web_search.",
+      "skills": [],
+      "skill": null,
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": "research_search.py",
+      "script": null,
       "no_agent": false,
       "monitor_script": null,
       "monitor_url": null,
@@ -672,24 +1299,24 @@
       "schedule_display": "15 * * * 2",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 0
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
-      "created_at": "2026-11-24T18:19:56.139936+03:00",
+      "created_at": "2026-11-25T21:27:49.112274+03:00",
       "next_run_at": "2026-12-01T00:15:00+03:00",
-      "last_run_at": "2026-11-24T23:15:31.932957+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "last_run_at": "2026-11-25T21:29:12.728762+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 28,850 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-24T19:40:17.291808+03:00",
-        "detail": "interrupted"
+        "at": "2026-11-25T21:29:12.728762+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 28,850 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -701,17 +1328,70 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "last_dispatch": {
-        "scheduled_at": "2026-11-24T23:15:00+03:00",
-        "dispatched_at": "2026-11-24T23:15:14.302477+03:00",
-        "lateness_seconds": 14.3,
-        "kind": "on_time"
-      },
+      "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "35ad850e526646519d118c0f3356c766"
+        "631b3e2f1a314a9f84a57a877f501404"
+      ]
+    },
+    {
+      "id": "daf150c1db9e",
+      "name": "research-tuesday-terminal-v2",
+      "prompt": "Search web for AI trends and tools. Return brief summary (3-5 bullet points). Use web_search.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 15 * * 2",
+        "display": "every tuesday 15:15"
+      },
+      "schedule_display": "every tuesday 15:15",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-11-25T21:27:49.372990+03:00",
+      "next_run_at": "2026-12-01T15:15:00+03:00",
+      "last_run_at": "2026-11-25T21:29:13.367284+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 28,852 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "last_failure": {
+        "at": "2026-11-25T21:29:13.367284+03:00",
+        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 28,852 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+      },
+      "failure_streak": 1,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "596611073",
+        "chat_name": ". .",
+        "thread_id": null,
+        "user_id": "596611073",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "timezone": "Europe/Moscow",
+      "fire_claim": null,
+      "canonical_completions": [
+        "34cfbe72c44c450283214b206fa452ed"
       ]
     }
   ],
-  "updated_at": "2026-11-24T23:15:32.226753+03:00"
+  "updated_at": "2026-11-25T23:05:20.261667+03:00"
 }
