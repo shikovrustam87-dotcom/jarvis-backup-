@@ -159,24 +159,24 @@
       "schedule_display": "every day at 7:55am",
       "repeat": {
         "times": null,
-        "completed": 34
+        "completed": 35
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-10-24T09:20:55.457205+03:00",
-      "next_run_at": "2026-11-26T07:55:00+03:00",
-      "last_run_at": "2026-11-25T18:42:49.573637+03:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 21,790 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
-      "last_delivery_error": null,
+      "next_run_at": "2026-11-27T07:55:00+03:00",
+      "last_run_at": "2026-11-26T07:56:49.723200+03:00",
+      "last_status": "delivery_failed",
+      "last_error": null,
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:596611073)",
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-25T18:42:49.573637+03:00",
         "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 21,790 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
       },
-      "failure_streak": 1,
+      "failure_streak": 0,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -191,14 +191,15 @@
       "attach_to_session": false,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-25T07:55:00+03:00",
-        "dispatched_at": "2026-11-25T07:55:14.503247+03:00",
-        "lateness_seconds": 14.5,
+        "scheduled_at": "2026-11-26T07:55:00+03:00",
+        "dispatched_at": "2026-11-26T07:55:23.611512+03:00",
+        "lateness_seconds": 23.6,
         "kind": "on_time"
       },
       "canonical_completions": [
-        "926624ed83cd4376ab262b87e0bba243"
-      ]
+        "018ce169e6f3473bb947f1dd21b1e416"
+      ],
+      "last_delivery_reached_none": true
     },
     {
       "id": "429e6958c7fd",
@@ -223,15 +224,15 @@
       "schedule_display": "every day at 10am",
       "repeat": {
         "times": null,
-        "completed": 18
+        "completed": 19
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-06T17:42:01.234994+03:00",
-      "next_run_at": "2026-11-26T10:00:00+03:00",
-      "last_run_at": "2026-11-25T18:28:53.694567+03:00",
+      "next_run_at": "2026-11-27T10:00:00+03:00",
+      "last_run_at": "2026-11-26T10:00:34.749668+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -254,14 +255,14 @@
       "workdir": null,
       "timezone": "Europe/Moscow",
       "last_dispatch": {
-        "scheduled_at": "2026-11-25T10:00:00+03:00",
-        "dispatched_at": "2026-11-25T10:00:14.599115+03:00",
-        "lateness_seconds": 14.6,
+        "scheduled_at": "2026-11-26T10:00:00+03:00",
+        "dispatched_at": "2026-11-26T10:00:06.915406+03:00",
+        "lateness_seconds": 6.9,
         "kind": "on_time"
       },
       "fire_claim": null,
       "canonical_completions": [
-        "44b3bc85497d4323bf9955bcbb46c088"
+        "796b9a0b27be4958b8ec066e08fde385"
       ]
     },
     {
@@ -344,24 +345,24 @@
       "schedule_display": "every day at 23:00",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-25T18:48:14.247879+03:00",
-      "next_run_at": "2026-11-26T23:00:00+03:00",
-      "last_run_at": "2026-11-25T23:02:00.161584+03:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
+      "next_run_at": "2026-11-27T23:00:00+03:00",
+      "last_run_at": "2026-11-26T23:00:12.203395+03:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Failed to read cron database: [Errno 13] Permission denied: 'C:\\\\Users\\\\Пользователь\\\\AppData\\\\Local\\\\hermes\\\\cron\\\\jobs.json'",
+      "last_delivery_error": "Gateway exited during delivery; send outcome is unknown and was not retried.",
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-25T18:49:16.120714+03:00",
-        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 20,610 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+        "at": "2026-11-26T23:00:12.203395+03:00",
+        "detail": "RuntimeError: Failed to read cron database: [Errno 13] Permission denied: 'C:\\\\Users\\\\Пользователь\\\\AppData\\\\Local\\\\hermes\\\\cron\\\\jobs.json'"
       },
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -376,12 +377,12 @@
       "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "29483b8967b040cc81b55e1c8e001373"
+        "f2fb027c87e1473cbf39a17e08bf1d94"
       ],
       "last_dispatch": {
-        "scheduled_at": "2026-11-25T23:00:00+03:00",
-        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
-        "lateness_seconds": 23.6,
+        "scheduled_at": "2026-11-26T23:00:00+03:00",
+        "dispatched_at": "2026-11-26T23:00:11.386135+03:00",
+        "lateness_seconds": 11.4,
         "kind": "on_time"
       }
     },
@@ -466,24 +467,24 @@
       "schedule_display": "every day at 23:00",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-25T18:48:26.749608+03:00",
-      "next_run_at": "2026-11-26T23:00:00+03:00",
-      "last_run_at": "2026-11-25T23:05:18.450862+03:00",
+      "next_run_at": "2026-11-27T23:00:00+03:00",
+      "last_run_at": "2026-11-26T23:01:54.620887+03:00",
       "last_status": "error",
-      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 39,564 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
+      "last_error": "interrupted",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-25T23:05:18.450862+03:00",
-        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 39,564 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+        "at": "2026-11-26T23:01:54.620887+03:00",
+        "detail": "interrupted"
       },
-      "failure_streak": 2,
+      "failure_streak": 3,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -498,12 +499,12 @@
       "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "9d9a14c18b0a499aaf0c1ff839afe8c1"
+        "57a8deb22f694753b247a96233761e48"
       ],
       "last_dispatch": {
-        "scheduled_at": "2026-11-25T23:00:00+03:00",
-        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
-        "lateness_seconds": 23.6,
+        "scheduled_at": "2026-11-26T23:00:00+03:00",
+        "dispatched_at": "2026-11-26T23:00:11.386135+03:00",
+        "lateness_seconds": 11.4,
         "kind": "on_time"
       }
     },
@@ -588,15 +589,15 @@
       "schedule_display": "every day at 22:00",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-25T18:48:26.920701+03:00",
-      "next_run_at": "2026-11-26T22:00:00+03:00",
-      "last_run_at": "2026-11-25T22:02:45.911049+03:00",
+      "next_run_at": "2026-11-27T22:00:00+03:00",
+      "last_run_at": "2026-11-26T22:17:28.969274+03:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -617,12 +618,12 @@
       "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "c82b0a8dac384d36b56322b09ab68cdc"
+        "ac52ff8a85514c839f41b31b92101217"
       ],
       "last_dispatch": {
-        "scheduled_at": "2026-11-25T22:00:00+03:00",
-        "dispatched_at": "2026-11-25T22:00:49.653539+03:00",
-        "lateness_seconds": 49.7,
+        "scheduled_at": "2026-11-26T22:00:00+03:00",
+        "dispatched_at": "2026-11-26T22:00:13.998425+03:00",
+        "lateness_seconds": 14.0,
         "kind": "on_time"
       }
     },
@@ -649,18 +650,18 @@
       "schedule_display": "every day at 07:55am",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-25T18:48:27.036298+03:00",
-      "next_run_at": "2026-11-26T07:55:00+03:00",
-      "last_run_at": "2026-11-25T18:52:42.645161+03:00",
-      "last_status": "ok",
+      "next_run_at": "2026-11-27T07:55:00+03:00",
+      "last_run_at": "2026-11-26T07:59:00.530177+03:00",
+      "last_status": "delivery_failed",
       "last_error": null,
-      "last_delivery_error": null,
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:596611073)",
       "last_delivery_unverified": null,
       "last_failure": null,
       "failure_streak": 0,
@@ -678,8 +679,15 @@
       "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "964549d3c3b941179c2040e259868ba9"
-      ]
+        "4fb46f4d0fe044bd80c26c6a51c36157"
+      ],
+      "last_dispatch": {
+        "scheduled_at": "2026-11-26T07:55:00+03:00",
+        "dispatched_at": "2026-11-26T07:55:23.611512+03:00",
+        "lateness_seconds": 23.6,
+        "kind": "on_time"
+      },
+      "last_delivery_reached_none": true
     },
     {
       "id": "7323a879a95f",
@@ -704,21 +712,24 @@
       "schedule_display": "every day at 23:00",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-25T18:53:36.807049+03:00",
-      "next_run_at": "2026-11-26T23:00:00+03:00",
-      "last_run_at": "2026-11-25T23:02:04.886007+03:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-11-27T23:00:00+03:00",
+      "last_run_at": "2026-11-26T23:01:56.581935+03:00",
+      "last_status": "error",
+      "last_error": "interrupted",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "last_failure": null,
-      "failure_streak": 0,
+      "last_failure": {
+        "at": "2026-11-26T23:01:56.581935+03:00",
+        "detail": "interrupted"
+      },
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -733,12 +744,12 @@
       "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "c1c6a7c216ea49ecbc1f5ec0bb802bd7"
+        "ab80df083f2343a3b21febce7c705c19"
       ],
       "last_dispatch": {
-        "scheduled_at": "2026-11-25T23:00:00+03:00",
-        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
-        "lateness_seconds": 23.6,
+        "scheduled_at": "2026-11-26T23:00:00+03:00",
+        "dispatched_at": "2026-11-26T23:00:11.386135+03:00",
+        "lateness_seconds": 11.4,
         "kind": "on_time"
       }
     },
@@ -765,24 +776,24 @@
       "schedule_display": "every day at 23:00",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-25T18:53:36.909121+03:00",
-      "next_run_at": "2026-11-26T23:00:00+03:00",
-      "last_run_at": "2026-11-25T23:05:18.403149+03:00",
+      "next_run_at": "2026-11-27T23:00:00+03:00",
+      "last_run_at": "2026-11-26T23:01:56.205538+03:00",
       "last_status": "error",
-      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 33,236 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
+      "last_error": "interrupted",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-25T23:05:18.403149+03:00",
-        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 33,236 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+        "at": "2026-11-26T23:01:56.205538+03:00",
+        "detail": "interrupted"
       },
-      "failure_streak": 1,
+      "failure_streak": 2,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -797,12 +808,12 @@
       "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "b9e0e4452afe40fd8769717693723fa3"
+        "f30c229a69944b4a9e46aa4786fa7406"
       ],
       "last_dispatch": {
-        "scheduled_at": "2026-11-25T23:00:00+03:00",
-        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
-        "lateness_seconds": 23.6,
+        "scheduled_at": "2026-11-26T23:00:00+03:00",
+        "dispatched_at": "2026-11-26T23:00:11.386135+03:00",
+        "lateness_seconds": 11.4,
         "kind": "on_time"
       }
     },
@@ -939,24 +950,24 @@
       "schedule_display": "every day at 23:00",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-25T21:23:31.245142+03:00",
-      "next_run_at": "2026-11-26T23:00:00+03:00",
-      "last_run_at": "2026-11-25T23:05:20.252143+03:00",
+      "next_run_at": "2026-11-27T23:00:00+03:00",
+      "last_run_at": "2026-11-26T23:01:56.871118+03:00",
       "last_status": "error",
-      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 70,618 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
+      "last_error": "interrupted",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-25T23:05:20.252143+03:00",
-        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 70,618 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+        "at": "2026-11-26T23:01:56.871118+03:00",
+        "detail": "interrupted"
       },
-      "failure_streak": 2,
+      "failure_streak": 3,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -971,12 +982,12 @@
       "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "3f06e622650b4b51ba5fffa2d8df9b82"
+        "931a43c073834b669645304c04221d93"
       ],
       "last_dispatch": {
-        "scheduled_at": "2026-11-25T23:00:00+03:00",
-        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
-        "lateness_seconds": 23.6,
+        "scheduled_at": "2026-11-26T23:00:00+03:00",
+        "dispatched_at": "2026-11-26T23:00:11.386135+03:00",
+        "lateness_seconds": 11.4,
         "kind": "on_time"
       }
     },
@@ -1061,18 +1072,18 @@
       "schedule_display": "every day at 22:00",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-25T21:23:31.480352+03:00",
-      "next_run_at": "2026-11-26T22:00:00+03:00",
-      "last_run_at": "2026-11-25T22:02:03.707661+03:00",
-      "last_status": "ok",
+      "next_run_at": "2026-11-27T22:00:00+03:00",
+      "last_run_at": "2026-11-26T22:14:55.920025+03:00",
+      "last_status": "delivery_failed",
       "last_error": null,
-      "last_delivery_error": null,
+      "last_delivery_error": "live adapter send failed: send_path_degraded; live adapter delivery to telegram:596611073 failed: send_path_degraded; delivery error: Telegram send failed: Timed out (target telegram:596611073); queued text for telegram:596611073 for redelivery once the live adapter reconnects",
       "last_delivery_unverified": null,
       "last_failure": {
         "at": "2026-11-25T21:29:13.687963+03:00",
@@ -1093,14 +1104,15 @@
       "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "5487fac34a5845dea869b925a7cae09e"
+        "054f0c563f894b488ce952bcaf9eac6c"
       ],
       "last_dispatch": {
-        "scheduled_at": "2026-11-25T22:00:00+03:00",
-        "dispatched_at": "2026-11-25T22:00:49.653539+03:00",
-        "lateness_seconds": 49.7,
+        "scheduled_at": "2026-11-26T22:00:00+03:00",
+        "dispatched_at": "2026-11-26T22:00:13.998425+03:00",
+        "lateness_seconds": 14.0,
         "kind": "on_time"
-      }
+      },
+      "last_delivery_reached_none": true
     },
     {
       "id": "eeb422685813",
@@ -1125,18 +1137,18 @@
       "schedule_display": "every day at 07:55am",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-25T21:23:31.580534+03:00",
-      "next_run_at": "2026-11-26T07:55:00+03:00",
-      "last_run_at": "2026-11-25T21:29:05.546218+03:00",
-      "last_status": "ok",
+      "next_run_at": "2026-11-27T07:55:00+03:00",
+      "last_run_at": "2026-11-26T08:02:31.584975+03:00",
+      "last_status": "delivery_failed",
       "last_error": null,
-      "last_delivery_error": null,
+      "last_delivery_error": "delivery error: Telegram send failed: Timed out (target telegram:596611073)",
       "last_delivery_unverified": null,
       "last_failure": null,
       "failure_streak": 0,
@@ -1154,8 +1166,15 @@
       "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "64bc8908b23b4cd3b88f13d090896e47"
-      ]
+        "71df3933ec424e42971cdde5d80f3ccf"
+      ],
+      "last_dispatch": {
+        "scheduled_at": "2026-11-26T07:55:00+03:00",
+        "dispatched_at": "2026-11-26T07:55:23.611512+03:00",
+        "lateness_seconds": 23.6,
+        "kind": "on_time"
+      },
+      "last_delivery_reached_none": true
     },
     {
       "id": "e09b656be379",
@@ -1180,24 +1199,24 @@
       "schedule_display": "0 23 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-11-25T21:27:48.833929+03:00",
-      "next_run_at": "2026-11-26T23:00:00+03:00",
-      "last_run_at": "2026-11-25T23:05:18.471664+03:00",
+      "next_run_at": "2026-11-27T23:00:00+03:00",
+      "last_run_at": "2026-11-26T23:01:55.584172+03:00",
       "last_status": "error",
-      "last_error": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 22,452 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting.",
+      "last_error": "interrupted",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
       "last_failure": {
-        "at": "2026-11-25T23:05:18.471664+03:00",
-        "detail": "RuntimeError: The model server rejected this request as too large, but this conversation is only about 22,452 tokens — well under the 170,240-token window Hermes knows for qwen3.5-9b-mtp — so shrinking it would not help. Another request on the same server (for example a background memory review from an earlier session) was probably holding its capacity, or the server runs qwen3.5-9b-mtp with a smaller window than Hermes assumes. Wait a moment and send /retry; if it keeps happening, check the server's context setting."
+        "at": "2026-11-26T23:01:55.584172+03:00",
+        "detail": "interrupted"
       },
-      "failure_streak": 1,
+      "failure_streak": 2,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -1212,12 +1231,12 @@
       "timezone": "Europe/Moscow",
       "fire_claim": null,
       "canonical_completions": [
-        "1845cff82963434198bf86a845669870"
+        "33476b97f467429b98c5e935d70de188"
       ],
       "last_dispatch": {
-        "scheduled_at": "2026-11-25T23:00:00+03:00",
-        "dispatched_at": "2026-11-25T23:00:23.645415+03:00",
-        "lateness_seconds": 23.6,
+        "scheduled_at": "2026-11-26T23:00:00+03:00",
+        "dispatched_at": "2026-11-26T23:00:11.386135+03:00",
+        "lateness_seconds": 11.4,
         "kind": "on_time"
       }
     },
@@ -1393,5 +1412,5 @@
       ]
     }
   ],
-  "updated_at": "2026-11-25T23:05:20.261667+03:00"
+  "updated_at": "2026-11-26T23:01:56.877265+03:00"
 }
