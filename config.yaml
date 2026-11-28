@@ -75,7 +75,8 @@ compression:
 cron:
   catch_up_missed: true
 dashboard:
-  theme: default
+  theme: midnight
+  font: theme
 database:
   journal_mode: wal
 delegation:
